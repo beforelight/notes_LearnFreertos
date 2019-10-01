@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <ProjectGuid>{62C453AA-681E-459E-A19B-17A3489840E1}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <NMakeOutput>base.exe</NMakeOutput>
+    <NMakePreprocessorDefinitions>CPU_MK66FX1M0VLQ18_cm4;FSL_RTOS_BM;SDK_OS_BAREMETAL;SDK_DEBUGCONSOLE=1;CR_INTEGER_PRINTF;PRINTF_FLOAT_ENABLE=0;FSL_RTOS_FREE_RTOS;SDK_OS_FREE_RTOS;SDK_DEBUGCONSOLE_UART;__MCUXPRESSO;__USE_CMSIS;DEBUG;__NEWLIB__</NMakePreprocessorDefinitions>
+    <IncludePath>$(MSBuildProjectDirectory)/base/utilities/utilities;$(MSBuildProjectDirectory)/base/board;$(MSBuildProjectDirectory)/base/utilities;$(MSBuildProjectDirectory)/base/component/uart;$(MSBuildProjectDirectory)/base/component/lists;$(MSBuildProjectDirectory)/base/component/serial_manager;$(MSBuildProjectDirectory)/base/CMSIS_driver;$(MSBuildProjectDirectory)/base/drivers/freertos;$(MSBuildProjectDirectory)/base/CMSIS;$(MSBuildProjectDirectory)/base/device;$(MSBuildProjectDirectory)/base/drivers;$(MSBuildProjectDirectory)/base/amazon-freertos/include;$(MSBuildProjectDirectory)/base/amazon-freertos/freertos/portable;$(MSBuildProjectDirectory)/base/;$(MSBuildProjectDirectory)/base/source;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <NMakeOutput>base.exe</NMakeOutput>
+    <NMakePreprocessorDefinitions>CPU_MK66FX1M0VLQ18_cm4;FSL_RTOS_BM;SDK_OS_BAREMETAL;SDK_DEBUGCONSOLE=1;CR_INTEGER_PRINTF;PRINTF_FLOAT_ENABLE=0;FSL_RTOS_FREE_RTOS;SDK_OS_FREE_RTOS;SDK_DEBUGCONSOLE_UART;__MCUXPRESSO;__USE_CMSIS;DEBUG;__NEWLIB__</NMakePreprocessorDefinitions>
+    <IncludePath>$(MSBuildProjectDirectory)/base/utilities/utilities;$(MSBuildProjectDirectory)/base/board;$(MSBuildProjectDirectory)/base/utilities;$(MSBuildProjectDirectory)/base/component/uart;$(MSBuildProjectDirectory)/base/component/lists;$(MSBuildProjectDirectory)/base/component/serial_manager;$(MSBuildProjectDirectory)/base/CMSIS_driver;$(MSBuildProjectDirectory)/base/drivers/freertos;$(MSBuildProjectDirectory)/base/CMSIS;$(MSBuildProjectDirectory)/base/device;$(MSBuildProjectDirectory)/base/drivers;$(MSBuildProjectDirectory)/base/amazon-freertos/include;$(MSBuildProjectDirectory)/base/amazon-freertos/freertos/portable;$(MSBuildProjectDirectory)/base/;$(MSBuildProjectDirectory)/base/source;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <NMakeOutput>base.exe</NMakeOutput>
+    <NMakePreprocessorDefinitions>CPU_MK66FX1M0VLQ18_cm4;FSL_RTOS_BM;SDK_OS_BAREMETAL;SDK_DEBUGCONSOLE=1;CR_INTEGER_PRINTF;PRINTF_FLOAT_ENABLE=0;FSL_RTOS_FREE_RTOS;SDK_OS_FREE_RTOS;SDK_DEBUGCONSOLE_UART;__MCUXPRESSO;__USE_CMSIS;DEBUG;__NEWLIB__</NMakePreprocessorDefinitions>
+    <IncludePath>$(MSBuildProjectDirectory)/base/utilities/utilities;$(MSBuildProjectDirectory)/base/board;$(MSBuildProjectDirectory)/base/utilities;$(MSBuildProjectDirectory)/base/component/uart;$(MSBuildProjectDirectory)/base/component/lists;$(MSBuildProjectDirectory)/base/component/serial_manager;$(MSBuildProjectDirectory)/base/CMSIS_driver;$(MSBuildProjectDirectory)/base/drivers/freertos;$(MSBuildProjectDirectory)/base/CMSIS;$(MSBuildProjectDirectory)/base/device;$(MSBuildProjectDirectory)/base/drivers;$(MSBuildProjectDirectory)/base/amazon-freertos/include;$(MSBuildProjectDirectory)/base/amazon-freertos/freertos/portable;$(MSBuildProjectDirectory)/base/;$(MSBuildProjectDirectory)/base/source;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <NMakeOutput>base.exe</NMakeOutput>
+    <NMakePreprocessorDefinitions>CPU_MK66FX1M0VLQ18_cm4;FSL_RTOS_BM;SDK_OS_BAREMETAL;SDK_DEBUGCONSOLE=1;CR_INTEGER_PRINTF;PRINTF_FLOAT_ENABLE=0;FSL_RTOS_FREE_RTOS;SDK_OS_FREE_RTOS;SDK_DEBUGCONSOLE_UART;__MCUXPRESSO;__USE_CMSIS;DEBUG;__NEWLIB__</NMakePreprocessorDefinitions>
+    <IncludePath>$(MSBuildProjectDirectory)/base/utilities/utilities;$(MSBuildProjectDirectory)/base/board;$(MSBuildProjectDirectory)/base/utilities;$(MSBuildProjectDirectory)/base/component/uart;$(MSBuildProjectDirectory)/base/component/lists;$(MSBuildProjectDirectory)/base/component/serial_manager;$(MSBuildProjectDirectory)/base/CMSIS_driver;$(MSBuildProjectDirectory)/base/drivers/freertos;$(MSBuildProjectDirectory)/base/CMSIS;$(MSBuildProjectDirectory)/base/device;$(MSBuildProjectDirectory)/base/drivers;$(MSBuildProjectDirectory)/base/amazon-freertos/include;$(MSBuildProjectDirectory)/base/amazon-freertos/freertos/portable;$(MSBuildProjectDirectory)/base/;$(MSBuildProjectDirectory)/base/source;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="base\board\board.c" />
+    <ClCompile Include="base\board\clock_config.c" />
+    <ClCompile Include="base\board\peripherals.c" />
+    <ClCompile Include="base\board\pin_mux.c" />
+    <ClCompile Include="base\component\lists\generic_list.c" />
+    <ClCompile Include="base\component\serial_manager\serial_manager.c" />
+    <ClCompile Include="base\component\serial_manager\serial_port_uart.c" />
+    <ClCompile Include="base\component\uart\uart_adapter.c" />
+    <ClCompile Include="base\device\system_MK66F18.c" />
+    <ClCompile Include="base\drivers\freertos\fsl_dspi_freertos.c" />
+    <ClCompile Include="base\drivers\freertos\fsl_i2c_freertos.c" />
+    <ClCompile Include="base\drivers\freertos\fsl_lpuart_freertos.c" />
+    <ClCompile Include="base\drivers\freertos\fsl_uart_freertos.c" />
+    <ClCompile Include="base\drivers\fsl_adc16.c" />
+    <ClCompile Include="base\drivers\fsl_cache.c" />
+    <ClCompile Include="base\drivers\fsl_clock.c" />
+    <ClCompile Include="base\drivers\fsl_cmp.c" />
+    <ClCompile Include="base\drivers\fsl_cmt.c" />
+    <ClCompile Include="base\drivers\fsl_common.c" />
+    <ClCompile Include="base\drivers\fsl_crc.c" />
+    <ClCompile Include="base\drivers\fsl_dac.c" />
+    <ClCompile Include="base\drivers\fsl_dmamux.c" />
+    <ClCompile Include="base\drivers\fsl_dspi.c" />
+    <ClCompile Include="base\drivers\fsl_dspi_cmsis.c" />
+    <ClCompile Include="base\drivers\fsl_dspi_edma.c" />
+    <ClCompile Include="base\drivers\fsl_edma.c" />
+    <ClCompile Include="base\drivers\fsl_enet.c" />
+    <ClCompile Include="base\drivers\fsl_ewm.c" />
+    <ClCompile Include="base\drivers\fsl_flexbus.c" />
+    <ClCompile Include="base\drivers\fsl_flexcan.c" />
+    <ClCompile Include="base\drivers\fsl_ftfx_cache.c" />
+    <ClCompile Include="base\drivers\fsl_ftfx_controller.c" />
+    <ClCompile Include="base\drivers\fsl_ftfx_flash.c" />
+    <ClCompile Include="base\drivers\fsl_ftfx_flexnvm.c" />
+    <ClCompile Include="base\drivers\fsl_ftm.c" />
+    <ClCompile Include="base\drivers\fsl_gpio.c" />
+    <ClCompile Include="base\drivers\fsl_i2c.c" />
+    <ClCompile Include="base\drivers\fsl_i2c_cmsis.c" />
+    <ClCompile Include="base\drivers\fsl_i2c_edma.c" />
+    <ClCompile Include="base\drivers\fsl_llwu.c" />
+    <ClCompile Include="base\drivers\fsl_lmem_cache.c" />
+    <ClCompile Include="base\drivers\fsl_lptmr.c" />
+    <ClCompile Include="base\drivers\fsl_lpuart.c" />
+    <ClCompile Include="base\drivers\fsl_lpuart_cmsis.c" />
+    <ClCompile Include="base\drivers\fsl_lpuart_edma.c" />
+    <ClCompile Include="base\drivers\fsl_pdb.c" />
+    <ClCompile Include="base\drivers\fsl_pit.c" />
+    <ClCompile Include="base\drivers\fsl_pmc.c" />
+    <ClCompile Include="base\drivers\fsl_rcm.c" />
+    <ClCompile Include="base\drivers\fsl_rnga.c" />
+    <ClCompile Include="base\drivers\fsl_rtc.c" />
+    <ClCompile Include="base\drivers\fsl_sai.c" />
+    <ClCompile Include="base\drivers\fsl_sai_edma.c" />
+    <ClCompile Include="base\drivers\fsl_sdhc.c" />
+    <ClCompile Include="base\drivers\fsl_sdramc.c" />
+    <ClCompile Include="base\drivers\fsl_sim.c" />
+    <ClCompile Include="base\drivers\fsl_smc.c" />
+    <ClCompile Include="base\drivers\fsl_sysmpu.c" />
+    <ClCompile Include="base\drivers\fsl_tpm.c" />
+    <ClCompile Include="base\drivers\fsl_tsi_v4.c" />
+    <ClCompile Include="base\drivers\fsl_uart.c" />
+    <ClCompile Include="base\drivers\fsl_uart_cmsis.c" />
+    <ClCompile Include="base\drivers\fsl_uart_edma.c" />
+    <ClCompile Include="base\drivers\fsl_vref.c" />
+    <ClCompile Include="base\drivers\fsl_wdog.c" />
+    <ClCompile Include="base\source\base.c" />
+    <ClCompile Include="base\source\semihost_hardfault.c" />
+    <ClCompile Include="base\startup\startup_mk66f18.c" />
+    <ClCompile Include="base\utilities\fsl_assert.c" />
+    <ClCompile Include="base\utilities\fsl_debug_console.c" />
+    <ClCompile Include="base\utilities\fsl_shell.c" />
+    <ClCompile Include="base\utilities\fsl_str.c" />
+    <ClCompile Include="base\utilities\utilities\fsl_notifier.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="base\board\board.h" />
+    <ClInclude Include="base\board\clock_config.h" />
+    <ClInclude Include="base\board\peripherals.h" />
+    <ClInclude Include="base\board\pin_mux.h" />
+    <ClInclude Include="base\board\RTE_Device.h" />
+    <ClInclude Include="base\CMSIS\arm_common_tables.h" />
+    <ClInclude Include="base\CMSIS\arm_const_structs.h" />
+    <ClInclude Include="base\CMSIS\arm_math.h" />
+    <ClInclude Include="base\CMSIS\cmsis_armcc.h" />
+    <ClInclude Include="base\CMSIS\cmsis_armclang.h" />
+    <ClInclude Include="base\CMSIS\cmsis_compiler.h" />
+    <ClInclude Include="base\CMSIS\cmsis_gcc.h" />
+    <ClInclude Include="base\CMSIS\cmsis_iccarm.h" />
+    <ClInclude Include="base\CMSIS\cmsis_version.h" />
+    <ClInclude Include="base\CMSIS\core_armv8mbl.h" />
+    <ClInclude Include="base\CMSIS\core_armv8mml.h" />
+    <ClInclude Include="base\CMSIS\core_cm4.h" />
+    <ClInclude Include="base\CMSIS\mpu_armv7.h" />
+    <ClInclude Include="base\CMSIS\mpu_armv8.h" />
+    <ClInclude Include="base\CMSIS_driver\Driver_Common.h" />
+    <ClInclude Include="base\CMSIS_driver\Driver_I2C.h" />
+    <ClInclude Include="base\CMSIS_driver\Driver_SPI.h" />
+    <ClInclude Include="base\CMSIS_driver\Driver_USART.h" />
+    <ClInclude Include="base\component\lists\generic_list.h" />
+    <ClInclude Include="base\component\serial_manager\serial_manager.h" />
+    <ClInclude Include="base\component\serial_manager\serial_port_internal.h" />
+    <ClInclude Include="base\component\serial_manager\serial_port_uart.h" />
+    <ClInclude Include="base\component\uart\uart.h" />
+    <ClInclude Include="base\device\fsl_device_registers.h" />
+    <ClInclude Include="base\device\MK66F18.h" />
+    <ClInclude Include="base\device\MK66F18_features.h" />
+    <ClInclude Include="base\device\system_MK66F18.h" />
+    <ClInclude Include="base\drivers\freertos\fsl_dspi_freertos.h" />
+    <ClInclude Include="base\drivers\freertos\fsl_i2c_freertos.h" />
+    <ClInclude Include="base\drivers\freertos\fsl_lpuart_freertos.h" />
+    <ClInclude Include="base\drivers\freertos\fsl_uart_freertos.h" />
+    <ClInclude Include="base\drivers\fsl_adc16.h" />
+    <ClInclude Include="base\drivers\fsl_cache.h" />
+    <ClInclude Include="base\drivers\fsl_clock.h" />
+    <ClInclude Include="base\drivers\fsl_cmp.h" />
+    <ClInclude Include="base\drivers\fsl_cmt.h" />
+    <ClInclude Include="base\drivers\fsl_common.h" />
+    <ClInclude Include="base\drivers\fsl_crc.h" />
+    <ClInclude Include="base\drivers\fsl_dac.h" />
+    <ClInclude Include="base\drivers\fsl_dmamux.h" />
+    <ClInclude Include="base\drivers\fsl_dspi.h" />
+    <ClInclude Include="base\drivers\fsl_dspi_cmsis.h" />
+    <ClInclude Include="base\drivers\fsl_dspi_edma.h" />
+    <ClInclude Include="base\drivers\fsl_edma.h" />
+    <ClInclude Include="base\drivers\fsl_enet.h" />
+    <ClInclude Include="base\drivers\fsl_ewm.h" />
+    <ClInclude Include="base\drivers\fsl_flash.h" />
+    <ClInclude Include="base\drivers\fsl_flexbus.h" />
+    <ClInclude Include="base\drivers\fsl_flexcan.h" />
+    <ClInclude Include="base\drivers\fsl_ftfx_adapter.h" />
+    <ClInclude Include="base\drivers\fsl_ftfx_cache.h" />
+    <ClInclude Include="base\drivers\fsl_ftfx_controller.h" />
+    <ClInclude Include="base\drivers\fsl_ftfx_features.h" />
+    <ClInclude Include="base\drivers\fsl_ftfx_flash.h" />
+    <ClInclude Include="base\drivers\fsl_ftfx_flexnvm.h" />
+    <ClInclude Include="base\drivers\fsl_ftfx_utilities.h" />
+    <ClInclude Include="base\drivers\fsl_ftm.h" />
+    <ClInclude Include="base\drivers\fsl_gpio.h" />
+    <ClInclude Include="base\drivers\fsl_i2c.h" />
+    <ClInclude Include="base\drivers\fsl_i2c_cmsis.h" />
+    <ClInclude Include="base\drivers\fsl_i2c_edma.h" />
+    <ClInclude Include="base\drivers\fsl_llwu.h" />
+    <ClInclude Include="base\drivers\fsl_lmem_cache.h" />
+    <ClInclude Include="base\drivers\fsl_lptmr.h" />
+    <ClInclude Include="base\drivers\fsl_lpuart.h" />
+    <ClInclude Include="base\drivers\fsl_lpuart_cmsis.h" />
+    <ClInclude Include="base\drivers\fsl_lpuart_edma.h" />
+    <ClInclude Include="base\drivers\fsl_pdb.h" />
+    <ClInclude Include="base\drivers\fsl_pit.h" />
+    <ClInclude Include="base\drivers\fsl_pmc.h" />
+    <ClInclude Include="base\drivers\fsl_port.h" />
+    <ClInclude Include="base\drivers\fsl_rcm.h" />
+    <ClInclude Include="base\drivers\fsl_rnga.h" />
+    <ClInclude Include="base\drivers\fsl_rtc.h" />
+    <ClInclude Include="base\drivers\fsl_sai.h" />
+    <ClInclude Include="base\drivers\fsl_sai_edma.h" />
+    <ClInclude Include="base\drivers\fsl_sdhc.h" />
+    <ClInclude Include="base\drivers\fsl_sdramc.h" />
+    <ClInclude Include="base\drivers\fsl_sim.h" />
+    <ClInclude Include="base\drivers\fsl_smc.h" />
+    <ClInclude Include="base\drivers\fsl_sysmpu.h" />
+    <ClInclude Include="base\drivers\fsl_tpm.h" />
+    <ClInclude Include="base\drivers\fsl_tsi_v4.h" />
+    <ClInclude Include="base\drivers\fsl_uart.h" />
+    <ClInclude Include="base\drivers\fsl_uart_cmsis.h" />
+    <ClInclude Include="base\drivers\fsl_uart_edma.h" />
+    <ClInclude Include="base\drivers\fsl_vref.h" />
+    <ClInclude Include="base\drivers\fsl_wdog.h" />
+    <ClInclude Include="base\source\FreeRTOSConfig.h" />
+    <ClInclude Include="base\utilities\fsl_debug_console.h" />
+    <ClInclude Include="base\utilities\fsl_debug_console_conf.h" />
+    <ClInclude Include="base\utilities\fsl_shell.h" />
+    <ClInclude Include="base\utilities\fsl_str.h" />
+    <ClInclude Include="base\utilities\utilities\fsl_notifier.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

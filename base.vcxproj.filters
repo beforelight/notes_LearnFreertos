@@ -1,0 +1,546 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="source">
+      <UniqueIdentifier>{a508b3b3-0792-4fdf-bdda-33dbb90fdcb7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="utilities">
+      <UniqueIdentifier>{446aeaa7-ac2c-4770-a461-ff997cadfddf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="drvers">
+      <UniqueIdentifier>{f16f5eb1-c4b6-4b2e-aad9-b9763f92cac7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="device">
+      <UniqueIdentifier>{4694743d-1447-48fc-89ff-fa45538f078b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="component">
+      <UniqueIdentifier>{87a8b870-9ef1-42d7-999f-0a71f241d34a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CMSIS">
+      <UniqueIdentifier>{8d277301-93d3-433b-888f-7b3312064ee9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="board">
+      <UniqueIdentifier>{1f7ea78b-7ecd-46cf-95c8-1b2e8bbc18bb}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="base\source\base.c">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="base\source\semihost_hardfault.c">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="base\startup\startup_mk66f18.c">
+      <Filter>utilities</Filter>
+    </ClCompile>
+    <ClCompile Include="base\utilities\fsl_assert.c">
+      <Filter>utilities</Filter>
+    </ClCompile>
+    <ClCompile Include="base\utilities\fsl_debug_console.c">
+      <Filter>utilities</Filter>
+    </ClCompile>
+    <ClCompile Include="base\utilities\fsl_shell.c">
+      <Filter>utilities</Filter>
+    </ClCompile>
+    <ClCompile Include="base\utilities\fsl_str.c">
+      <Filter>utilities</Filter>
+    </ClCompile>
+    <ClCompile Include="base\utilities\utilities\fsl_notifier.c">
+      <Filter>utilities</Filter>
+    </ClCompile>
+    <ClCompile Include="base\drivers\freertos\fsl_dspi_freertos.c">
+      <Filter>drvers</Filter>
+    </ClCompile>
+    <ClCompile Include="base\drivers\freertos\fsl_i2c_freertos.c">
+      <Filter>drvers</Filter>
+    </ClCompile>
+    <ClCompile Include="base\drivers\freertos\fsl_lpuart_freertos.c">
+      <Filter>drvers</Filter>
+    </ClCompile>
+    <ClCompile Include="base\drivers\freertos\fsl_uart_freertos.c">
+      <Filter>drvers</Filter>
+    </ClCompile>
+    <ClCompile Include="base\drivers\fsl_adc16.c">
+      <Filter>drvers</Filter>
+    </ClCompile>
+    <ClCompile Include="base\drivers\fsl_cache.c">
+      <Filter>drvers</Filter>
+    </ClCompile>
+    <ClCompile Include="base\drivers\fsl_clock.c">
+      <Filter>drvers</Filter>
+    </ClCompile>
+    <ClCompile Include="base\drivers\fsl_cmp.c">
+      <Filter>drvers</Filter>
+    </ClCompile>
+    <ClCompile Include="base\drivers\fsl_cmt.c">
+      <Filter>drvers</Filter>
+    </ClCompile>
+    <ClCompile Include="base\drivers\fsl_common.c">
+      <Filter>drvers</Filter>
+    </ClCompile>
+    <ClCompile Include="base\drivers\fsl_crc.c">
+      <Filter>drvers</Filter>
+    </ClCompile>
+    <ClCompile Include="base\drivers\fsl_dac.c">
+      <Filter>drvers</Filter>
+    </ClCompile>
+    <ClCompile Include="base\drivers\fsl_dmamux.c">
+      <Filter>drvers</Filter>
+    </ClCompile>
+    <ClCompile Include="base\drivers\fsl_dspi.c">
+      <Filter>drvers</Filter>
+    </ClCompile>
+    <ClCompile Include="base\drivers\fsl_dspi_cmsis.c">
+      <Filter>drvers</Filter>
+    </ClCompile>
+    <ClCompile Include="base\drivers\fsl_dspi_edma.c">
+      <Filter>drvers</Filter>
+    </ClCompile>
+    <ClCompile Include="base\drivers\fsl_edma.c">
+      <Filter>drvers</Filter>
+    </ClCompile>
+    <ClCompile Include="base\drivers\fsl_enet.c">
+      <Filter>drvers</Filter>
+    </ClCompile>
+    <ClCompile Include="base\drivers\fsl_ewm.c">
+      <Filter>drvers</Filter>
+    </ClCompile>
+    <ClCompile Include="base\drivers\fsl_flexbus.c">
+      <Filter>drvers</Filter>
+    </ClCompile>
+    <ClCompile Include="base\drivers\fsl_flexcan.c">
+      <Filter>drvers</Filter>
+    </ClCompile>
+    <ClCompile Include="base\drivers\fsl_ftfx_cache.c">
+      <Filter>drvers</Filter>
+    </ClCompile>
+    <ClCompile Include="base\drivers\fsl_ftfx_controller.c">
+      <Filter>drvers</Filter>
+    </ClCompile>
+    <ClCompile Include="base\drivers\fsl_ftfx_flash.c">
+      <Filter>drvers</Filter>
+    </ClCompile>
+    <ClCompile Include="base\drivers\fsl_ftfx_flexnvm.c">
+      <Filter>drvers</Filter>
+    </ClCompile>
+    <ClCompile Include="base\drivers\fsl_ftm.c">
+      <Filter>drvers</Filter>
+    </ClCompile>
+    <ClCompile Include="base\drivers\fsl_gpio.c">
+      <Filter>drvers</Filter>
+    </ClCompile>
+    <ClCompile Include="base\drivers\fsl_i2c.c">
+      <Filter>drvers</Filter>
+    </ClCompile>
+    <ClCompile Include="base\drivers\fsl_i2c_cmsis.c">
+      <Filter>drvers</Filter>
+    </ClCompile>
+    <ClCompile Include="base\drivers\fsl_i2c_edma.c">
+      <Filter>drvers</Filter>
+    </ClCompile>
+    <ClCompile Include="base\drivers\fsl_llwu.c">
+      <Filter>drvers</Filter>
+    </ClCompile>
+    <ClCompile Include="base\drivers\fsl_lmem_cache.c">
+      <Filter>drvers</Filter>
+    </ClCompile>
+    <ClCompile Include="base\drivers\fsl_lptmr.c">
+      <Filter>drvers</Filter>
+    </ClCompile>
+    <ClCompile Include="base\drivers\fsl_lpuart.c">
+      <Filter>drvers</Filter>
+    </ClCompile>
+    <ClCompile Include="base\drivers\fsl_lpuart_cmsis.c">
+      <Filter>drvers</Filter>
+    </ClCompile>
+    <ClCompile Include="base\drivers\fsl_lpuart_edma.c">
+      <Filter>drvers</Filter>
+    </ClCompile>
+    <ClCompile Include="base\drivers\fsl_pdb.c">
+      <Filter>drvers</Filter>
+    </ClCompile>
+    <ClCompile Include="base\drivers\fsl_pit.c">
+      <Filter>drvers</Filter>
+    </ClCompile>
+    <ClCompile Include="base\drivers\fsl_pmc.c">
+      <Filter>drvers</Filter>
+    </ClCompile>
+    <ClCompile Include="base\drivers\fsl_rcm.c">
+      <Filter>drvers</Filter>
+    </ClCompile>
+    <ClCompile Include="base\drivers\fsl_rnga.c">
+      <Filter>drvers</Filter>
+    </ClCompile>
+    <ClCompile Include="base\drivers\fsl_rtc.c">
+      <Filter>drvers</Filter>
+    </ClCompile>
+    <ClCompile Include="base\drivers\fsl_sai.c">
+      <Filter>drvers</Filter>
+    </ClCompile>
+    <ClCompile Include="base\drivers\fsl_sai_edma.c">
+      <Filter>drvers</Filter>
+    </ClCompile>
+    <ClCompile Include="base\drivers\fsl_sdhc.c">
+      <Filter>drvers</Filter>
+    </ClCompile>
+    <ClCompile Include="base\drivers\fsl_sdramc.c">
+      <Filter>drvers</Filter>
+    </ClCompile>
+    <ClCompile Include="base\drivers\fsl_sim.c">
+      <Filter>drvers</Filter>
+    </ClCompile>
+    <ClCompile Include="base\drivers\fsl_smc.c">
+      <Filter>drvers</Filter>
+    </ClCompile>
+    <ClCompile Include="base\drivers\fsl_sysmpu.c">
+      <Filter>drvers</Filter>
+    </ClCompile>
+    <ClCompile Include="base\drivers\fsl_tpm.c">
+      <Filter>drvers</Filter>
+    </ClCompile>
+    <ClCompile Include="base\drivers\fsl_tsi_v4.c">
+      <Filter>drvers</Filter>
+    </ClCompile>
+    <ClCompile Include="base\drivers\fsl_uart.c">
+      <Filter>drvers</Filter>
+    </ClCompile>
+    <ClCompile Include="base\drivers\fsl_uart_cmsis.c">
+      <Filter>drvers</Filter>
+    </ClCompile>
+    <ClCompile Include="base\drivers\fsl_uart_edma.c">
+      <Filter>drvers</Filter>
+    </ClCompile>
+    <ClCompile Include="base\drivers\fsl_vref.c">
+      <Filter>drvers</Filter>
+    </ClCompile>
+    <ClCompile Include="base\drivers\fsl_wdog.c">
+      <Filter>drvers</Filter>
+    </ClCompile>
+    <ClCompile Include="base\device\system_MK66F18.c">
+      <Filter>device</Filter>
+    </ClCompile>
+    <ClCompile Include="base\component\lists\generic_list.c">
+      <Filter>component</Filter>
+    </ClCompile>
+    <ClCompile Include="base\component\serial_manager\serial_manager.c">
+      <Filter>component</Filter>
+    </ClCompile>
+    <ClCompile Include="base\component\serial_manager\serial_port_uart.c">
+      <Filter>component</Filter>
+    </ClCompile>
+    <ClCompile Include="base\component\uart\uart_adapter.c">
+      <Filter>component</Filter>
+    </ClCompile>
+    <ClCompile Include="base\board\board.c">
+      <Filter>board</Filter>
+    </ClCompile>
+    <ClCompile Include="base\board\clock_config.c">
+      <Filter>board</Filter>
+    </ClCompile>
+    <ClCompile Include="base\board\peripherals.c">
+      <Filter>board</Filter>
+    </ClCompile>
+    <ClCompile Include="base\board\pin_mux.c">
+      <Filter>board</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="base\source\FreeRTOSConfig.h">
+      <Filter>source</Filter>
+    </ClInclude>
+    <ClInclude Include="base\utilities\fsl_debug_console.h">
+      <Filter>utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="base\utilities\fsl_debug_console_conf.h">
+      <Filter>utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="base\utilities\fsl_shell.h">
+      <Filter>utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="base\utilities\fsl_str.h">
+      <Filter>utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="base\utilities\utilities\fsl_notifier.h">
+      <Filter>utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="base\drivers\freertos\fsl_dspi_freertos.h">
+      <Filter>drvers</Filter>
+    </ClInclude>
+    <ClInclude Include="base\drivers\freertos\fsl_i2c_freertos.h">
+      <Filter>drvers</Filter>
+    </ClInclude>
+    <ClInclude Include="base\drivers\freertos\fsl_lpuart_freertos.h">
+      <Filter>drvers</Filter>
+    </ClInclude>
+    <ClInclude Include="base\drivers\freertos\fsl_uart_freertos.h">
+      <Filter>drvers</Filter>
+    </ClInclude>
+    <ClInclude Include="base\drivers\fsl_adc16.h">
+      <Filter>drvers</Filter>
+    </ClInclude>
+    <ClInclude Include="base\drivers\fsl_cache.h">
+      <Filter>drvers</Filter>
+    </ClInclude>
+    <ClInclude Include="base\drivers\fsl_clock.h">
+      <Filter>drvers</Filter>
+    </ClInclude>
+    <ClInclude Include="base\drivers\fsl_cmp.h">
+      <Filter>drvers</Filter>
+    </ClInclude>
+    <ClInclude Include="base\drivers\fsl_cmt.h">
+      <Filter>drvers</Filter>
+    </ClInclude>
+    <ClInclude Include="base\drivers\fsl_common.h">
+      <Filter>drvers</Filter>
+    </ClInclude>
+    <ClInclude Include="base\drivers\fsl_crc.h">
+      <Filter>drvers</Filter>
+    </ClInclude>
+    <ClInclude Include="base\drivers\fsl_dac.h">
+      <Filter>drvers</Filter>
+    </ClInclude>
+    <ClInclude Include="base\drivers\fsl_dmamux.h">
+      <Filter>drvers</Filter>
+    </ClInclude>
+    <ClInclude Include="base\drivers\fsl_dspi.h">
+      <Filter>drvers</Filter>
+    </ClInclude>
+    <ClInclude Include="base\drivers\fsl_dspi_cmsis.h">
+      <Filter>drvers</Filter>
+    </ClInclude>
+    <ClInclude Include="base\drivers\fsl_dspi_edma.h">
+      <Filter>drvers</Filter>
+    </ClInclude>
+    <ClInclude Include="base\drivers\fsl_edma.h">
+      <Filter>drvers</Filter>
+    </ClInclude>
+    <ClInclude Include="base\drivers\fsl_enet.h">
+      <Filter>drvers</Filter>
+    </ClInclude>
+    <ClInclude Include="base\drivers\fsl_ewm.h">
+      <Filter>drvers</Filter>
+    </ClInclude>
+    <ClInclude Include="base\drivers\fsl_flash.h">
+      <Filter>drvers</Filter>
+    </ClInclude>
+    <ClInclude Include="base\drivers\fsl_flexbus.h">
+      <Filter>drvers</Filter>
+    </ClInclude>
+    <ClInclude Include="base\drivers\fsl_flexcan.h">
+      <Filter>drvers</Filter>
+    </ClInclude>
+    <ClInclude Include="base\drivers\fsl_ftfx_adapter.h">
+      <Filter>drvers</Filter>
+    </ClInclude>
+    <ClInclude Include="base\drivers\fsl_ftfx_cache.h">
+      <Filter>drvers</Filter>
+    </ClInclude>
+    <ClInclude Include="base\drivers\fsl_ftfx_controller.h">
+      <Filter>drvers</Filter>
+    </ClInclude>
+    <ClInclude Include="base\drivers\fsl_ftfx_features.h">
+      <Filter>drvers</Filter>
+    </ClInclude>
+    <ClInclude Include="base\drivers\fsl_ftfx_flash.h">
+      <Filter>drvers</Filter>
+    </ClInclude>
+    <ClInclude Include="base\drivers\fsl_ftfx_flexnvm.h">
+      <Filter>drvers</Filter>
+    </ClInclude>
+    <ClInclude Include="base\drivers\fsl_ftfx_utilities.h">
+      <Filter>drvers</Filter>
+    </ClInclude>
+    <ClInclude Include="base\drivers\fsl_ftm.h">
+      <Filter>drvers</Filter>
+    </ClInclude>
+    <ClInclude Include="base\drivers\fsl_gpio.h">
+      <Filter>drvers</Filter>
+    </ClInclude>
+    <ClInclude Include="base\drivers\fsl_i2c.h">
+      <Filter>drvers</Filter>
+    </ClInclude>
+    <ClInclude Include="base\drivers\fsl_i2c_cmsis.h">
+      <Filter>drvers</Filter>
+    </ClInclude>
+    <ClInclude Include="base\drivers\fsl_i2c_edma.h">
+      <Filter>drvers</Filter>
+    </ClInclude>
+    <ClInclude Include="base\drivers\fsl_llwu.h">
+      <Filter>drvers</Filter>
+    </ClInclude>
+    <ClInclude Include="base\drivers\fsl_lmem_cache.h">
+      <Filter>drvers</Filter>
+    </ClInclude>
+    <ClInclude Include="base\drivers\fsl_lptmr.h">
+      <Filter>drvers</Filter>
+    </ClInclude>
+    <ClInclude Include="base\drivers\fsl_lpuart.h">
+      <Filter>drvers</Filter>
+    </ClInclude>
+    <ClInclude Include="base\drivers\fsl_lpuart_cmsis.h">
+      <Filter>drvers</Filter>
+    </ClInclude>
+    <ClInclude Include="base\drivers\fsl_lpuart_edma.h">
+      <Filter>drvers</Filter>
+    </ClInclude>
+    <ClInclude Include="base\drivers\fsl_pdb.h">
+      <Filter>drvers</Filter>
+    </ClInclude>
+    <ClInclude Include="base\drivers\fsl_pit.h">
+      <Filter>drvers</Filter>
+    </ClInclude>
+    <ClInclude Include="base\drivers\fsl_pmc.h">
+      <Filter>drvers</Filter>
+    </ClInclude>
+    <ClInclude Include="base\drivers\fsl_port.h">
+      <Filter>drvers</Filter>
+    </ClInclude>
+    <ClInclude Include="base\drivers\fsl_rcm.h">
+      <Filter>drvers</Filter>
+    </ClInclude>
+    <ClInclude Include="base\drivers\fsl_rnga.h">
+      <Filter>drvers</Filter>
+    </ClInclude>
+    <ClInclude Include="base\drivers\fsl_rtc.h">
+      <Filter>drvers</Filter>
+    </ClInclude>
+    <ClInclude Include="base\drivers\fsl_sai.h">
+      <Filter>drvers</Filter>
+    </ClInclude>
+    <ClInclude Include="base\drivers\fsl_sai_edma.h">
+      <Filter>drvers</Filter>
+    </ClInclude>
+    <ClInclude Include="base\drivers\fsl_sdhc.h">
+      <Filter>drvers</Filter>
+    </ClInclude>
+    <ClInclude Include="base\drivers\fsl_sdramc.h">
+      <Filter>drvers</Filter>
+    </ClInclude>
+    <ClInclude Include="base\drivers\fsl_sim.h">
+      <Filter>drvers</Filter>
+    </ClInclude>
+    <ClInclude Include="base\drivers\fsl_smc.h">
+      <Filter>drvers</Filter>
+    </ClInclude>
+    <ClInclude Include="base\drivers\fsl_sysmpu.h">
+      <Filter>drvers</Filter>
+    </ClInclude>
+    <ClInclude Include="base\drivers\fsl_tpm.h">
+      <Filter>drvers</Filter>
+    </ClInclude>
+    <ClInclude Include="base\drivers\fsl_tsi_v4.h">
+      <Filter>drvers</Filter>
+    </ClInclude>
+    <ClInclude Include="base\drivers\fsl_uart.h">
+      <Filter>drvers</Filter>
+    </ClInclude>
+    <ClInclude Include="base\drivers\fsl_uart_cmsis.h">
+      <Filter>drvers</Filter>
+    </ClInclude>
+    <ClInclude Include="base\drivers\fsl_uart_edma.h">
+      <Filter>drvers</Filter>
+    </ClInclude>
+    <ClInclude Include="base\drivers\fsl_vref.h">
+      <Filter>drvers</Filter>
+    </ClInclude>
+    <ClInclude Include="base\drivers\fsl_wdog.h">
+      <Filter>drvers</Filter>
+    </ClInclude>
+    <ClInclude Include="base\device\fsl_device_registers.h">
+      <Filter>device</Filter>
+    </ClInclude>
+    <ClInclude Include="base\device\MK66F18.h">
+      <Filter>device</Filter>
+    </ClInclude>
+    <ClInclude Include="base\device\MK66F18_features.h">
+      <Filter>device</Filter>
+    </ClInclude>
+    <ClInclude Include="base\device\system_MK66F18.h">
+      <Filter>device</Filter>
+    </ClInclude>
+    <ClInclude Include="base\component\lists\generic_list.h">
+      <Filter>component</Filter>
+    </ClInclude>
+    <ClInclude Include="base\component\serial_manager\serial_manager.h">
+      <Filter>component</Filter>
+    </ClInclude>
+    <ClInclude Include="base\component\serial_manager\serial_port_internal.h">
+      <Filter>component</Filter>
+    </ClInclude>
+    <ClInclude Include="base\component\serial_manager\serial_port_uart.h">
+      <Filter>component</Filter>
+    </ClInclude>
+    <ClInclude Include="base\component\uart\uart.h">
+      <Filter>component</Filter>
+    </ClInclude>
+    <ClInclude Include="base\CMSIS\arm_common_tables.h">
+      <Filter>CMSIS</Filter>
+    </ClInclude>
+    <ClInclude Include="base\CMSIS\arm_const_structs.h">
+      <Filter>CMSIS</Filter>
+    </ClInclude>
+    <ClInclude Include="base\CMSIS\arm_math.h">
+      <Filter>CMSIS</Filter>
+    </ClInclude>
+    <ClInclude Include="base\CMSIS\cmsis_armcc.h">
+      <Filter>CMSIS</Filter>
+    </ClInclude>
+    <ClInclude Include="base\CMSIS\cmsis_armclang.h">
+      <Filter>CMSIS</Filter>
+    </ClInclude>
+    <ClInclude Include="base\CMSIS\cmsis_compiler.h">
+      <Filter>CMSIS</Filter>
+    </ClInclude>
+    <ClInclude Include="base\CMSIS\cmsis_gcc.h">
+      <Filter>CMSIS</Filter>
+    </ClInclude>
+    <ClInclude Include="base\CMSIS\cmsis_iccarm.h">
+      <Filter>CMSIS</Filter>
+    </ClInclude>
+    <ClInclude Include="base\CMSIS\cmsis_version.h">
+      <Filter>CMSIS</Filter>
+    </ClInclude>
+    <ClInclude Include="base\CMSIS\core_armv8mbl.h">
+      <Filter>CMSIS</Filter>
+    </ClInclude>
+    <ClInclude Include="base\CMSIS\core_armv8mml.h">
+      <Filter>CMSIS</Filter>
+    </ClInclude>
+    <ClInclude Include="base\CMSIS\core_cm4.h">
+      <Filter>CMSIS</Filter>
+    </ClInclude>
+    <ClInclude Include="base\CMSIS\mpu_armv7.h">
+      <Filter>CMSIS</Filter>
+    </ClInclude>
+    <ClInclude Include="base\CMSIS\mpu_armv8.h">
+      <Filter>CMSIS</Filter>
+    </ClInclude>
+    <ClInclude Include="base\CMSIS_driver\Driver_Common.h">
+      <Filter>CMSIS</Filter>
+    </ClInclude>
+    <ClInclude Include="base\CMSIS_driver\Driver_I2C.h">
+      <Filter>CMSIS</Filter>
+    </ClInclude>
+    <ClInclude Include="base\CMSIS_driver\Driver_SPI.h">
+      <Filter>CMSIS</Filter>
+    </ClInclude>
+    <ClInclude Include="base\CMSIS_driver\Driver_USART.h">
+      <Filter>CMSIS</Filter>
+    </ClInclude>
+    <ClInclude Include="base\board\board.h">
+      <Filter>board</Filter>
+    </ClInclude>
+    <ClInclude Include="base\board\clock_config.h">
+      <Filter>board</Filter>
+    </ClInclude>
+    <ClInclude Include="base\board\peripherals.h">
+      <Filter>board</Filter>
+    </ClInclude>
+    <ClInclude Include="base\board\pin_mux.h">
+      <Filter>board</Filter>
+    </ClInclude>
+    <ClInclude Include="base\board\RTE_Device.h">
+      <Filter>board</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

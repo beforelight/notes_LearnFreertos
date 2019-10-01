@@ -1,2 +1,4 @@
 eclipse.preferences.version=1
+sdk.component.overwrite.ask=true
+sdk.component.overwrite.policy=Replace
 sdk.paths.pref=C\:\\Users\\17616\\mcuxpresso\\02\\SDKPackages;;

@@ -63,6 +63,7 @@ int main(void) {
         i++ ;
         /* 'Dummy' NOP to allow source level single stepping of
             tight while() loop */
+      //  PRINTF("Hello World\n");
         __asm volatile ("nop");
     }
     return 0 ;

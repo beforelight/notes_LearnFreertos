@@ -43,4 +43,6 @@
  */
 void BOARD_InitDebugConsole(void) {
 	/* The user initialization should be placed here */
+	uint32_t uartClkSrcFreq = CLOCK_GetCoreSysClkFreq();
+	DbgConsole_Init(0, 1500000, 1, uartClkSrcFreq);
 }
