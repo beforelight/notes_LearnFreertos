@@ -293,3 +293,54 @@ user global configuration and to define the default location to store repositori
 not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
 EGit might behave differently since they see different configuration options.
 This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2019-10-01 14:15:19.632
+!MESSAGE Memory type 'DFlash' for project 'null' is not supported.
+
+!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2019-10-01 14:15:21.167
+!MESSAGE Memory type 'DFlash' for project 'null' is not supported.
+
+!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2019-10-01 14:15:21.415
+!MESSAGE Memory type 'DFlash' for project 'null' is not supported.
+
+!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2019-10-01 14:15:39.503
+!MESSAGE Memory type 'DFlash' for project 'null' is not supported.
+
+!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2019-10-01 14:15:41.733
+!MESSAGE Memory type 'DFlash' for project 'null' is not supported.
+
+!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2019-10-01 14:15:41.978
+!MESSAGE Memory type 'DFlash' for project 'null' is not supported.
+
+!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2019-10-01 14:19:44.684
+!MESSAGE Memory type 'DFlash' for project 'null' is not supported.
+
+!ENTRY org.eclipse.cdt.core 1 0 2019-10-01 14:19:45.516
+!MESSAGE Indexed 'base' (0 sources, 0 headers) in 0.003 sec: 0 declarations; 0 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
+
+!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2019-10-01 14:22:03.858
+!MESSAGE Overwriting file L/base/sdmmc/port/fsl_sdmmc_host.c
+
+!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2019-10-01 14:22:06.094
+!MESSAGE Overwriting file L/base/sdmmc/port/fsl_sdmmc_event.c
+
+!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2019-10-01 14:22:06.144
+!MESSAGE Overwriting file L/base/sdmmc/port/fsl_sdmmc_host.c
+
+!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2019-10-01 14:23:09.059
+!MESSAGE Memory type 'DFlash' for project 'null' is not supported.
+
+!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2019-10-01 14:23:13.549
+!MESSAGE Memory type 'DFlash' for project 'null' is not supported.
+
+!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2019-10-01 14:23:16.728
+!MESSAGE Memory type 'DFlash' for project 'null' is not supported.
+
+!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2019-10-01 14:23:16.911
+!MESSAGE Memory type 'DFlash' for project 'null' is not supported.
+
+!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2019-10-01 14:28:55.097
+!MESSAGE Memory type 'DFlash' for project 'null' is not supported.
+
+!ENTRY org.eclipse.cdt.core 1 0 2019-10-01 14:28:55.184
+!MESSAGE Indexed 'base' (0 sources, 0 headers) in 0 sec: 0 declarations; 0 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
