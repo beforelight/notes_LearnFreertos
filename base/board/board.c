@@ -28,21 +28,21 @@
  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-/**
- * @file    board.c
- * @brief   Board initialization file.
- */
- 
-/* This is a template for board specific configuration created by MCUXpresso IDE Project Wizard.*/
+ /**
+  * @file    board.c
+  * @brief   Board initialization file.
+  */
+
+  /* This is a template for board specific configuration created by MCUXpresso IDE Project Wizard.*/
 
 #include <stdint.h>
 #include "board.h"
-
+#include "fsl_debug_console.h"
 /**
  * @brief Set up and initialize all required blocks and functions related to the board hardware.
  */
 void BOARD_InitDebugConsole(void) {
 	/* The user initialization should be placed here */
 	uint32_t uartClkSrcFreq = CLOCK_GetCoreSysClkFreq();
-	DbgConsole_Init(0, 1500000, 1, uartClkSrcFreq);
+	DbgConsole_Init(0, 1500000, kSerialPort_Uart, uartClkSrcFreq);
 }

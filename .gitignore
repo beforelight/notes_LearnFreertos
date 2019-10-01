@@ -49,3 +49,9 @@ FreeRTOS_TAD_logs/TAD_log_191002_001426.log
 FreeRTOS_TAD_logs/TAD_log_191002_001504.log
 FreeRTOS_TAD_logs/TAD_log_191002_001705.log
 FreeRTOS_TAD_logs/TAD_log_191002_001754.log
+.vs/base/v16/ipch/AutoPCH/2d138ddc54a81971/PIN_MUX.ipch
+.vs/base/v16/ipch/AutoPCH/82c9618a3a580253/BOARD.ipch
+.metadata/.plugins/com.genuitec.eclipse.devstyle/recent.json
+.metadata/.plugins/org.eclipse.e4.workbench/workbench.xmi
+*.json
+*.xmi

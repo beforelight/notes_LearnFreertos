@@ -823,7 +823,7 @@ int DbgConsole_Printf(const char *formatString, ...)
 
     va_start(ap, formatString);
     /* format print log first */
-    logLength = StrFormatPrintf(formatString, ap, printBuf, DbgConsole_PrintCallback);
+	logLength = vsnprintf(printBuf, DEBUG_CONSOLE_PRINTF_MAX_LOG_LEN, formatString, ap);
     /* print log */
     dbgResult = DbgConsole_SendDataReliable((uint8_t *)printBuf, (size_t)logLength);
 
