@@ -1,6 +1,33 @@
 # FreeRtos学习笔记
 
-## 第0章 FreRtos编码标准和风格
+## 第零章 FreRtos编码标准和风格
+
+1. ### 命名规则
+
+   1. 变量命名
+
+      - uint32_t类型变量的前缀为ul，u表示无符号unsigned，l表示long
+
+      - uint16_t类型变量的前缀为us，s表示short
+
+      - uint8_t类型变量的前缀为uc，c表示char
+      - 非stdint.h定义的前缀为x
+      - 非stdint.h定义的无符号前缀为ux
+      - size_t的前缀也为x
+      - char类型前缀为c
+      - 枚举变量前缀为e
+      - 指针类型前缀前面要多加一个p
+
+   2. 函数命名
+
+      - 使用static限定的私有函数使用前缀prv
+      - api函数使用其返回值来决定函数前缀，无返回值的为v，v为void
+
+   3. 宏命名
+
+      - 宏定义使用文件名的一部发，比如
+
+   
 
 ## 第一章 hello world
 
@@ -255,18 +282,63 @@ rtos在进入临界区会屏蔽优先级configLIBRARY_MAX_SYSCALL_INTERRUPT_PRIO
 
 任务状态，以下四种
 
-1. 运行态
+1. 运行态Running
 
    > cpu正在执行。。。
 
-2. 就绪态
+2. 就绪态Ready
 
    > 任务准备好但是有更高优先级的任务在占用cpu
 
-3. 阻塞态
+3. 阻塞态Blocked
 
-   > 任务正在等待事件或者等待延时结束。一般有一个超时时间，超过时间之后会退出阻塞态，既是没有等待到事件
+   > 任务正在等待事件或者等待延时结束。一般有一个超时时间，超过时间之后会退出阻塞态，既是没有等待到事件 vTaskDelay()进入的等待时间等等
 
-4. 挂起态
+4. 挂起态Suspended
 
    > 挂起之后会暂停调度，进入和退出的函数是vTaskSuspend()和xTaskResume()实现
+
+## 第六章 内核控制函数
+
+```c
+taskYIELD()//任务切换
+taskENTER_CRITICAL()//进入临界区
+taskEXIT_CRITICAL()//退出临界区
+taskENTER_CRITICAL_FROM_ISR()//中断服务函数用
+taskEXIT_CRITICAL_FROM_ISR()//中断服务函数用
+taskDISABLE_INTERRUPTS()//关闭中断
+taskENABLE_INTERRUPTS()//打开中断
+vTaskStartScheduler()//开启任务调度
+vTaskEndScheduler()//关闭任务调度
+vTaskSuspendAll()//挂起任务调度器
+xTaskResumeAll()//恢复任务调度器
+vTaskStepTick()//设置系统节拍值
+```
+
+## 第七章 其他任务API函数
+
+```c
+void vTaskGetRunTimeStats( char *pcWriteBuffer );
+void vTaskList( char * pcWriteBuffer );
+```
+
+这两函数输出的都是表格，缓存一定要大一点，前者获取的是任务的运行时间和占比，后者是每个任务的详细信息。需要设置相关的宏
+
+## 第八章 时间管理（待）
+
+## 第九章 FreeRtos队列（）
+
+## 第十章 信号量（）
+
+## 第十一章 软件定时器任务（）
+
+## 第十二章 事件标志组（）
+
+## 第十三章 任务通知·新（）
+
+## 第十四章 低功耗模式（）
+
+## 第十五章 空闲任务（）
+
+## 第十六章 内存管理（）
+

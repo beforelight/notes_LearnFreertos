@@ -1,0 +1,167 @@
+"FreeRTOS Task Aware Debugger for GDB" version 11.0.0 (201905201323)
+(c) 2016-2018 NXP Semiconductors, Inc.
+==================================
+22:01:04.421 INFO: [TadModel] DSF session ID 45 has started.
+22:01:15.585 INFO: [TadState] TAD state changed:  DEBUG_STARTED -> DEBUG_INIT_0 (RESUMED, USER_REQUEST)
+22:01:15.784 INFO: [TadState] TAD state changed:  DEBUG_INIT_0 -> DEBUG_INIT_1 (SUSPENDED, SIGNAL)
+22:01:18.288 INFO: [TadState] TAD state changed:  DEBUG_INIT_1 -> DEBUG_SUSPENDED (RESUMED, USER_REQUEST)
+22:01:18.459 INFO: [TadState] TAD state changed:  DEBUG_SUSPENDED -> DEBUG_SUSPENDED (SUSPENDED, BREAKPOINT)
+22:01:21.815 INFO: [TadState] TAD state changed:  DEBUG_SUSPENDED -> DEBUG_RESUMED (RESUMED, USER_REQUEST)
+22:01:39.978 INFO: [TadState] TAD state changed:  DEBUG_RESUMED -> READY (SUSPENDED, SIGNAL)
+22:01:40.12 INFO: [Benchmark] Loading data for "Determine FreeRTOS version" has started.
+22:01:40.469 INFO: [TadState] TAD state changed:  READY -> DEBUG_RESUMED (RESUMED, USER_REQUEST)
+22:01:40.538 ERROR: [VariableReader] Could not read variable expression: "&(FreeRTOSDebugConfig)".
+22:01:40.663 INFO: [TadState] TAD state changed:  DEBUG_RESUMED -> READY (SUSPENDED, BREAKPOINT)
+22:01:42.541 INFO: [TadModel] FreeRTOS version has been identified from available FreeRTOS symbols as 10.11.
+22:01:42.541 INFO: [Benchmark] Loading data for "Determine FreeRTOS version" took 2529 ms.
+22:01:42.541 INFO: [Benchmark] Loading data for "Task List" has started.
+22:01:42.541 INFO: [Benchmark] Loading data for "Task List" has started.
+22:01:42.544 ERROR: [VariableReader] Could not read variable expression: "sizeof(struct TaskControlBlock_t)".
+22:01:42.551 ERROR: [VariableReader] Could not read variable expression: "&(((struct QueueDefinition *) 0)->pcTail)".
+22:01:42.832 ERROR: [TaskFactory] ulTotalRunTime not available
+22:01:47.887 ERROR: [MemoryReader] Read bytes method timed out!
+22:01:47.915 ERROR: [VariableReader] Could not read variable expression: "(((struct tskTaskControlBlock *) 0x8f3efe0)->uxBasePriority)".
+22:01:47.916 INFO: [FreeRTOS] FreeRTOS macro "configUSE_MUTEXES" is disabled.
+22:01:47.948 ERROR: [VariableReader] Could not read variable expression: "(((struct tskTaskControlBlock *) 0x8f3efe0)->uxPriority)".
+22:01:47.949 ERROR: [TaskFactory] Cannot read information from "pxDelayedTaskList".
+22:01:52.09 ERROR: [MemoryReader] Read bytes method timed out!
+22:01:52.247 INFO: [TadState] TAD state changed:  READY -> DEBUG_RESUMED (RESUMED, USER_REQUEST)
+22:01:53.11 ERROR: [TaskFactory] Cannot read information from "pxOverflowDelayedTaskList".
+22:01:54.12 ERROR: [TaskFactory] Cannot read information from "xPendingReadyList".
+22:01:54.12 INFO: [Benchmark] Loading data for "Task List" took 11471 ms.
+22:01:54.12 INFO: [TadState] TAD state changed:  DEBUG_RESUMED -> READY (SUSPENDED, BREAKPOINT)
+22:01:54.13 INFO: [Benchmark] Loading data for "Task List" has started.
+22:01:54.14 ERROR: [VariableReader] Could not read variable expression: "(((struct tskTaskControlBlock *) 0x8f3efe0)->uxPriority)".
+22:01:54.461 INFO: [TadState] TAD state changed:  READY -> DEBUG_RESUMED (RESUMED, USER_REQUEST)
+22:01:55.572 ERROR: [TaskFactory] ulTotalRunTime not available
+22:01:56.528 ERROR: [TadFactory] Reading exception during: "readAddressOfVariableSafely(xQueueRegistry[1])"
+22:01:56.528 ERROR: [QueueFactory] Cannot read information from "xQueueRegistry[1]".
+22:01:56.573 ERROR: [TaskFactory] Cannot read information from "pxReadyTasksLists[0]".
+22:01:57.529 ERROR: [TadFactory] Reading exception during: "readAddressOfVariableSafely(xQueueRegistry[2])"
+22:01:57.529 ERROR: [QueueFactory] Cannot read information from "xQueueRegistry[2]".
+22:01:57.574 ERROR: [TaskFactory] Cannot read information from "pxReadyTasksLists[1]".
+22:01:58.531 ERROR: [TadFactory] Reading exception during: "readAddressOfVariableSafely(xQueueRegistry[3])"
+22:01:58.531 ERROR: [QueueFactory] Cannot read information from "xQueueRegistry[3]".
+22:01:58.576 ERROR: [TaskFactory] Cannot read information from "pxReadyTasksLists[2]".
+22:01:59.532 ERROR: [TadFactory] Reading exception during: "readAddressOfVariableSafely(xQueueRegistry[4])"
+22:01:59.532 ERROR: [QueueFactory] Cannot read information from "xQueueRegistry[4]".
+22:01:59.577 ERROR: [TaskFactory] Cannot read information from "pxReadyTasksLists[3]".
+22:02:00.533 ERROR: [TadFactory] Reading exception during: "readAddressOfVariableSafely(xQueueRegistry[5])"
+22:02:00.533 ERROR: [QueueFactory] Cannot read information from "xQueueRegistry[5]".
+22:02:00.578 ERROR: [TaskFactory] Cannot read information from "pxReadyTasksLists[4]".
+22:02:01.535 ERROR: [TadFactory] Reading exception during: "readAddressOfVariableSafely(xQueueRegistry[6])"
+22:02:01.535 ERROR: [QueueFactory] Cannot read information from "xQueueRegistry[6]".
+22:02:01.580 ERROR: [TaskFactory] Cannot read information from "pxReadyTasksLists[5]".
+22:02:02.536 ERROR: [TadFactory] Reading exception during: "readAddressOfVariableSafely(xQueueRegistry[7])"
+22:02:02.536 ERROR: [QueueFactory] Cannot read information from "xQueueRegistry[7]".
+22:02:02.581 ERROR: [TaskFactory] Cannot read information from "pxReadyTasksLists[6]".
+22:02:03.582 ERROR: [TaskFactory] Cannot read information from "pxReadyTasksLists[7]".
+22:02:04.584 ERROR: [TaskFactory] Cannot read information from "pxReadyTasksLists[8]".
+22:02:05.585 ERROR: [TaskFactory] Cannot read information from "pxReadyTasksLists[9]".
+22:02:06.586 ERROR: [TaskFactory] Cannot read information from "pxReadyTasksLists[10]".
+22:02:07.588 ERROR: [TaskFactory] Cannot read information from "pxReadyTasksLists[11]".
+22:02:08.589 ERROR: [TaskFactory] Cannot read information from "pxReadyTasksLists[12]".
+22:02:09.590 ERROR: [TaskFactory] Cannot read information from "pxReadyTasksLists[13]".
+22:02:10.592 ERROR: [TaskFactory] Cannot read information from "pxReadyTasksLists[14]".
+22:02:11.593 ERROR: [TaskFactory] Cannot read information from "pxReadyTasksLists[15]".
+22:02:12.594 ERROR: [TaskFactory] Cannot read information from "pxReadyTasksLists[16]".
+22:02:13.597 ERROR: [TaskFactory] Cannot read information from "pxReadyTasksLists[17]".
+22:02:14.603 ERROR: [TaskFactory] Cannot read information from "pxReadyTasksLists[18]".
+22:02:15.605 ERROR: [TaskFactory] Cannot read information from "pxReadyTasksLists[19]".
+22:02:16.606 ERROR: [TaskFactory] Cannot read information from "pxReadyTasksLists[20]".
+22:02:17.607 ERROR: [TaskFactory] Cannot read information from "pxReadyTasksLists[21]".
+22:02:18.609 ERROR: [TaskFactory] Cannot read information from "pxReadyTasksLists[22]".
+22:02:19.609 ERROR: [TaskFactory] Cannot read information from "pxReadyTasksLists[23]".
+22:02:20.610 ERROR: [TaskFactory] Cannot read information from "pxReadyTasksLists[24]".
+22:02:21.611 ERROR: [TaskFactory] Cannot read information from "pxReadyTasksLists[25]".
+22:02:22.613 ERROR: [TaskFactory] Cannot read information from "pxReadyTasksLists[26]".
+22:02:23.614 ERROR: [TaskFactory] Cannot read information from "pxReadyTasksLists[27]".
+22:02:24.615 ERROR: [TaskFactory] Cannot read information from "pxReadyTasksLists[28]".
+22:02:25.616 ERROR: [TaskFactory] Cannot read information from "pxReadyTasksLists[29]".
+22:02:26.617 ERROR: [TaskFactory] Cannot read information from "pxReadyTasksLists[30]".
+22:02:27.619 ERROR: [TaskFactory] Cannot read information from "pxReadyTasksLists[31]".
+22:02:28.561 INFO: [PauseViewAction] View "Task List" has been paused.
+22:02:28.620 ERROR: [TaskFactory] Cannot read information from "xSuspendedTaskList".
+22:02:29.621 ERROR: [TaskFactory] Cannot read information from "pxDelayedTaskList".
+22:02:30.622 ERROR: [TaskFactory] Cannot read information from "pxOverflowDelayedTaskList".
+22:02:31.622 ERROR: [TaskFactory] Cannot read information from "xPendingReadyList".
+22:02:31.622 INFO: [Benchmark] Loading data for "Task List" took 37610 ms.
+22:02:32.623 ERROR: [TaskFactory] Could not get size of "pxReadyTasksLists"!
+22:02:32.623 ERROR: [TaskFactory] Cannot display tasks from ready task list!
+22:02:33.626 ERROR: [TadFactory] Reading exception during: "readLongVariableSafely(pxCurrentTCB)"
+22:02:34.627 ERROR: [TaskFactory] ulTotalRunTime not available
+22:02:35.630 ERROR: [TaskFactory] Cannot read information from "xSuspendedTaskList".
+22:02:36.630 ERROR: [TaskFactory] Cannot read information from "pxDelayedTaskList".
+22:02:37.632 ERROR: [TaskFactory] Cannot read information from "pxOverflowDelayedTaskList".
+22:02:38.633 ERROR: [TaskFactory] Cannot read information from "xPendingReadyList".
+22:02:38.634 INFO: [TadState] TAD state changed:  DEBUG_RESUMED -> READY (SUSPENDED, BREAKPOINT)
+22:02:38.635 INFO: [Benchmark] Loading data for "Task List" has started.
+22:02:38.650 ERROR: [VariableReader] Could not read variable expression: "&(xQueueRegistry[1])".
+22:02:38.651 ERROR: [VariableReader] Could not read variable expression: "pxReadyTasksLists[0].uxNumberOfItems".
+22:02:38.653 ERROR: [VariableReader] Could not read variable expression: "&(xQueueRegistry[2])".
+22:02:38.657 ERROR: [VariableReader] Could not read variable expression: "pxReadyTasksLists[1].uxNumberOfItems".
+22:02:38.659 ERROR: [VariableReader] Could not read variable expression: "&(xQueueRegistry[3])".
+22:02:38.662 ERROR: [VariableReader] Could not read variable expression: "pxReadyTasksLists[2].uxNumberOfItems".
+22:02:38.663 ERROR: [VariableReader] Could not read variable expression: "&(xQueueRegistry[4])".
+22:02:38.663 ERROR: [VariableReader] Could not read variable expression: "pxReadyTasksLists[3].uxNumberOfItems".
+22:02:38.664 ERROR: [VariableReader] Could not read variable expression: "&(xQueueRegistry[5])".
+22:02:38.664 ERROR: [VariableReader] Could not read variable expression: "pxReadyTasksLists[4].uxNumberOfItems".
+22:02:38.665 ERROR: [VariableReader] Could not read variable expression: "&(xQueueRegistry[6])".
+22:02:38.665 ERROR: [VariableReader] Could not read variable expression: "pxReadyTasksLists[5].uxNumberOfItems".
+22:02:38.666 ERROR: [VariableReader] Could not read variable expression: "&(xQueueRegistry[7])".
+22:02:38.666 ERROR: [VariableReader] Could not read variable expression: "pxReadyTasksLists[6].uxNumberOfItems".
+22:02:38.667 ERROR: [VariableReader] Could not read variable expression: "pxReadyTasksLists[7].uxNumberOfItems".
+22:02:38.667 ERROR: [VariableReader] Could not read variable expression: "pxReadyTasksLists[8].uxNumberOfItems".
+22:02:38.668 ERROR: [VariableReader] Could not read variable expression: "pxReadyTasksLists[9].uxNumberOfItems".
+22:02:38.669 ERROR: [VariableReader] Could not read variable expression: "pxReadyTasksLists[10].uxNumberOfItems".
+22:02:38.669 ERROR: [VariableReader] Could not read variable expression: "pxReadyTasksLists[11].uxNumberOfItems".
+22:02:38.670 ERROR: [VariableReader] Could not read variable expression: "pxReadyTasksLists[12].uxNumberOfItems".
+22:02:38.670 ERROR: [VariableReader] Could not read variable expression: "pxReadyTasksLists[13].uxNumberOfItems".
+22:02:38.671 ERROR: [VariableReader] Could not read variable expression: "pxReadyTasksLists[14].uxNumberOfItems".
+22:02:38.671 ERROR: [VariableReader] Could not read variable expression: "pxReadyTasksLists[15].uxNumberOfItems".
+22:02:38.671 ERROR: [VariableReader] Could not read variable expression: "pxReadyTasksLists[16].uxNumberOfItems".
+22:02:38.671 ERROR: [VariableReader] Could not read variable expression: "pxReadyTasksLists[17].uxNumberOfItems".
+22:02:38.672 ERROR: [VariableReader] Could not read variable expression: "pxReadyTasksLists[18].uxNumberOfItems".
+22:02:38.672 ERROR: [VariableReader] Could not read variable expression: "pxReadyTasksLists[19].uxNumberOfItems".
+22:02:38.673 ERROR: [VariableReader] Could not read variable expression: "pxReadyTasksLists[20].uxNumberOfItems".
+22:02:38.673 ERROR: [VariableReader] Could not read variable expression: "pxReadyTasksLists[21].uxNumberOfItems".
+22:02:38.673 ERROR: [VariableReader] Could not read variable expression: "pxReadyTasksLists[22].uxNumberOfItems".
+22:02:38.673 ERROR: [VariableReader] Could not read variable expression: "pxReadyTasksLists[23].uxNumberOfItems".
+22:02:38.674 ERROR: [VariableReader] Could not read variable expression: "pxReadyTasksLists[24].uxNumberOfItems".
+22:02:38.674 ERROR: [VariableReader] Could not read variable expression: "pxReadyTasksLists[25].uxNumberOfItems".
+22:02:38.674 ERROR: [VariableReader] Could not read variable expression: "pxReadyTasksLists[26].uxNumberOfItems".
+22:02:38.674 ERROR: [VariableReader] Could not read variable expression: "pxReadyTasksLists[27].uxNumberOfItems".
+22:02:38.675 ERROR: [VariableReader] Could not read variable expression: "pxReadyTasksLists[28].uxNumberOfItems".
+22:02:38.677 ERROR: [VariableReader] Could not read variable expression: "pxReadyTasksLists[29].uxNumberOfItems".
+22:02:38.678 ERROR: [VariableReader] Could not read variable expression: "pxReadyTasksLists[30].uxNumberOfItems".
+22:02:38.678 ERROR: [VariableReader] Could not read variable expression: "pxReadyTasksLists[31].uxNumberOfItems".
+22:02:38.679 ERROR: [VariableReader] Could not read variable expression: "xSuspendedTaskList.uxNumberOfItems".
+22:02:38.679 ERROR: [VariableReader] Could not read variable expression: "pxDelayedTaskList.uxNumberOfItems".
+22:02:38.680 ERROR: [VariableReader] Could not read variable expression: "pxOverflowDelayedTaskList.uxNumberOfItems".
+22:02:38.680 ERROR: [VariableReader] Could not read variable expression: "xPendingReadyList.uxNumberOfItems".
+22:02:38.681 ERROR: [VariableReader] Could not read variable expression: "sizeof(pxReadyTasksLists)".
+22:02:38.681 ERROR: [VariableReader] Could not read variable expression: "pxCurrentTCB".
+22:02:38.682 ERROR: [VariableReader] Could not read variable expression: "ulTotalRunTime".
+22:02:38.682 ERROR: [VariableReader] Could not read variable expression: "xSuspendedTaskList.uxNumberOfItems".
+22:02:38.682 ERROR: [VariableReader] Could not read variable expression: "pxDelayedTaskList.uxNumberOfItems".
+22:02:38.683 ERROR: [VariableReader] Could not read variable expression: "pxOverflowDelayedTaskList.uxNumberOfItems".
+22:02:38.684 ERROR: [VariableReader] Could not read variable expression: "xPendingReadyList.uxNumberOfItems".
+22:02:38.684 ERROR: [VariableReader] Could not read variable expression: "&(xQueueRegistry)".
+22:02:38.684 ERROR: [TadFactory] Reading exception during: "readAddressOfVariableSafely(xQueueRegistry)"
+22:02:38.691 ERROR: [VariableReader] Could not read variable expression: "sizeof(pxReadyTasksLists)".
+22:02:38.691 ERROR: [TaskFactory] Could not get size of "pxReadyTasksLists"!
+22:02:38.691 ERROR: [TaskFactory] Cannot display tasks from ready task list!
+22:02:38.693 ERROR: [VariableReader] Could not read variable expression: "pxCurrentTCB".
+22:02:38.693 ERROR: [TadFactory] Reading exception during: "readLongVariableSafely(pxCurrentTCB)"
+22:02:38.694 ERROR: [VariableReader] Could not read variable expression: "ulTotalRunTime".
+22:02:38.694 ERROR: [TaskFactory] ulTotalRunTime not available
+22:02:38.708 ERROR: [VariableReader] Could not read variable expression: "xSuspendedTaskList.uxNumberOfItems".
+22:02:38.709 ERROR: [TaskFactory] Cannot read information from "xSuspendedTaskList".
+22:02:38.714 ERROR: [VariableReader] Could not read variable expression: "pxDelayedTaskList.uxNumberOfItems".
+22:02:38.714 ERROR: [TaskFactory] Cannot read information from "pxDelayedTaskList".
+22:02:38.715 ERROR: [VariableReader] Could not read variable expression: "pxOverflowDelayedTaskList.uxNumberOfItems".
+22:02:38.715 ERROR: [TaskFactory] Cannot read information from "pxOverflowDelayedTaskList".
+22:02:38.715 ERROR: [VariableReader] Could not read variable expression: "xPendingReadyList.uxNumberOfItems".
+22:02:38.715 ERROR: [TaskFactory] Cannot read information from "xPendingReadyList".
+22:02:38.715 INFO: [Benchmark] Loading data for "Task List" took 80 ms.
+22:02:44.56 INFO: [TadModel] DSF session ID 45 has ended.

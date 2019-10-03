@@ -5533,3 +5533,2140 @@ java.net.SocketException: Connection reset by peer: socket write error
 
 !ENTRY com.crt.debugcommon 4 0 2019-10-03 20:45:35.973
 !MESSAGE Unable to parse ProbeList output to get probe ref count: []
+
+!ENTRY com.crt.debugcommon 1 0 2019-10-03 20:57:14.896
+!MESSAGE cvc-complex-type.2.4.a: 发现了以元素 'xi:include' 开头的无效内容。应以 '{params, param, initvalue}' 之一开头。
+
+
+!ENTRY com.crt.log 1 0 2019-10-03 20:57:18.600
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.crt.debugcommon 1 0 2019-10-03 20:57:18.609
+!MESSAGE RedlinkServer telnet session connected on port 3025->58606 @ 127.0.0.1
+
+!ENTRY com.crt.dsfdebug 1 0 2019-10-03 20:57:20.216
+!MESSAGE Telnet session connected on port 3330->58610 @ 127.0.0.1
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2019-10-03 20:57:30.534
+!MESSAGE Request for monitor: '58^error,msg="No symbol "FreeRTOSDebugConfig" in current context."' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2019-10-03 20:57:30.534
+!MESSAGE Failed to execute MI command:
+-data-evaluate-expression &(FreeRTOSDebugConfig)
+Error message from debugger back end:
+No symbol "FreeRTOSDebugConfig" in current context.
+!STACK 0
+java.lang.Exception: No symbol "FreeRTOSDebugConfig" in current context.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:993)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:822)
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2019-10-03 20:57:30.538
+!MESSAGE Request for monitor: '60^error,msg="No struct type named TaskControlBlock_t."' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2019-10-03 20:57:30.538
+!MESSAGE Failed to execute MI command:
+-data-evaluate-expression "sizeof(struct TaskControlBlock_t)"
+Error message from debugger back end:
+No struct type named TaskControlBlock_t.
+!STACK 0
+java.lang.Exception: No struct type named TaskControlBlock_t.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:993)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:822)
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2019-10-03 20:57:30.593
+!MESSAGE Request for monitor: '62^error,msg="There is no member named pcTail."' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2019-10-03 20:57:30.593
+!MESSAGE Failed to execute MI command:
+-data-evaluate-expression "&(((struct QueueDefinition *) 0)->pcTail)"
+Error message from debugger back end:
+There is no member named pcTail.
+!STACK 0
+java.lang.Exception: There is no member named pcTail.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:993)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:822)
+
+!ENTRY com.crt.debugcommon 4 0 2019-10-03 20:58:56.843
+!MESSAGE There is already a running debug session for the launch configuration 'base LinkServer Debug'.
+
+!ENTRY com.crt.log 1 0 2019-10-03 20:59:47.454
+!MESSAGE Stream is null in [MCUXpresso Semihosting Telnet console for 'base LinkServer Debug' started on port 58610 @ 127.0.0.1]
+
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2019-10-03 20:59:49.457
+!MESSAGE Request for monitor: 'RequestMonitor (com.nxp.mcuxpresso.trace.core.linkserver.server.RedlinkClient$3@25dd0e99): Status ERROR: com.nxp.mcuxpresso.trace.core.linkserver code=0 Problem obtaining SWO buffer content. java.net.SocketException: Connection reset by peer: socket write error' resulted in an error.
+!SUBENTRY 1 com.nxp.mcuxpresso.trace.core.linkserver 4 0 2019-10-03 20:59:49.457
+!MESSAGE Problem obtaining SWO buffer content.
+!STACK 0
+java.net.SocketException: Connection reset by peer: socket write error
+	at java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.net.SocketOutputStream.write(SocketOutputStream.java:143)
+	at com.nxp.mcuxpresso.trace.core.linkserver.server.RedlinkClient$2.run(RedlinkClient.java:127)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+!ENTRY com.crt.log 1 0 2019-10-03 20:59:52.712
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.crt.debugcommon 1 0 2019-10-03 20:59:52.738
+!MESSAGE RedlinkServer telnet session connected on port 3025->58656 @ 127.0.0.1
+
+!ENTRY com.crt.debugcommon 4 0 2019-10-03 20:59:52.739
+!MESSAGE Unable to parse ProbeList output to get probe ref count: []
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2019-10-03 20:59:52.744
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.ImmediateRequestMonitor@2bb52d70): Status ERROR: org.eclipse.cdt.dsf code=10005 Composite status null children=[Status ERROR: org.eclipse.cdt.dsf code=0 Executor shut down while executing Sequence Sequence "", result for executing step #4 = Status ERROR: org.eclipse.cdt.dsf code=10005 Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.gdb.launching.ShutdownSequence$ServiceShutdownStep$1@286614f5): Status OK: unknown code=0 OK null' resulted in a rejected execution exception. null, step #4 null Status ERROR: org.eclipse.cdt.dsf code=10005 Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.gdb.launching.GdbLaunch$4@336c4654): Status ERROR: org.eclipse.cdt.dsf code=0 Executor shut down while executing Sequence Sequence "", result for executing step #4 = Status ERROR: org.eclipse.cdt.dsf code=10005 Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.gdb.launching.ShutdownSequence$ServiceShutdownStep$1@286614f5): Status OK: unknown code=0 OK null' resulted in a rejected execution exception. null, step #4 null' resulted in a rejected execution exception. null]' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf 4 0 2019-10-03 20:59:52.744
+!MESSAGE Executor shut down while executing Sequence Sequence "", result for executing step #4 = Status ERROR: org.eclipse.cdt.dsf code=10005 Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.gdb.launching.ShutdownSequence$ServiceShutdownStep$1@286614f5): Status OK: unknown code=0 OK null' resulted in a rejected execution exception. null, step #4
+!SUBENTRY 1 org.eclipse.cdt.dsf 4 10005 2019-10-03 20:59:52.744
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.gdb.launching.GdbLaunch$4@336c4654): Status ERROR: org.eclipse.cdt.dsf code=0 Executor shut down while executing Sequence Sequence "", result for executing step #4 = Status ERROR: org.eclipse.cdt.dsf code=10005 Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.gdb.launching.ShutdownSequence$ServiceShutdownStep$1@286614f5): Status OK: unknown code=0 OK null' resulted in a rejected execution exception. null, step #4 null' resulted in a rejected execution exception.
+
+!ENTRY com.crt.debugcommon 1 0 2019-10-03 20:59:57.518
+!MESSAGE cvc-complex-type.2.4.a: 发现了以元素 'xi:include' 开头的无效内容。应以 '{params, param, initvalue}' 之一开头。
+
+
+!ENTRY com.crt.log 1 0 2019-10-03 21:00:01.104
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.crt.debugcommon 1 0 2019-10-03 21:00:01.114
+!MESSAGE RedlinkServer telnet session connected on port 3025->58665 @ 127.0.0.1
+
+!ENTRY com.crt.dsfdebug 1 0 2019-10-03 21:00:02.718
+!MESSAGE Telnet session connected on port 3330->58669 @ 127.0.0.1
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2019-10-03 21:00:17.282
+!MESSAGE Request for monitor: '64^error,msg="No symbol "FreeRTOSDebugConfig" in current context."' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2019-10-03 21:00:17.282
+!MESSAGE Failed to execute MI command:
+-data-evaluate-expression &(FreeRTOSDebugConfig)
+Error message from debugger back end:
+No symbol "FreeRTOSDebugConfig" in current context.
+!STACK 0
+java.lang.Exception: No symbol "FreeRTOSDebugConfig" in current context.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:993)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:822)
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2019-10-03 21:00:17.285
+!MESSAGE Request for monitor: '65^error,msg="No struct type named TaskControlBlock_t."' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2019-10-03 21:00:17.285
+!MESSAGE Failed to execute MI command:
+-data-evaluate-expression "sizeof(struct TaskControlBlock_t)"
+Error message from debugger back end:
+No struct type named TaskControlBlock_t.
+!STACK 0
+java.lang.Exception: No struct type named TaskControlBlock_t.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:993)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:822)
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2019-10-03 21:00:17.297
+!MESSAGE Request for monitor: '66^error,msg="There is no member named pcTail."' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2019-10-03 21:00:17.297
+!MESSAGE Failed to execute MI command:
+-data-evaluate-expression "&(((struct QueueDefinition *) 0)->pcTail)"
+Error message from debugger back end:
+There is no member named pcTail.
+!STACK 0
+java.lang.Exception: There is no member named pcTail.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:993)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:822)
+
+!ENTRY com.crt.debugcommon 4 0 2019-10-03 21:01:43.307
+!MESSAGE There is already a running debug session for the launch configuration 'base LinkServer Debug'.
+
+!ENTRY com.crt.log 1 0 2019-10-03 21:01:46.866
+!MESSAGE Stream is null in [MCUXpresso Semihosting Telnet console for 'base LinkServer Debug' started on port 58669 @ 127.0.0.1]
+
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2019-10-03 21:01:48.867
+!MESSAGE Request for monitor: 'RequestMonitor (com.nxp.mcuxpresso.trace.core.linkserver.server.RedlinkClient$3@78af127d): Status ERROR: com.nxp.mcuxpresso.trace.core.linkserver code=0 Problem obtaining SWO buffer content. java.net.SocketException: Connection reset by peer: socket write error' resulted in an error.
+!SUBENTRY 1 com.nxp.mcuxpresso.trace.core.linkserver 4 0 2019-10-03 21:01:48.867
+!MESSAGE Problem obtaining SWO buffer content.
+!STACK 0
+java.net.SocketException: Connection reset by peer: socket write error
+	at java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.net.SocketOutputStream.write(SocketOutputStream.java:143)
+	at com.nxp.mcuxpresso.trace.core.linkserver.server.RedlinkClient$2.run(RedlinkClient.java:127)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+!ENTRY com.crt.log 1 0 2019-10-03 21:01:52.184
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.crt.debugcommon 1 0 2019-10-03 21:01:52.188
+!MESSAGE RedlinkServer telnet session connected on port 3025->58697 @ 127.0.0.1
+
+!ENTRY com.crt.debugcommon 4 0 2019-10-03 21:01:52.190
+!MESSAGE Unable to parse ProbeList output to get probe ref count: []
+
+!ENTRY com.crt.debugcommon 1 0 2019-10-03 21:02:04.750
+!MESSAGE cvc-complex-type.2.4.a: 发现了以元素 'xi:include' 开头的无效内容。应以 '{params, param, initvalue}' 之一开头。
+
+
+!ENTRY com.crt.log 1 0 2019-10-03 21:02:08.320
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.crt.debugcommon 1 0 2019-10-03 21:02:08.325
+!MESSAGE RedlinkServer telnet session connected on port 3025->58703 @ 127.0.0.1
+
+!ENTRY com.crt.dsfdebug 1 0 2019-10-03 21:02:09.939
+!MESSAGE Telnet session connected on port 3330->58708 @ 127.0.0.1
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2019-10-03 21:02:18.105
+!MESSAGE Request for monitor: '58^error,msg="No symbol "FreeRTOSDebugConfig" in current context."' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2019-10-03 21:02:18.105
+!MESSAGE Failed to execute MI command:
+-data-evaluate-expression &(FreeRTOSDebugConfig)
+Error message from debugger back end:
+No symbol "FreeRTOSDebugConfig" in current context.
+!STACK 0
+java.lang.Exception: No symbol "FreeRTOSDebugConfig" in current context.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:993)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:822)
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2019-10-03 21:02:18.110
+!MESSAGE Request for monitor: '60^error,msg="No struct type named TaskControlBlock_t."' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2019-10-03 21:02:18.110
+!MESSAGE Failed to execute MI command:
+-data-evaluate-expression "sizeof(struct TaskControlBlock_t)"
+Error message from debugger back end:
+No struct type named TaskControlBlock_t.
+!STACK 0
+java.lang.Exception: No struct type named TaskControlBlock_t.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:993)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:822)
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2019-10-03 21:02:18.120
+!MESSAGE Request for monitor: '62^error,msg="There is no member named pcTail."' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2019-10-03 21:02:18.120
+!MESSAGE Failed to execute MI command:
+-data-evaluate-expression "&(((struct QueueDefinition *) 0)->pcTail)"
+Error message from debugger back end:
+There is no member named pcTail.
+!STACK 0
+java.lang.Exception: There is no member named pcTail.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:993)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:822)
+
+!ENTRY com.crt.log 1 0 2019-10-03 21:03:38.841
+!MESSAGE Stream is null in [MCUXpresso Semihosting Telnet console for 'base LinkServer Debug' started on port 58708 @ 127.0.0.1]
+
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2019-10-03 21:03:40.842
+!MESSAGE Request for monitor: 'RequestMonitor (com.nxp.mcuxpresso.trace.core.linkserver.server.RedlinkClient$3@6288fa72): Status ERROR: com.nxp.mcuxpresso.trace.core.linkserver code=0 Problem obtaining SWO buffer content. java.net.SocketException: Connection reset by peer: socket write error' resulted in an error.
+!SUBENTRY 1 com.nxp.mcuxpresso.trace.core.linkserver 4 0 2019-10-03 21:03:40.842
+!MESSAGE Problem obtaining SWO buffer content.
+!STACK 0
+java.net.SocketException: Connection reset by peer: socket write error
+	at java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.net.SocketOutputStream.write(SocketOutputStream.java:143)
+	at com.nxp.mcuxpresso.trace.core.linkserver.server.RedlinkClient$2.run(RedlinkClient.java:127)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+!ENTRY com.crt.log 1 0 2019-10-03 21:03:44.112
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.crt.debugcommon 1 0 2019-10-03 21:03:44.115
+!MESSAGE RedlinkServer telnet session connected on port 3025->58728 @ 127.0.0.1
+
+!ENTRY com.crt.debugcommon 4 0 2019-10-03 21:03:44.116
+!MESSAGE Unable to parse ProbeList output to get probe ref count: []
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2019-10-03 21:03:44.119
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.ImmediateRequestMonitor@4d361432): Status ERROR: org.eclipse.cdt.dsf code=10005 Composite status null children=[Status ERROR: org.eclipse.cdt.dsf code=0 Executor shut down while executing Sequence Sequence "", result for executing step #4 = Status ERROR: org.eclipse.cdt.dsf code=10005 Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.gdb.launching.ShutdownSequence$ServiceShutdownStep$1@55fae09d): Status OK: unknown code=0 OK null' resulted in a rejected execution exception. null, step #4 null Status ERROR: org.eclipse.cdt.dsf code=10005 Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.gdb.launching.GdbLaunch$4@4fcaeb5e): Status ERROR: org.eclipse.cdt.dsf code=0 Executor shut down while executing Sequence Sequence "", result for executing step #4 = Status ERROR: org.eclipse.cdt.dsf code=10005 Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.gdb.launching.ShutdownSequence$ServiceShutdownStep$1@55fae09d): Status OK: unknown code=0 OK null' resulted in a rejected execution exception. null, step #4 null' resulted in a rejected execution exception. null]' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf 4 0 2019-10-03 21:03:44.119
+!MESSAGE Executor shut down while executing Sequence Sequence "", result for executing step #4 = Status ERROR: org.eclipse.cdt.dsf code=10005 Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.gdb.launching.ShutdownSequence$ServiceShutdownStep$1@55fae09d): Status OK: unknown code=0 OK null' resulted in a rejected execution exception. null, step #4
+!SUBENTRY 1 org.eclipse.cdt.dsf 4 10005 2019-10-03 21:03:44.119
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.gdb.launching.GdbLaunch$4@4fcaeb5e): Status ERROR: org.eclipse.cdt.dsf code=0 Executor shut down while executing Sequence Sequence "", result for executing step #4 = Status ERROR: org.eclipse.cdt.dsf code=10005 Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.gdb.launching.ShutdownSequence$ServiceShutdownStep$1@55fae09d): Status OK: unknown code=0 OK null' resulted in a rejected execution exception. null, step #4 null' resulted in a rejected execution exception.
+
+!ENTRY com.crt.debugcommon 1 0 2019-10-03 21:03:45.341
+!MESSAGE cvc-complex-type.2.4.a: 发现了以元素 'xi:include' 开头的无效内容。应以 '{params, param, initvalue}' 之一开头。
+
+
+!ENTRY com.crt.log 1 0 2019-10-03 21:03:49.097
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.crt.debugcommon 1 0 2019-10-03 21:03:49.099
+!MESSAGE RedlinkServer telnet session connected on port 3025->58732 @ 127.0.0.1
+
+!ENTRY com.crt.dsfdebug 1 0 2019-10-03 21:03:50.703
+!MESSAGE Telnet session connected on port 3330->58736 @ 127.0.0.1
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2019-10-03 21:04:11.422
+!MESSAGE Request for monitor: '58^error,msg="No symbol "FreeRTOSDebugConfig" in current context."' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2019-10-03 21:04:11.422
+!MESSAGE Failed to execute MI command:
+-data-evaluate-expression &(FreeRTOSDebugConfig)
+Error message from debugger back end:
+No symbol "FreeRTOSDebugConfig" in current context.
+!STACK 0
+java.lang.Exception: No symbol "FreeRTOSDebugConfig" in current context.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:993)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:822)
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2019-10-03 21:04:11.428
+!MESSAGE Request for monitor: '60^error,msg="No struct type named TaskControlBlock_t."' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2019-10-03 21:04:11.428
+!MESSAGE Failed to execute MI command:
+-data-evaluate-expression "sizeof(struct TaskControlBlock_t)"
+Error message from debugger back end:
+No struct type named TaskControlBlock_t.
+!STACK 0
+java.lang.Exception: No struct type named TaskControlBlock_t.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:993)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:822)
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2019-10-03 21:04:11.484
+!MESSAGE Request for monitor: '62^error,msg="There is no member named pcTail."' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2019-10-03 21:04:11.484
+!MESSAGE Failed to execute MI command:
+-data-evaluate-expression "&(((struct QueueDefinition *) 0)->pcTail)"
+Error message from debugger back end:
+There is no member named pcTail.
+!STACK 0
+java.lang.Exception: There is no member named pcTail.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:993)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:822)
+
+!ENTRY com.crt.log 1 0 2019-10-03 21:04:43.394
+!MESSAGE Stream is null in [MCUXpresso Semihosting Telnet console for 'base LinkServer Debug' started on port 58736 @ 127.0.0.1]
+
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2019-10-03 21:04:45.390
+!MESSAGE Request for monitor: 'RequestMonitor (com.nxp.mcuxpresso.trace.core.linkserver.server.RedlinkClient$3@1102c210): Status ERROR: com.nxp.mcuxpresso.trace.core.linkserver code=0 Problem obtaining SWO buffer content. java.net.SocketException: Connection reset by peer: socket write error' resulted in an error.
+!SUBENTRY 1 com.nxp.mcuxpresso.trace.core.linkserver 4 0 2019-10-03 21:04:45.390
+!MESSAGE Problem obtaining SWO buffer content.
+!STACK 0
+java.net.SocketException: Connection reset by peer: socket write error
+	at java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.net.SocketOutputStream.write(SocketOutputStream.java:143)
+	at com.nxp.mcuxpresso.trace.core.linkserver.server.RedlinkClient$2.run(RedlinkClient.java:127)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+!ENTRY com.crt.debugcommon 1 0 2019-10-03 21:04:48.215
+!MESSAGE cvc-complex-type.2.4.a: 发现了以元素 'xi:include' 开头的无效内容。应以 '{params, param, initvalue}' 之一开头。
+
+
+!ENTRY com.crt.log 1 0 2019-10-03 21:04:48.684
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.crt.debugcommon 1 0 2019-10-03 21:04:48.687
+!MESSAGE RedlinkServer telnet session connected on port 3025->58753 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2019-10-03 21:04:48.701
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.crt.dsfdebug 1 0 2019-10-03 21:04:50.298
+!MESSAGE Telnet session connected on port 3330->58758 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2019-10-03 21:04:58.703
+!MESSAGE Trying to connect to redlink server on port 3050.
+
+!ENTRY com.crt.debugcommon 1 0 2019-10-03 21:04:58.706
+!MESSAGE RedlinkServer telnet session connected on port 3050->58766 @ 127.0.0.1
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2019-10-03 21:04:58.709
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.ImmediateRequestMonitor@7d81aec7): Status ERROR: org.eclipse.cdt.dsf code=10005 Composite status null children=[Status ERROR: org.eclipse.cdt.dsf code=0 Executor shut down while executing Sequence Sequence "", result for executing step #4 = Status ERROR: org.eclipse.cdt.dsf code=10005 Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.gdb.launching.ShutdownSequence$ServiceShutdownStep$1@20df344): Status OK: unknown code=0 OK null' resulted in a rejected execution exception. null, step #4 null Status ERROR: org.eclipse.cdt.dsf code=10005 Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.gdb.launching.GdbLaunch$4@107be85f): Status ERROR: org.eclipse.cdt.dsf code=0 Executor shut down while executing Sequence Sequence "", result for executing step #4 = Status ERROR: org.eclipse.cdt.dsf code=10005 Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.gdb.launching.ShutdownSequence$ServiceShutdownStep$1@20df344): Status OK: unknown code=0 OK null' resulted in a rejected execution exception. null, step #4 null' resulted in a rejected execution exception. null]' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf 4 0 2019-10-03 21:04:58.709
+!MESSAGE Executor shut down while executing Sequence Sequence "", result for executing step #4 = Status ERROR: org.eclipse.cdt.dsf code=10005 Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.gdb.launching.ShutdownSequence$ServiceShutdownStep$1@20df344): Status OK: unknown code=0 OK null' resulted in a rejected execution exception. null, step #4
+!SUBENTRY 1 org.eclipse.cdt.dsf 4 10005 2019-10-03 21:04:58.709
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.gdb.launching.GdbLaunch$4@107be85f): Status ERROR: org.eclipse.cdt.dsf code=0 Executor shut down while executing Sequence Sequence "", result for executing step #4 = Status ERROR: org.eclipse.cdt.dsf code=10005 Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.gdb.launching.ShutdownSequence$ServiceShutdownStep$1@20df344): Status OK: unknown code=0 OK null' resulted in a rejected execution exception. null, step #4 null' resulted in a rejected execution exception.
+
+!ENTRY com.crt.debugcommon 1 0 2019-10-03 21:04:58.734
+!MESSAGE RedlinkServer telnet session connected on port 3025->58766 @ 127.0.0.1
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2019-10-03 21:05:53.565
+!MESSAGE Request for monitor: '78^error,msg="No symbol "FreeRTOSDebugConfig" in current context."' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2019-10-03 21:05:53.565
+!MESSAGE Failed to execute MI command:
+-data-evaluate-expression &(FreeRTOSDebugConfig)
+Error message from debugger back end:
+No symbol "FreeRTOSDebugConfig" in current context.
+!STACK 0
+java.lang.Exception: No symbol "FreeRTOSDebugConfig" in current context.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:993)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:822)
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2019-10-03 21:05:53.572
+!MESSAGE Request for monitor: '80^error,msg="No struct type named TaskControlBlock_t."' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2019-10-03 21:05:53.572
+!MESSAGE Failed to execute MI command:
+-data-evaluate-expression "sizeof(struct TaskControlBlock_t)"
+Error message from debugger back end:
+No struct type named TaskControlBlock_t.
+!STACK 0
+java.lang.Exception: No struct type named TaskControlBlock_t.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:993)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:822)
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2019-10-03 21:05:53.592
+!MESSAGE Request for monitor: '82^error,msg="There is no member named pcTail."' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2019-10-03 21:05:53.592
+!MESSAGE Failed to execute MI command:
+-data-evaluate-expression "&(((struct QueueDefinition *) 0)->pcTail)"
+Error message from debugger back end:
+There is no member named pcTail.
+!STACK 0
+java.lang.Exception: There is no member named pcTail.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:993)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:822)
+
+!ENTRY com.crt.log 1 0 2019-10-03 21:06:34.221
+!MESSAGE Stream is null in [MCUXpresso Semihosting Telnet console for 'base LinkServer Debug' started on port 58758 @ 127.0.0.1]
+
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2019-10-03 21:06:36.216
+!MESSAGE Request for monitor: 'RequestMonitor (com.nxp.mcuxpresso.trace.core.linkserver.server.RedlinkClient$3@7b1f9730): Status ERROR: com.nxp.mcuxpresso.trace.core.linkserver code=0 Problem obtaining SWO buffer content. java.net.SocketException: Connection reset by peer: socket write error' resulted in an error.
+!SUBENTRY 1 com.nxp.mcuxpresso.trace.core.linkserver 4 0 2019-10-03 21:06:36.216
+!MESSAGE Problem obtaining SWO buffer content.
+!STACK 0
+java.net.SocketException: Connection reset by peer: socket write error
+	at java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.net.SocketOutputStream.write(SocketOutputStream.java:143)
+	at com.nxp.mcuxpresso.trace.core.linkserver.server.RedlinkClient$2.run(RedlinkClient.java:127)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+!ENTRY com.crt.debugcommon 1 0 2019-10-03 21:06:39.421
+!MESSAGE cvc-complex-type.2.4.a: 发现了以元素 'xi:include' 开头的无效内容。应以 '{params, param, initvalue}' 之一开头。
+
+
+!ENTRY com.crt.log 1 0 2019-10-03 21:06:39.509
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.crt.debugcommon 1 0 2019-10-03 21:06:39.512
+!MESSAGE RedlinkServer telnet session connected on port 3025->58790 @ 127.0.0.1
+
+!ENTRY com.crt.debugcommon 4 0 2019-10-03 21:06:39.516
+!MESSAGE Unable to parse ProbeList output to get probe ref count: []
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2019-10-03 21:06:39.520
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.ImmediateRequestMonitor@e992196): Status ERROR: org.eclipse.cdt.dsf code=10005 Composite status null children=[Status ERROR: org.eclipse.cdt.dsf code=0 Executor shut down while executing Sequence Sequence "", result for executing step #4 = Status ERROR: org.eclipse.cdt.dsf code=10005 Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.gdb.launching.ShutdownSequence$ServiceShutdownStep$1@7d7145e3): Status OK: unknown code=0 OK null' resulted in a rejected execution exception. null, step #4 null Status ERROR: org.eclipse.cdt.dsf code=10005 Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.gdb.launching.GdbLaunch$4@79303d0e): Status ERROR: org.eclipse.cdt.dsf code=0 Executor shut down while executing Sequence Sequence "", result for executing step #4 = Status ERROR: org.eclipse.cdt.dsf code=10005 Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.gdb.launching.ShutdownSequence$ServiceShutdownStep$1@7d7145e3): Status OK: unknown code=0 OK null' resulted in a rejected execution exception. null, step #4 null' resulted in a rejected execution exception. null]' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf 4 0 2019-10-03 21:06:39.520
+!MESSAGE Executor shut down while executing Sequence Sequence "", result for executing step #4 = Status ERROR: org.eclipse.cdt.dsf code=10005 Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.gdb.launching.ShutdownSequence$ServiceShutdownStep$1@7d7145e3): Status OK: unknown code=0 OK null' resulted in a rejected execution exception. null, step #4
+!SUBENTRY 1 org.eclipse.cdt.dsf 4 10005 2019-10-03 21:06:39.520
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.gdb.launching.GdbLaunch$4@79303d0e): Status ERROR: org.eclipse.cdt.dsf code=0 Executor shut down while executing Sequence Sequence "", result for executing step #4 = Status ERROR: org.eclipse.cdt.dsf code=10005 Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.gdb.launching.ShutdownSequence$ServiceShutdownStep$1@7d7145e3): Status OK: unknown code=0 OK null' resulted in a rejected execution exception. null, step #4 null' resulted in a rejected execution exception.
+
+!ENTRY com.crt.log 1 0 2019-10-03 21:06:43.098
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.crt.debugcommon 1 0 2019-10-03 21:06:43.105
+!MESSAGE RedlinkServer telnet session connected on port 3025->58791 @ 127.0.0.1
+
+!ENTRY com.crt.dsfdebug 1 0 2019-10-03 21:06:44.720
+!MESSAGE Telnet session connected on port 3330->58797 @ 127.0.0.1
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2019-10-03 21:07:12.004
+!MESSAGE Request for monitor: '59^error,msg="No symbol "FreeRTOSDebugConfig" in current context."' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2019-10-03 21:07:12.004
+!MESSAGE Failed to execute MI command:
+-data-evaluate-expression &(FreeRTOSDebugConfig)
+Error message from debugger back end:
+No symbol "FreeRTOSDebugConfig" in current context.
+!STACK 0
+java.lang.Exception: No symbol "FreeRTOSDebugConfig" in current context.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:993)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:822)
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2019-10-03 21:07:12.008
+!MESSAGE Request for monitor: '61^error,msg="No struct type named TaskControlBlock_t."' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2019-10-03 21:07:12.008
+!MESSAGE Failed to execute MI command:
+-data-evaluate-expression "sizeof(struct TaskControlBlock_t)"
+Error message from debugger back end:
+No struct type named TaskControlBlock_t.
+!STACK 0
+java.lang.Exception: No struct type named TaskControlBlock_t.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:993)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:822)
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2019-10-03 21:07:12.023
+!MESSAGE Request for monitor: '63^error,msg="There is no member named pcTail."' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2019-10-03 21:07:12.023
+!MESSAGE Failed to execute MI command:
+-data-evaluate-expression "&(((struct QueueDefinition *) 0)->pcTail)"
+Error message from debugger back end:
+There is no member named pcTail.
+!STACK 0
+java.lang.Exception: There is no member named pcTail.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:993)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:822)
+
+!ENTRY com.crt.log 1 0 2019-10-03 21:08:03.559
+!MESSAGE Stream is null in [MCUXpresso Semihosting Telnet console for 'base LinkServer Debug' started on port 58797 @ 127.0.0.1]
+
+
+!ENTRY com.crt.debugcommon 1 0 2019-10-03 21:08:10.982
+!MESSAGE cvc-complex-type.2.4.a: 发现了以元素 'xi:include' 开头的无效内容。应以 '{params, param, initvalue}' 之一开头。
+
+
+!ENTRY com.crt.log 1 0 2019-10-03 21:08:14.517
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.crt.debugcommon 1 0 2019-10-03 21:08:14.523
+!MESSAGE RedlinkServer telnet session connected on port 3025->58820 @ 127.0.0.1
+
+!ENTRY com.crt.dsfdebug 1 0 2019-10-03 21:08:16.118
+!MESSAGE Telnet session connected on port 3330->58824 @ 127.0.0.1
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2019-10-03 21:08:29.499
+!MESSAGE Request for monitor: '58^error,msg="No symbol "FreeRTOSDebugConfig" in current context."' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2019-10-03 21:08:29.499
+!MESSAGE Failed to execute MI command:
+-data-evaluate-expression &(FreeRTOSDebugConfig)
+Error message from debugger back end:
+No symbol "FreeRTOSDebugConfig" in current context.
+!STACK 0
+java.lang.Exception: No symbol "FreeRTOSDebugConfig" in current context.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:993)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:822)
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2019-10-03 21:08:29.503
+!MESSAGE Request for monitor: '60^error,msg="No struct type named TaskControlBlock_t."' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2019-10-03 21:08:29.503
+!MESSAGE Failed to execute MI command:
+-data-evaluate-expression "sizeof(struct TaskControlBlock_t)"
+Error message from debugger back end:
+No struct type named TaskControlBlock_t.
+!STACK 0
+java.lang.Exception: No struct type named TaskControlBlock_t.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:993)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:822)
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2019-10-03 21:08:29.556
+!MESSAGE Request for monitor: '62^error,msg="There is no member named pcTail."' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2019-10-03 21:08:29.556
+!MESSAGE Failed to execute MI command:
+-data-evaluate-expression "&(((struct QueueDefinition *) 0)->pcTail)"
+Error message from debugger back end:
+There is no member named pcTail.
+!STACK 0
+java.lang.Exception: There is no member named pcTail.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:993)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:822)
+
+!ENTRY com.crt.log 1 0 2019-10-03 21:08:56.713
+!MESSAGE Stream is null in [MCUXpresso Semihosting Telnet console for 'base LinkServer Debug' started on port 58824 @ 127.0.0.1]
+
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2019-10-03 21:08:58.716
+!MESSAGE Request for monitor: 'RequestMonitor (com.nxp.mcuxpresso.trace.core.linkserver.server.RedlinkClient$3@5f49c2db): Status ERROR: com.nxp.mcuxpresso.trace.core.linkserver code=0 Problem obtaining SWO buffer content. java.net.SocketException: Connection reset by peer: socket write error' resulted in an error.
+!SUBENTRY 1 com.nxp.mcuxpresso.trace.core.linkserver 4 0 2019-10-03 21:08:58.716
+!MESSAGE Problem obtaining SWO buffer content.
+!STACK 0
+java.net.SocketException: Connection reset by peer: socket write error
+	at java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.net.SocketOutputStream.write(SocketOutputStream.java:143)
+	at com.nxp.mcuxpresso.trace.core.linkserver.server.RedlinkClient$2.run(RedlinkClient.java:127)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+!ENTRY com.crt.log 1 0 2019-10-03 21:09:01.961
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.crt.debugcommon 1 0 2019-10-03 21:09:01.964
+!MESSAGE RedlinkServer telnet session connected on port 3025->58833 @ 127.0.0.1
+
+!ENTRY com.crt.debugcommon 4 0 2019-10-03 21:09:01.966
+!MESSAGE Unable to parse ProbeList output to get probe ref count: []
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2019-10-03 21:09:01.968
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.ImmediateRequestMonitor@df3821): Status ERROR: org.eclipse.cdt.dsf code=10005 Composite status null children=[Status ERROR: org.eclipse.cdt.dsf code=0 Executor shut down while executing Sequence Sequence "", result for executing step #4 = Status ERROR: org.eclipse.cdt.dsf code=10005 Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.gdb.launching.ShutdownSequence$ServiceShutdownStep$1@76ab12a): Status OK: unknown code=0 OK null' resulted in a rejected execution exception. null, step #4 null Status ERROR: org.eclipse.cdt.dsf code=10005 Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.gdb.launching.GdbLaunch$4@526e30a7): Status ERROR: org.eclipse.cdt.dsf code=0 Executor shut down while executing Sequence Sequence "", result for executing step #4 = Status ERROR: org.eclipse.cdt.dsf code=10005 Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.gdb.launching.ShutdownSequence$ServiceShutdownStep$1@76ab12a): Status OK: unknown code=0 OK null' resulted in a rejected execution exception. null, step #4 null' resulted in a rejected execution exception. null]' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf 4 0 2019-10-03 21:09:01.968
+!MESSAGE Executor shut down while executing Sequence Sequence "", result for executing step #4 = Status ERROR: org.eclipse.cdt.dsf code=10005 Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.gdb.launching.ShutdownSequence$ServiceShutdownStep$1@76ab12a): Status OK: unknown code=0 OK null' resulted in a rejected execution exception. null, step #4
+!SUBENTRY 1 org.eclipse.cdt.dsf 4 10005 2019-10-03 21:09:01.968
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.gdb.launching.GdbLaunch$4@526e30a7): Status ERROR: org.eclipse.cdt.dsf code=0 Executor shut down while executing Sequence Sequence "", result for executing step #4 = Status ERROR: org.eclipse.cdt.dsf code=10005 Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.gdb.launching.ShutdownSequence$ServiceShutdownStep$1@76ab12a): Status OK: unknown code=0 OK null' resulted in a rejected execution exception. null, step #4 null' resulted in a rejected execution exception.
+
+!ENTRY com.crt.debugcommon 1 0 2019-10-03 21:09:02.047
+!MESSAGE cvc-complex-type.2.4.a: 发现了以元素 'xi:include' 开头的无效内容。应以 '{params, param, initvalue}' 之一开头。
+
+
+!ENTRY com.crt.log 1 0 2019-10-03 21:09:05.714
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.crt.debugcommon 1 0 2019-10-03 21:09:05.720
+!MESSAGE RedlinkServer telnet session connected on port 3025->58836 @ 127.0.0.1
+
+!ENTRY com.crt.dsfdebug 1 0 2019-10-03 21:09:07.364
+!MESSAGE Telnet session connected on port 3330->58840 @ 127.0.0.1
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2019-10-03 21:09:20.280
+!MESSAGE Request for monitor: '59^error,msg="No symbol "FreeRTOSDebugConfig" in current context."' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2019-10-03 21:09:20.280
+!MESSAGE Failed to execute MI command:
+-data-evaluate-expression &(FreeRTOSDebugConfig)
+Error message from debugger back end:
+No symbol "FreeRTOSDebugConfig" in current context.
+!STACK 0
+java.lang.Exception: No symbol "FreeRTOSDebugConfig" in current context.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:993)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:822)
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2019-10-03 21:09:20.284
+!MESSAGE Request for monitor: '61^error,msg="No struct type named TaskControlBlock_t."' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2019-10-03 21:09:20.284
+!MESSAGE Failed to execute MI command:
+-data-evaluate-expression "sizeof(struct TaskControlBlock_t)"
+Error message from debugger back end:
+No struct type named TaskControlBlock_t.
+!STACK 0
+java.lang.Exception: No struct type named TaskControlBlock_t.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:993)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:822)
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2019-10-03 21:09:20.295
+!MESSAGE Request for monitor: '63^error,msg="There is no member named pcTail."' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2019-10-03 21:09:20.295
+!MESSAGE Failed to execute MI command:
+-data-evaluate-expression "&(((struct QueueDefinition *) 0)->pcTail)"
+Error message from debugger back end:
+There is no member named pcTail.
+!STACK 0
+java.lang.Exception: There is no member named pcTail.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:993)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:822)
+
+!ENTRY com.crt.log 1 0 2019-10-03 21:10:09.065
+!MESSAGE Stream is null in [MCUXpresso Semihosting Telnet console for 'base LinkServer Debug' started on port 58840 @ 127.0.0.1]
+
+
+!ENTRY com.crt.debugcommon 1 0 2019-10-03 21:10:16.964
+!MESSAGE cvc-complex-type.2.4.a: 发现了以元素 'xi:include' 开头的无效内容。应以 '{params, param, initvalue}' 之一开头。
+
+
+!ENTRY com.crt.log 1 0 2019-10-03 21:10:20.605
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.crt.debugcommon 1 0 2019-10-03 21:10:20.608
+!MESSAGE RedlinkServer telnet session connected on port 3025->58862 @ 127.0.0.1
+
+!ENTRY com.crt.dsfdebug 1 0 2019-10-03 21:10:22.224
+!MESSAGE Telnet session connected on port 3330->58866 @ 127.0.0.1
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2019-10-03 21:10:39.247
+!MESSAGE Request for monitor: '58^error,msg="No symbol "FreeRTOSDebugConfig" in current context."' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2019-10-03 21:10:39.247
+!MESSAGE Failed to execute MI command:
+-data-evaluate-expression &(FreeRTOSDebugConfig)
+Error message from debugger back end:
+No symbol "FreeRTOSDebugConfig" in current context.
+!STACK 0
+java.lang.Exception: No symbol "FreeRTOSDebugConfig" in current context.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:993)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:822)
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2019-10-03 21:10:39.251
+!MESSAGE Request for monitor: '60^error,msg="No struct type named TaskControlBlock_t."' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2019-10-03 21:10:39.251
+!MESSAGE Failed to execute MI command:
+-data-evaluate-expression "sizeof(struct TaskControlBlock_t)"
+Error message from debugger back end:
+No struct type named TaskControlBlock_t.
+!STACK 0
+java.lang.Exception: No struct type named TaskControlBlock_t.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:993)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:822)
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2019-10-03 21:10:39.308
+!MESSAGE Request for monitor: '62^error,msg="There is no member named pcTail."' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2019-10-03 21:10:39.308
+!MESSAGE Failed to execute MI command:
+-data-evaluate-expression "&(((struct QueueDefinition *) 0)->pcTail)"
+Error message from debugger back end:
+There is no member named pcTail.
+!STACK 0
+java.lang.Exception: There is no member named pcTail.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:993)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:822)
+
+!ENTRY com.crt.log 1 0 2019-10-03 21:16:35.241
+!MESSAGE Stream is null in [MCUXpresso Semihosting Telnet console for 'base LinkServer Debug' started on port 58866 @ 127.0.0.1]
+
+
+!ENTRY com.crt.debugcommon 1 0 2019-10-03 21:16:44.394
+!MESSAGE cvc-complex-type.2.4.a: 发现了以元素 'xi:include' 开头的无效内容。应以 '{params, param, initvalue}' 之一开头。
+
+
+!ENTRY com.crt.log 1 0 2019-10-03 21:16:48.054
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.crt.debugcommon 1 0 2019-10-03 21:16:48.063
+!MESSAGE RedlinkServer telnet session connected on port 3025->58936 @ 127.0.0.1
+
+!ENTRY com.crt.dsfdebug 1 0 2019-10-03 21:16:49.711
+!MESSAGE Telnet session connected on port 3330->58941 @ 127.0.0.1
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2019-10-03 21:17:14.365
+!MESSAGE Request for monitor: '59^error,msg="No symbol "FreeRTOSDebugConfig" in current context."' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2019-10-03 21:17:14.365
+!MESSAGE Failed to execute MI command:
+-data-evaluate-expression &(FreeRTOSDebugConfig)
+Error message from debugger back end:
+No symbol "FreeRTOSDebugConfig" in current context.
+!STACK 0
+java.lang.Exception: No symbol "FreeRTOSDebugConfig" in current context.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:993)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:822)
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2019-10-03 21:17:14.369
+!MESSAGE Request for monitor: '61^error,msg="No struct type named TaskControlBlock_t."' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2019-10-03 21:17:14.369
+!MESSAGE Failed to execute MI command:
+-data-evaluate-expression "sizeof(struct TaskControlBlock_t)"
+Error message from debugger back end:
+No struct type named TaskControlBlock_t.
+!STACK 0
+java.lang.Exception: No struct type named TaskControlBlock_t.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:993)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:822)
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2019-10-03 21:17:14.427
+!MESSAGE Request for monitor: '63^error,msg="There is no member named pcTail."' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2019-10-03 21:17:14.427
+!MESSAGE Failed to execute MI command:
+-data-evaluate-expression "&(((struct QueueDefinition *) 0)->pcTail)"
+Error message from debugger back end:
+There is no member named pcTail.
+!STACK 0
+java.lang.Exception: There is no member named pcTail.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:993)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:822)
+
+!ENTRY com.crt.log 1 0 2019-10-03 21:18:12.797
+!MESSAGE Stream is null in [MCUXpresso Semihosting Telnet console for 'base LinkServer Debug' started on port 58941 @ 127.0.0.1]
+
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2019-10-03 21:18:14.811
+!MESSAGE Request for monitor: 'RequestMonitor (com.nxp.mcuxpresso.trace.core.linkserver.server.RedlinkClient$3@38d4a267): Status ERROR: com.nxp.mcuxpresso.trace.core.linkserver code=0 Problem obtaining SWO buffer content. java.net.SocketException: Connection reset by peer: socket write error' resulted in an error.
+!SUBENTRY 1 com.nxp.mcuxpresso.trace.core.linkserver 4 0 2019-10-03 21:18:14.812
+!MESSAGE Problem obtaining SWO buffer content.
+!STACK 0
+java.net.SocketException: Connection reset by peer: socket write error
+	at java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.net.SocketOutputStream.write(SocketOutputStream.java:143)
+	at com.nxp.mcuxpresso.trace.core.linkserver.server.RedlinkClient$2.run(RedlinkClient.java:127)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+!ENTRY com.crt.log 1 0 2019-10-03 21:18:18.090
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.crt.debugcommon 1 0 2019-10-03 21:18:18.100
+!MESSAGE RedlinkServer telnet session connected on port 3025->58959 @ 127.0.0.1
+
+!ENTRY com.crt.debugcommon 4 0 2019-10-03 21:18:18.102
+!MESSAGE Unable to parse ProbeList output to get probe ref count: []
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2019-10-03 21:18:18.104
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.ImmediateRequestMonitor@73bfec74): Status ERROR: org.eclipse.cdt.dsf code=10005 Composite status null children=[Status ERROR: org.eclipse.cdt.dsf code=0 Executor shut down while executing Sequence Sequence "", result for executing step #4 = Status ERROR: org.eclipse.cdt.dsf code=10005 Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.gdb.launching.ShutdownSequence$ServiceShutdownStep$1@77eb5a1f): Status OK: unknown code=0 OK null' resulted in a rejected execution exception. null, step #4 null Status ERROR: org.eclipse.cdt.dsf code=10005 Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.gdb.launching.GdbLaunch$4@5e297e0c): Status ERROR: org.eclipse.cdt.dsf code=0 Executor shut down while executing Sequence Sequence "", result for executing step #4 = Status ERROR: org.eclipse.cdt.dsf code=10005 Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.gdb.launching.ShutdownSequence$ServiceShutdownStep$1@77eb5a1f): Status OK: unknown code=0 OK null' resulted in a rejected execution exception. null, step #4 null' resulted in a rejected execution exception. null]' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf 4 0 2019-10-03 21:18:18.104
+!MESSAGE Executor shut down while executing Sequence Sequence "", result for executing step #4 = Status ERROR: org.eclipse.cdt.dsf code=10005 Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.gdb.launching.ShutdownSequence$ServiceShutdownStep$1@77eb5a1f): Status OK: unknown code=0 OK null' resulted in a rejected execution exception. null, step #4
+!SUBENTRY 1 org.eclipse.cdt.dsf 4 10005 2019-10-03 21:18:18.104
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.gdb.launching.GdbLaunch$4@5e297e0c): Status ERROR: org.eclipse.cdt.dsf code=0 Executor shut down while executing Sequence Sequence "", result for executing step #4 = Status ERROR: org.eclipse.cdt.dsf code=10005 Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.gdb.launching.ShutdownSequence$ServiceShutdownStep$1@77eb5a1f): Status OK: unknown code=0 OK null' resulted in a rejected execution exception. null, step #4 null' resulted in a rejected execution exception.
+
+!ENTRY com.crt.debugcommon 1 0 2019-10-03 21:18:21.684
+!MESSAGE cvc-complex-type.2.4.a: 发现了以元素 'xi:include' 开头的无效内容。应以 '{params, param, initvalue}' 之一开头。
+
+
+!ENTRY com.crt.log 1 0 2019-10-03 21:18:25.288
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.crt.debugcommon 1 0 2019-10-03 21:18:25.297
+!MESSAGE RedlinkServer telnet session connected on port 3025->58963 @ 127.0.0.1
+
+!ENTRY com.crt.dsfdebug 1 0 2019-10-03 21:18:26.969
+!MESSAGE Telnet session connected on port 3330->58967 @ 127.0.0.1
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2019-10-03 21:18:40.490
+!MESSAGE Request for monitor: '59^error,msg="No symbol "FreeRTOSDebugConfig" in current context."' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2019-10-03 21:18:40.491
+!MESSAGE Failed to execute MI command:
+-data-evaluate-expression &(FreeRTOSDebugConfig)
+Error message from debugger back end:
+No symbol "FreeRTOSDebugConfig" in current context.
+!STACK 0
+java.lang.Exception: No symbol "FreeRTOSDebugConfig" in current context.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:993)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:822)
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2019-10-03 21:18:40.495
+!MESSAGE Request for monitor: '61^error,msg="No struct type named TaskControlBlock_t."' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2019-10-03 21:18:40.495
+!MESSAGE Failed to execute MI command:
+-data-evaluate-expression "sizeof(struct TaskControlBlock_t)"
+Error message from debugger back end:
+No struct type named TaskControlBlock_t.
+!STACK 0
+java.lang.Exception: No struct type named TaskControlBlock_t.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:993)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:822)
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2019-10-03 21:18:40.511
+!MESSAGE Request for monitor: '63^error,msg="There is no member named pcTail."' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2019-10-03 21:18:40.511
+!MESSAGE Failed to execute MI command:
+-data-evaluate-expression "&(((struct QueueDefinition *) 0)->pcTail)"
+Error message from debugger back end:
+There is no member named pcTail.
+!STACK 0
+java.lang.Exception: There is no member named pcTail.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:993)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:822)
+
+!ENTRY com.crt.log 1 0 2019-10-03 21:23:20.330
+!MESSAGE Stream is null in [MCUXpresso Semihosting Telnet console for 'base LinkServer Debug' started on port 58967 @ 127.0.0.1]
+
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2019-10-03 21:23:22.331
+!MESSAGE Request for monitor: 'RequestMonitor (com.nxp.mcuxpresso.trace.core.linkserver.server.RedlinkClient$3@737c41f3): Status ERROR: com.nxp.mcuxpresso.trace.core.linkserver code=0 Problem obtaining SWO buffer content. java.net.SocketException: Connection reset by peer: socket write error' resulted in an error.
+!SUBENTRY 1 com.nxp.mcuxpresso.trace.core.linkserver 4 0 2019-10-03 21:23:22.331
+!MESSAGE Problem obtaining SWO buffer content.
+!STACK 0
+java.net.SocketException: Connection reset by peer: socket write error
+	at java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.net.SocketOutputStream.write(SocketOutputStream.java:143)
+	at com.nxp.mcuxpresso.trace.core.linkserver.server.RedlinkClient$2.run(RedlinkClient.java:127)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+!ENTRY com.crt.log 1 0 2019-10-03 21:23:25.594
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.crt.debugcommon 1 0 2019-10-03 21:23:25.597
+!MESSAGE RedlinkServer telnet session connected on port 3025->59030 @ 127.0.0.1
+
+!ENTRY com.crt.debugcommon 4 0 2019-10-03 21:23:25.598
+!MESSAGE Unable to parse ProbeList output to get probe ref count: []
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2019-10-03 21:23:25.600
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.ImmediateRequestMonitor@4f99d5ef): Status ERROR: org.eclipse.cdt.dsf code=10005 Composite status null children=[Status ERROR: org.eclipse.cdt.dsf code=0 Executor shut down while executing Sequence Sequence "", result for executing step #4 = Status ERROR: org.eclipse.cdt.dsf code=10005 Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.gdb.launching.ShutdownSequence$ServiceShutdownStep$1@25914ad6): Status OK: unknown code=0 OK null' resulted in a rejected execution exception. null, step #4 null Status ERROR: org.eclipse.cdt.dsf code=10005 Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.gdb.launching.GdbLaunch$4@6071e4cd): Status ERROR: org.eclipse.cdt.dsf code=0 Executor shut down while executing Sequence Sequence "", result for executing step #4 = Status ERROR: org.eclipse.cdt.dsf code=10005 Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.gdb.launching.ShutdownSequence$ServiceShutdownStep$1@25914ad6): Status OK: unknown code=0 OK null' resulted in a rejected execution exception. null, step #4 null' resulted in a rejected execution exception. null]' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf 4 0 2019-10-03 21:23:25.600
+!MESSAGE Executor shut down while executing Sequence Sequence "", result for executing step #4 = Status ERROR: org.eclipse.cdt.dsf code=10005 Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.gdb.launching.ShutdownSequence$ServiceShutdownStep$1@25914ad6): Status OK: unknown code=0 OK null' resulted in a rejected execution exception. null, step #4
+!SUBENTRY 1 org.eclipse.cdt.dsf 4 10005 2019-10-03 21:23:25.600
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.gdb.launching.GdbLaunch$4@6071e4cd): Status ERROR: org.eclipse.cdt.dsf code=0 Executor shut down while executing Sequence Sequence "", result for executing step #4 = Status ERROR: org.eclipse.cdt.dsf code=10005 Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.gdb.launching.ShutdownSequence$ServiceShutdownStep$1@25914ad6): Status OK: unknown code=0 OK null' resulted in a rejected execution exception. null, step #4 null' resulted in a rejected execution exception.
+
+!ENTRY com.crt.debugcommon 1 0 2019-10-03 21:23:26.547
+!MESSAGE cvc-complex-type.2.4.a: 发现了以元素 'xi:include' 开头的无效内容。应以 '{params, param, initvalue}' 之一开头。
+
+
+!ENTRY com.crt.log 1 0 2019-10-03 21:23:30.222
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.crt.debugcommon 1 0 2019-10-03 21:23:30.224
+!MESSAGE RedlinkServer telnet session connected on port 3025->59032 @ 127.0.0.1
+
+!ENTRY com.crt.dsfdebug 1 0 2019-10-03 21:23:31.869
+!MESSAGE Telnet session connected on port 3330->59036 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2019-10-03 21:24:17.854
+!MESSAGE Stream is null in [MCUXpresso Semihosting Telnet console for 'base LinkServer Debug' started on port 59036 @ 127.0.0.1]
+
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2019-10-03 21:24:19.858
+!MESSAGE Request for monitor: 'RequestMonitor (com.nxp.mcuxpresso.trace.core.linkserver.server.RedlinkClient$3@3d1687a8): Status ERROR: com.nxp.mcuxpresso.trace.core.linkserver code=0 Problem obtaining SWO buffer content. java.net.SocketException: Connection reset by peer: socket write error' resulted in an error.
+!SUBENTRY 1 com.nxp.mcuxpresso.trace.core.linkserver 4 0 2019-10-03 21:24:19.858
+!MESSAGE Problem obtaining SWO buffer content.
+!STACK 0
+java.net.SocketException: Connection reset by peer: socket write error
+	at java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.net.SocketOutputStream.write(SocketOutputStream.java:143)
+	at com.nxp.mcuxpresso.trace.core.linkserver.server.RedlinkClient$2.run(RedlinkClient.java:127)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+!ENTRY com.crt.debugcommon 1 0 2019-10-03 21:24:22.947
+!MESSAGE cvc-complex-type.2.4.a: 发现了以元素 'xi:include' 开头的无效内容。应以 '{params, param, initvalue}' 之一开头。
+
+
+!ENTRY com.crt.log 1 0 2019-10-03 21:24:23.202
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.crt.debugcommon 1 0 2019-10-03 21:24:23.211
+!MESSAGE RedlinkServer telnet session connected on port 3025->59046 @ 127.0.0.1
+
+!ENTRY com.crt.debugcommon 4 0 2019-10-03 21:24:23.213
+!MESSAGE Unable to parse ProbeList output to get probe ref count: []
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2019-10-03 21:24:23.216
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.ImmediateRequestMonitor@72d594da): Status ERROR: org.eclipse.cdt.dsf code=10005 Composite status null children=[Status ERROR: org.eclipse.cdt.dsf code=0 Executor shut down while executing Sequence Sequence "", result for executing step #4 = Status ERROR: org.eclipse.cdt.dsf code=10005 Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.gdb.launching.ShutdownSequence$ServiceShutdownStep$1@ed90b0a): Status OK: unknown code=0 OK null' resulted in a rejected execution exception. null, step #4 null Status ERROR: org.eclipse.cdt.dsf code=10005 Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.gdb.launching.GdbLaunch$4@34925819): Status ERROR: org.eclipse.cdt.dsf code=0 Executor shut down while executing Sequence Sequence "", result for executing step #4 = Status ERROR: org.eclipse.cdt.dsf code=10005 Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.gdb.launching.ShutdownSequence$ServiceShutdownStep$1@ed90b0a): Status OK: unknown code=0 OK null' resulted in a rejected execution exception. null, step #4 null' resulted in a rejected execution exception. null]' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf 4 0 2019-10-03 21:24:23.216
+!MESSAGE Executor shut down while executing Sequence Sequence "", result for executing step #4 = Status ERROR: org.eclipse.cdt.dsf code=10005 Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.gdb.launching.ShutdownSequence$ServiceShutdownStep$1@ed90b0a): Status OK: unknown code=0 OK null' resulted in a rejected execution exception. null, step #4
+!SUBENTRY 1 org.eclipse.cdt.dsf 4 10005 2019-10-03 21:24:23.216
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.gdb.launching.GdbLaunch$4@34925819): Status ERROR: org.eclipse.cdt.dsf code=0 Executor shut down while executing Sequence Sequence "", result for executing step #4 = Status ERROR: org.eclipse.cdt.dsf code=10005 Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.gdb.launching.ShutdownSequence$ServiceShutdownStep$1@ed90b0a): Status OK: unknown code=0 OK null' resulted in a rejected execution exception. null, step #4 null' resulted in a rejected execution exception.
+
+!ENTRY com.crt.log 1 0 2019-10-03 21:24:26.792
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.crt.debugcommon 1 0 2019-10-03 21:24:26.799
+!MESSAGE RedlinkServer telnet session connected on port 3025->59050 @ 127.0.0.1
+
+!ENTRY com.crt.dsfdebug 1 0 2019-10-03 21:24:28.429
+!MESSAGE Telnet session connected on port 3330->59054 @ 127.0.0.1
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2019-10-03 21:24:44.472
+!MESSAGE Request for monitor: '65^error,msg="No symbol "FreeRTOSDebugConfig" in current context."' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2019-10-03 21:24:44.472
+!MESSAGE Failed to execute MI command:
+-data-evaluate-expression &(FreeRTOSDebugConfig)
+Error message from debugger back end:
+No symbol "FreeRTOSDebugConfig" in current context.
+!STACK 0
+java.lang.Exception: No symbol "FreeRTOSDebugConfig" in current context.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:993)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:822)
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2019-10-03 21:24:44.475
+!MESSAGE Request for monitor: '66^error,msg="No struct type named TaskControlBlock_t."' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2019-10-03 21:24:44.475
+!MESSAGE Failed to execute MI command:
+-data-evaluate-expression "sizeof(struct TaskControlBlock_t)"
+Error message from debugger back end:
+No struct type named TaskControlBlock_t.
+!STACK 0
+java.lang.Exception: No struct type named TaskControlBlock_t.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:993)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:822)
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2019-10-03 21:24:44.488
+!MESSAGE Request for monitor: '67^error,msg="There is no member named pcTail."' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2019-10-03 21:24:44.488
+!MESSAGE Failed to execute MI command:
+-data-evaluate-expression "&(((struct QueueDefinition *) 0)->pcTail)"
+Error message from debugger back end:
+There is no member named pcTail.
+!STACK 0
+java.lang.Exception: There is no member named pcTail.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:993)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:822)
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2019-10-03 21:24:50.602
+!MESSAGE Request for monitor: '247^error,msg="No symbol "freeRTOSMemoryScheme" in current context."' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2019-10-03 21:24:50.602
+!MESSAGE Failed to execute MI command:
+-data-evaluate-expression freeRTOSMemoryScheme
+Error message from debugger back end:
+No symbol "freeRTOSMemoryScheme" in current context.
+!STACK 0
+java.lang.Exception: No symbol "freeRTOSMemoryScheme" in current context.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:993)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:822)
+
+!ENTRY com.crt.log 1 0 2019-10-03 21:26:47.612
+!MESSAGE Stream is null in [MCUXpresso Semihosting Telnet console for 'base LinkServer Debug' started on port 59054 @ 127.0.0.1]
+
+
+!ENTRY com.crt.debugcommon 1 0 2019-10-03 21:26:52.194
+!MESSAGE cvc-complex-type.2.4.a: 发现了以元素 'xi:include' 开头的无效内容。应以 '{params, param, initvalue}' 之一开头。
+
+
+!ENTRY com.crt.log 1 0 2019-10-03 21:26:55.770
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.crt.debugcommon 1 0 2019-10-03 21:26:55.774
+!MESSAGE RedlinkServer telnet session connected on port 3025->59087 @ 127.0.0.1
+
+!ENTRY com.crt.dsfdebug 1 0 2019-10-03 21:26:57.365
+!MESSAGE Telnet session connected on port 3330->59091 @ 127.0.0.1
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2019-10-03 21:27:14.840
+!MESSAGE Request for monitor: '59^error,msg="No symbol "FreeRTOSDebugConfig" in current context."' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2019-10-03 21:27:14.841
+!MESSAGE Failed to execute MI command:
+-data-evaluate-expression &(FreeRTOSDebugConfig)
+Error message from debugger back end:
+No symbol "FreeRTOSDebugConfig" in current context.
+!STACK 0
+java.lang.Exception: No symbol "FreeRTOSDebugConfig" in current context.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:993)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:822)
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2019-10-03 21:27:14.846
+!MESSAGE Request for monitor: '61^error,msg="No struct type named TaskControlBlock_t."' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2019-10-03 21:27:14.846
+!MESSAGE Failed to execute MI command:
+-data-evaluate-expression "sizeof(struct TaskControlBlock_t)"
+Error message from debugger back end:
+No struct type named TaskControlBlock_t.
+!STACK 0
+java.lang.Exception: No struct type named TaskControlBlock_t.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:993)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:822)
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2019-10-03 21:27:14.863
+!MESSAGE Request for monitor: '63^error,msg="There is no member named pcTail."' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2019-10-03 21:27:14.863
+!MESSAGE Failed to execute MI command:
+-data-evaluate-expression "&(((struct QueueDefinition *) 0)->pcTail)"
+Error message from debugger back end:
+There is no member named pcTail.
+!STACK 0
+java.lang.Exception: There is no member named pcTail.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:993)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:822)
+
+!ENTRY com.crt.log 1 0 2019-10-03 21:27:53.957
+!MESSAGE Stream is null in [MCUXpresso Semihosting Telnet console for 'base LinkServer Debug' started on port 59091 @ 127.0.0.1]
+
+
+!ENTRY com.crt.debugcommon 1 0 2019-10-03 21:27:58.278
+!MESSAGE cvc-complex-type.2.4.a: 发现了以元素 'xi:include' 开头的无效内容。应以 '{params, param, initvalue}' 之一开头。
+
+
+!ENTRY com.crt.log 1 0 2019-10-03 21:28:01.911
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.crt.debugcommon 1 0 2019-10-03 21:28:01.923
+!MESSAGE RedlinkServer telnet session connected on port 3025->59104 @ 127.0.0.1
+
+!ENTRY com.crt.dsfdebug 1 0 2019-10-03 21:28:03.513
+!MESSAGE Telnet session connected on port 3330->59108 @ 127.0.0.1
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2019-10-03 21:28:14.521
+!MESSAGE Request for monitor: '59^error,msg="No symbol "FreeRTOSDebugConfig" in current context."' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2019-10-03 21:28:14.521
+!MESSAGE Failed to execute MI command:
+-data-evaluate-expression &(FreeRTOSDebugConfig)
+Error message from debugger back end:
+No symbol "FreeRTOSDebugConfig" in current context.
+!STACK 0
+java.lang.Exception: No symbol "FreeRTOSDebugConfig" in current context.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:993)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:822)
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2019-10-03 21:28:14.528
+!MESSAGE Request for monitor: '61^error,msg="No struct type named TaskControlBlock_t."' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2019-10-03 21:28:14.528
+!MESSAGE Failed to execute MI command:
+-data-evaluate-expression "sizeof(struct TaskControlBlock_t)"
+Error message from debugger back end:
+No struct type named TaskControlBlock_t.
+!STACK 0
+java.lang.Exception: No struct type named TaskControlBlock_t.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:993)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:822)
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2019-10-03 21:28:14.546
+!MESSAGE Request for monitor: '63^error,msg="There is no member named pcTail."' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2019-10-03 21:28:14.547
+!MESSAGE Failed to execute MI command:
+-data-evaluate-expression "&(((struct QueueDefinition *) 0)->pcTail)"
+Error message from debugger back end:
+There is no member named pcTail.
+!STACK 0
+java.lang.Exception: There is no member named pcTail.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:993)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:822)
+
+!ENTRY com.crt.log 1 0 2019-10-03 21:30:25.095
+!MESSAGE Stream is null in [MCUXpresso Semihosting Telnet console for 'base LinkServer Debug' started on port 59108 @ 127.0.0.1]
+
+
+!ENTRY com.crt.debugcommon 1 0 2019-10-03 21:30:33.816
+!MESSAGE cvc-complex-type.2.4.a: 发现了以元素 'xi:include' 开头的无效内容。应以 '{params, param, initvalue}' 之一开头。
+
+
+!ENTRY com.crt.log 1 0 2019-10-03 21:30:37.326
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.crt.debugcommon 1 0 2019-10-03 21:30:37.331
+!MESSAGE RedlinkServer telnet session connected on port 3025->59154 @ 127.0.0.1
+
+!ENTRY com.crt.dsfdebug 1 0 2019-10-03 21:30:38.986
+!MESSAGE Telnet session connected on port 3330->59158 @ 127.0.0.1
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2019-10-03 21:30:49.073
+!MESSAGE Request for monitor: '59^error,msg="No symbol "FreeRTOSDebugConfig" in current context."' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2019-10-03 21:30:49.073
+!MESSAGE Failed to execute MI command:
+-data-evaluate-expression &(FreeRTOSDebugConfig)
+Error message from debugger back end:
+No symbol "FreeRTOSDebugConfig" in current context.
+!STACK 0
+java.lang.Exception: No symbol "FreeRTOSDebugConfig" in current context.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:993)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:822)
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2019-10-03 21:30:49.080
+!MESSAGE Request for monitor: '61^error,msg="No struct type named TaskControlBlock_t."' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2019-10-03 21:30:49.080
+!MESSAGE Failed to execute MI command:
+-data-evaluate-expression "sizeof(struct TaskControlBlock_t)"
+Error message from debugger back end:
+No struct type named TaskControlBlock_t.
+!STACK 0
+java.lang.Exception: No struct type named TaskControlBlock_t.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:993)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:822)
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2019-10-03 21:30:49.100
+!MESSAGE Request for monitor: '63^error,msg="There is no member named pcTail."' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2019-10-03 21:30:49.100
+!MESSAGE Failed to execute MI command:
+-data-evaluate-expression "&(((struct QueueDefinition *) 0)->pcTail)"
+Error message from debugger back end:
+There is no member named pcTail.
+!STACK 0
+java.lang.Exception: There is no member named pcTail.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:993)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:822)
+
+!ENTRY com.crt.log 1 0 2019-10-03 21:33:38.685
+!MESSAGE Stream is null in [MCUXpresso Semihosting Telnet console for 'base LinkServer Debug' started on port 59158 @ 127.0.0.1]
+
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2019-10-03 21:33:40.689
+!MESSAGE Request for monitor: 'RequestMonitor (com.nxp.mcuxpresso.trace.core.linkserver.server.RedlinkClient$3@7ec1a7e4): Status ERROR: com.nxp.mcuxpresso.trace.core.linkserver code=0 Problem obtaining SWO buffer content. java.net.SocketException: Connection reset by peer: socket write error' resulted in an error.
+!SUBENTRY 1 com.nxp.mcuxpresso.trace.core.linkserver 4 0 2019-10-03 21:33:40.689
+!MESSAGE Problem obtaining SWO buffer content.
+!STACK 0
+java.net.SocketException: Connection reset by peer: socket write error
+	at java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.net.SocketOutputStream.write(SocketOutputStream.java:143)
+	at com.nxp.mcuxpresso.trace.core.linkserver.server.RedlinkClient$2.run(RedlinkClient.java:127)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+!ENTRY com.crt.log 1 0 2019-10-03 21:33:43.986
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.crt.debugcommon 1 0 2019-10-03 21:33:44.024
+!MESSAGE RedlinkServer telnet session connected on port 3025->59192 @ 127.0.0.1
+
+!ENTRY com.crt.debugcommon 4 0 2019-10-03 21:33:44.025
+!MESSAGE Unable to parse ProbeList output to get probe ref count: []
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 104 2019-10-03 21:58:33.162
+!MESSAGE Program file does not exist
+!STACK 0
+java.io.FileNotFoundException: C:\Users\17616\Documents\SmartCar\notes_LearnFreertos\base\Debug\base.axf not found
+	at org.eclipse.cdt.dsf.gdb.launching.LaunchUtils.verifyProgramPath(LaunchUtils.java:131)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.checkBinaryDetails(GdbLaunchDelegate.java:315)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugSession(GdbLaunchDelegate.java:142)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugger(GdbLaunchDelegate.java:106)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launch(GdbLaunchDelegate.java:94)
+	at com.crt.dsfdebug.dsf.override.CRTGdbLaunchDelegate.launch(CRTGdbLaunchDelegate.java:147)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:862)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:720)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1029)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$2.run(DebugUIPlugin.java:1243)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 104 2019-10-03 21:58:33.162
+!MESSAGE C:\Users\17616\Documents\SmartCar\notes_LearnFreertos\base\Debug\base.axf not found
+!STACK 0
+java.io.FileNotFoundException: C:\Users\17616\Documents\SmartCar\notes_LearnFreertos\base\Debug\base.axf not found
+	at org.eclipse.cdt.dsf.gdb.launching.LaunchUtils.verifyProgramPath(LaunchUtils.java:131)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.checkBinaryDetails(GdbLaunchDelegate.java:315)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugSession(GdbLaunchDelegate.java:142)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugger(GdbLaunchDelegate.java:106)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launch(GdbLaunchDelegate.java:94)
+	at com.crt.dsfdebug.dsf.override.CRTGdbLaunchDelegate.launch(CRTGdbLaunchDelegate.java:147)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:862)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:720)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1029)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$2.run(DebugUIPlugin.java:1243)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 104 2019-10-03 21:58:47.921
+!MESSAGE Program file does not exist
+!STACK 0
+java.io.FileNotFoundException: C:\Users\17616\Documents\SmartCar\notes_LearnFreertos\base\Debug\base.axf not found
+	at org.eclipse.cdt.dsf.gdb.launching.LaunchUtils.verifyProgramPath(LaunchUtils.java:131)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.checkBinaryDetails(GdbLaunchDelegate.java:315)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugSession(GdbLaunchDelegate.java:142)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugger(GdbLaunchDelegate.java:106)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launch(GdbLaunchDelegate.java:94)
+	at com.crt.dsfdebug.dsf.override.CRTGdbLaunchDelegate.launch(CRTGdbLaunchDelegate.java:147)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:862)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:720)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1029)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$2.run(DebugUIPlugin.java:1243)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 104 2019-10-03 21:58:47.921
+!MESSAGE C:\Users\17616\Documents\SmartCar\notes_LearnFreertos\base\Debug\base.axf not found
+!STACK 0
+java.io.FileNotFoundException: C:\Users\17616\Documents\SmartCar\notes_LearnFreertos\base\Debug\base.axf not found
+	at org.eclipse.cdt.dsf.gdb.launching.LaunchUtils.verifyProgramPath(LaunchUtils.java:131)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.checkBinaryDetails(GdbLaunchDelegate.java:315)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugSession(GdbLaunchDelegate.java:142)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugger(GdbLaunchDelegate.java:106)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launch(GdbLaunchDelegate.java:94)
+	at com.crt.dsfdebug.dsf.override.CRTGdbLaunchDelegate.launch(CRTGdbLaunchDelegate.java:147)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:862)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:720)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1029)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$2.run(DebugUIPlugin.java:1243)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 104 2019-10-03 21:59:11.602
+!MESSAGE Program file does not exist
+!STACK 0
+java.io.FileNotFoundException: C:\Users\17616\Documents\SmartCar\notes_LearnFreertos\base\Debug\base.axf not found
+	at org.eclipse.cdt.dsf.gdb.launching.LaunchUtils.verifyProgramPath(LaunchUtils.java:131)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.checkBinaryDetails(GdbLaunchDelegate.java:315)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugSession(GdbLaunchDelegate.java:142)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugger(GdbLaunchDelegate.java:106)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launch(GdbLaunchDelegate.java:94)
+	at com.crt.dsfdebug.dsf.override.CRTGdbLaunchDelegate.launch(CRTGdbLaunchDelegate.java:147)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:862)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:720)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1029)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$2.run(DebugUIPlugin.java:1243)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 104 2019-10-03 21:59:11.602
+!MESSAGE C:\Users\17616\Documents\SmartCar\notes_LearnFreertos\base\Debug\base.axf not found
+!STACK 0
+java.io.FileNotFoundException: C:\Users\17616\Documents\SmartCar\notes_LearnFreertos\base\Debug\base.axf not found
+	at org.eclipse.cdt.dsf.gdb.launching.LaunchUtils.verifyProgramPath(LaunchUtils.java:131)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.checkBinaryDetails(GdbLaunchDelegate.java:315)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugSession(GdbLaunchDelegate.java:142)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugger(GdbLaunchDelegate.java:106)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launch(GdbLaunchDelegate.java:94)
+	at com.crt.dsfdebug.dsf.override.CRTGdbLaunchDelegate.launch(CRTGdbLaunchDelegate.java:147)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:862)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:720)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1029)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$2.run(DebugUIPlugin.java:1243)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY com.crt.debugcommon 1 0 2019-10-03 22:01:10.152
+!MESSAGE cvc-complex-type.2.4.a: 发现了以元素 'xi:include' 开头的无效内容。应以 '{params, param, initvalue}' 之一开头。
+
+
+!ENTRY com.crt.log 1 0 2019-10-03 22:01:13.739
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.crt.debugcommon 1 0 2019-10-03 22:01:13.743
+!MESSAGE RedlinkServer telnet session connected on port 3025->59598 @ 127.0.0.1
+
+!ENTRY com.crt.dsfdebug 1 0 2019-10-03 22:01:15.406
+!MESSAGE Telnet session connected on port 3330->59603 @ 127.0.0.1
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2019-10-03 22:01:40.537
+!MESSAGE Request for monitor: '*running,thread-id="1"
+61^error,msg="No symbol "FreeRTOSDebugConfig" in current context."' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2019-10-03 22:01:40.537
+!MESSAGE Failed to execute MI command:
+-data-evaluate-expression &(FreeRTOSDebugConfig)
+Error message from debugger back end:
+No symbol "FreeRTOSDebugConfig" in current context.
+!STACK 0
+java.lang.Exception: No symbol "FreeRTOSDebugConfig" in current context.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:993)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:822)
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 10004 2019-10-03 22:01:40.539
+!MESSAGE Failed to execute MI command:
+-data-list-register-values x 13
+Error message from debugger back end:
+Selected thread is running.
+!STACK 0
+java.lang.Exception: Selected thread is running.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:993)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:822)
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2019-10-03 22:01:42.543
+!MESSAGE Request for monitor: '=breakpoint-modified,bkpt={number="6",type="hw breakpoint",disp="del",enabled="y",addr="0x00001dbc",func="main",file="../source/base.c",fullname="C:\Users\17616\Documents\SmartCar\notes_LearnFreertos\base\source\base.c",line="52",thread-groups=[i1],times="1",original-location="main"}
+~"\n"
+~"Temporary breakpoint 6, main () at ../source/base.c:52\n"
+~"52\t    BOARD_InitBootPins();\n"
+*stopped,reason="breakpoint-hit",disp="del",bkptno="6",frame={addr="0x00001dbc",func="main",args=[],file="../source/base.c",fullname="C:\Users\17616\Documents\SmartCar\notes_LearnFreertos\base\source\base.c",line="52",arch="armv7e-m"},thread-id="1",stopped-threads=[1]
+=breakpoint-deleted,id="6"
+65^error,msg="No struct type named TaskControlBlock_t."' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2019-10-03 22:01:42.543
+!MESSAGE Failed to execute MI command:
+-data-evaluate-expression "sizeof(struct TaskControlBlock_t)"
+Error message from debugger back end:
+No struct type named TaskControlBlock_t.
+!STACK 0
+java.lang.Exception: No struct type named TaskControlBlock_t.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:993)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:822)
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2019-10-03 22:01:42.550
+!MESSAGE Request for monitor: '67^error,msg="There is no member named pcTail."' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2019-10-03 22:01:42.550
+!MESSAGE Failed to execute MI command:
+-data-evaluate-expression "&(((struct QueueDefinition *) 0)->pcTail)"
+Error message from debugger back end:
+There is no member named pcTail.
+!STACK 0
+java.lang.Exception: There is no member named pcTail.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:993)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:822)
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2019-10-03 22:01:43.950
+!MESSAGE Request for monitor: '203^error,msg="Unable to read memory."' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2019-10-03 22:01:43.950
+!MESSAGE Failed to execute MI command:
+-data-read-memory-bytes 0x8f3f014 32
+Error message from debugger back end:
+Unable to read memory.
+!STACK 0
+java.lang.Exception: Unable to read memory.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:993)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:822)
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2019-10-03 22:01:47.913
+!MESSAGE Request for monitor: '204^error,msg="Cannot access memory at address 0x8f3f034"' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2019-10-03 22:01:47.913
+!MESSAGE Failed to execute MI command:
+-data-evaluate-expression "(((struct tskTaskControlBlock *) 0x8f3efe0)->uxBasePriority)"
+Error message from debugger back end:
+Cannot access memory at address 0x8f3f034
+!STACK 0
+java.lang.Exception: Cannot access memory at address 0x8f3f034
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:993)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:822)
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2019-10-03 22:01:47.947
+!MESSAGE Request for monitor: '205^error,msg="Cannot access memory at address 0x8f3f00c"' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2019-10-03 22:01:47.947
+!MESSAGE Failed to execute MI command:
+-data-evaluate-expression "(((struct tskTaskControlBlock *) 0x8f3efe0)->uxPriority)"
+Error message from debugger back end:
+Cannot access memory at address 0x8f3f00c
+!STACK 0
+java.lang.Exception: Cannot access memory at address 0x8f3f00c
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:993)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:822)
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2019-10-03 22:01:48.073
+!MESSAGE Request for monitor: '210^error,msg="Unable to read memory."' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2019-10-03 22:01:48.073
+!MESSAGE Failed to execute MI command:
+-data-read-memory-bytes 0x8f3f014 32
+Error message from debugger back end:
+Unable to read memory.
+!STACK 0
+java.lang.Exception: Unable to read memory.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:993)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:822)
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2019-10-03 22:01:54.014
+!MESSAGE Request for monitor: '215^error,msg="Cannot access memory at address 0x8f3f00c"' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2019-10-03 22:01:54.014
+!MESSAGE Failed to execute MI command:
+-data-evaluate-expression "(((struct tskTaskControlBlock *) 0x8f3efe0)->uxPriority)"
+Error message from debugger back end:
+Cannot access memory at address 0x8f3f00c
+!STACK 0
+java.lang.Exception: Cannot access memory at address 0x8f3f00c
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:993)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:822)
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2019-10-03 22:02:38.639
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.debug.ui.actions.DsfSuspendCommand$4$1@3b7c553e): Status ERROR: org.eclipse.cdt.dsf.gdb code=10003 Given context: (gdb[34].proc[42000].threadGroup[i1],gdb[34].proc[42000].OSthread[1]).thread[1], is already suspended. null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10003 2019-10-03 22:02:38.639
+!MESSAGE Given context: (gdb[34].proc[42000].threadGroup[i1],gdb[34].proc[42000].OSthread[1]).thread[1], is already suspended.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2019-10-03 22:02:38.643
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.ImmediateRequestMonitor@2b799c97): Status ERROR: org.eclipse.cdt.dsf.gdb code=10003 Invalid context type. null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10003 2019-10-03 22:02:38.643
+!MESSAGE Invalid context type.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2019-10-03 22:02:38.649
+!MESSAGE Request for monitor: 'RequestMonitor (com.nxp.mcuxpresso.freertos.gdb.tad.model.readers.VariableReader$1@6dd26b8b): Status ERROR: org.eclipse.cdt.dsf.gdb code=10001 Connection is shut down null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10001 2019-10-03 22:02:38.649
+!MESSAGE Connection is shut down
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2019-10-03 22:02:38.650
+!MESSAGE Request for monitor: 'RequestMonitor (com.nxp.mcuxpresso.freertos.gdb.tad.model.readers.VariableReader$1@6016a779): Status ERROR: org.eclipse.cdt.dsf.gdb code=10001 Connection is shut down null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10001 2019-10-03 22:02:38.650
+!MESSAGE Connection is shut down
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2019-10-03 22:02:38.652
+!MESSAGE Request for monitor: 'RequestMonitor (com.nxp.mcuxpresso.freertos.gdb.tad.model.readers.VariableReader$1@2ef100ac): Status ERROR: org.eclipse.cdt.dsf.gdb code=10001 Connection is shut down null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10001 2019-10-03 22:02:38.652
+!MESSAGE Connection is shut down
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2019-10-03 22:02:38.655
+!MESSAGE Request for monitor: 'RequestMonitor (com.nxp.mcuxpresso.freertos.gdb.tad.model.readers.VariableReader$1@7b895764): Status ERROR: org.eclipse.cdt.dsf.gdb code=10001 Connection is shut down null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10001 2019-10-03 22:02:38.655
+!MESSAGE Connection is shut down
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2019-10-03 22:02:38.657
+!MESSAGE Request for monitor: 'RequestMonitor (com.nxp.mcuxpresso.freertos.gdb.tad.model.readers.VariableReader$1@3e16a6fb): Status ERROR: org.eclipse.cdt.dsf.gdb code=10001 Connection is shut down null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10001 2019-10-03 22:02:38.657
+!MESSAGE Connection is shut down
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2019-10-03 22:02:38.661
+!MESSAGE Request for monitor: 'RequestMonitor (com.nxp.mcuxpresso.freertos.gdb.tad.model.readers.VariableReader$1@63f29f2a): Status ERROR: org.eclipse.cdt.dsf.gdb code=10001 Connection is shut down null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10001 2019-10-03 22:02:38.661
+!MESSAGE Connection is shut down
+
+!ENTRY com.crt.log 1 0 2019-10-03 22:02:38.662
+!MESSAGE Stream is null in [MCUXpresso Semihosting Telnet console for 'base LinkServer Debug' started on port 59603 @ 127.0.0.1]
+
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2019-10-03 22:02:38.662
+!MESSAGE Request for monitor: 'RequestMonitor (com.nxp.mcuxpresso.freertos.gdb.tad.model.readers.VariableReader$1@45201798): Status ERROR: org.eclipse.cdt.dsf.gdb code=10001 Connection is shut down null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10001 2019-10-03 22:02:38.662
+!MESSAGE Connection is shut down
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2019-10-03 22:02:38.663
+!MESSAGE Request for monitor: 'RequestMonitor (com.nxp.mcuxpresso.freertos.gdb.tad.model.readers.VariableReader$1@74a34a2f): Status ERROR: org.eclipse.cdt.dsf.gdb code=10001 Connection is shut down null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10001 2019-10-03 22:02:38.663
+!MESSAGE Connection is shut down
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2019-10-03 22:02:38.663
+!MESSAGE Request for monitor: 'RequestMonitor (com.nxp.mcuxpresso.freertos.gdb.tad.model.readers.VariableReader$1@7f091b3e): Status ERROR: org.eclipse.cdt.dsf.gdb code=10001 Connection is shut down null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10001 2019-10-03 22:02:38.663
+!MESSAGE Connection is shut down
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2019-10-03 22:02:38.664
+!MESSAGE Request for monitor: 'RequestMonitor (com.nxp.mcuxpresso.freertos.gdb.tad.model.readers.VariableReader$1@875c03a): Status ERROR: org.eclipse.cdt.dsf.gdb code=10001 Connection is shut down null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10001 2019-10-03 22:02:38.664
+!MESSAGE Connection is shut down
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2019-10-03 22:02:38.664
+!MESSAGE Request for monitor: 'RequestMonitor (com.nxp.mcuxpresso.freertos.gdb.tad.model.readers.VariableReader$1@4d2c9a7b): Status ERROR: org.eclipse.cdt.dsf.gdb code=10001 Connection is shut down null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10001 2019-10-03 22:02:38.664
+!MESSAGE Connection is shut down
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2019-10-03 22:02:38.665
+!MESSAGE Request for monitor: 'RequestMonitor (com.nxp.mcuxpresso.freertos.gdb.tad.model.readers.VariableReader$1@23b053c3): Status ERROR: org.eclipse.cdt.dsf.gdb code=10001 Connection is shut down null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10001 2019-10-03 22:02:38.665
+!MESSAGE Connection is shut down
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2019-10-03 22:02:38.666
+!MESSAGE Request for monitor: 'RequestMonitor (com.nxp.mcuxpresso.freertos.gdb.tad.model.readers.VariableReader$1@14d76c60): Status ERROR: org.eclipse.cdt.dsf.gdb code=10001 Connection is shut down null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10001 2019-10-03 22:02:38.666
+!MESSAGE Connection is shut down
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2019-10-03 22:02:38.666
+!MESSAGE Request for monitor: 'RequestMonitor (com.nxp.mcuxpresso.freertos.gdb.tad.model.readers.VariableReader$1@32851ad0): Status ERROR: org.eclipse.cdt.dsf.gdb code=10001 Connection is shut down null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10001 2019-10-03 22:02:38.666
+!MESSAGE Connection is shut down
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2019-10-03 22:02:38.667
+!MESSAGE Request for monitor: 'RequestMonitor (com.nxp.mcuxpresso.freertos.gdb.tad.model.readers.VariableReader$1@1b53b1b9): Status ERROR: org.eclipse.cdt.dsf.gdb code=10001 Connection is shut down null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10001 2019-10-03 22:02:38.667
+!MESSAGE Connection is shut down
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2019-10-03 22:02:38.667
+!MESSAGE Request for monitor: 'RequestMonitor (com.nxp.mcuxpresso.freertos.gdb.tad.model.readers.VariableReader$1@3adcc75b): Status ERROR: org.eclipse.cdt.dsf.gdb code=10001 Connection is shut down null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10001 2019-10-03 22:02:38.667
+!MESSAGE Connection is shut down
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2019-10-03 22:02:38.668
+!MESSAGE Request for monitor: 'RequestMonitor (com.nxp.mcuxpresso.freertos.gdb.tad.model.readers.VariableReader$1@1547180c): Status ERROR: org.eclipse.cdt.dsf.gdb code=10001 Connection is shut down null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10001 2019-10-03 22:02:38.668
+!MESSAGE Connection is shut down
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2019-10-03 22:02:38.668
+!MESSAGE Request for monitor: 'RequestMonitor (com.nxp.mcuxpresso.freertos.gdb.tad.model.readers.VariableReader$1@f8ed3ee): Status ERROR: org.eclipse.cdt.dsf.gdb code=10001 Connection is shut down null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10001 2019-10-03 22:02:38.668
+!MESSAGE Connection is shut down
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2019-10-03 22:02:38.669
+!MESSAGE Request for monitor: 'RequestMonitor (com.nxp.mcuxpresso.freertos.gdb.tad.model.readers.VariableReader$1@95665df): Status ERROR: org.eclipse.cdt.dsf.gdb code=10001 Connection is shut down null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10001 2019-10-03 22:02:38.669
+!MESSAGE Connection is shut down
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2019-10-03 22:02:38.669
+!MESSAGE Request for monitor: 'RequestMonitor (com.nxp.mcuxpresso.freertos.gdb.tad.model.readers.VariableReader$1@556c8db1): Status ERROR: org.eclipse.cdt.dsf.gdb code=10001 Connection is shut down null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10001 2019-10-03 22:02:38.669
+!MESSAGE Connection is shut down
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2019-10-03 22:02:38.670
+!MESSAGE Request for monitor: 'RequestMonitor (com.nxp.mcuxpresso.freertos.gdb.tad.model.readers.VariableReader$1@78c67868): Status ERROR: org.eclipse.cdt.dsf.gdb code=10001 Connection is shut down null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10001 2019-10-03 22:02:38.670
+!MESSAGE Connection is shut down
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2019-10-03 22:02:38.670
+!MESSAGE Request for monitor: 'RequestMonitor (com.nxp.mcuxpresso.freertos.gdb.tad.model.readers.VariableReader$1@12ec53d): Status ERROR: org.eclipse.cdt.dsf.gdb code=10001 Connection is shut down null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10001 2019-10-03 22:02:38.670
+!MESSAGE Connection is shut down
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2019-10-03 22:02:38.671
+!MESSAGE Request for monitor: 'RequestMonitor (com.nxp.mcuxpresso.freertos.gdb.tad.model.readers.VariableReader$1@3b6c305a): Status ERROR: org.eclipse.cdt.dsf.gdb code=10001 Connection is shut down null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10001 2019-10-03 22:02:38.671
+!MESSAGE Connection is shut down
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2019-10-03 22:02:38.671
+!MESSAGE Request for monitor: 'RequestMonitor (com.nxp.mcuxpresso.freertos.gdb.tad.model.readers.VariableReader$1@a5c2383): Status ERROR: org.eclipse.cdt.dsf.gdb code=10001 Connection is shut down null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10001 2019-10-03 22:02:38.671
+!MESSAGE Connection is shut down
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2019-10-03 22:02:38.671
+!MESSAGE Request for monitor: 'RequestMonitor (com.nxp.mcuxpresso.freertos.gdb.tad.model.readers.VariableReader$1@41120f98): Status ERROR: org.eclipse.cdt.dsf.gdb code=10001 Connection is shut down null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10001 2019-10-03 22:02:38.671
+!MESSAGE Connection is shut down
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2019-10-03 22:02:38.671
+!MESSAGE Request for monitor: 'RequestMonitor (com.nxp.mcuxpresso.freertos.gdb.tad.model.readers.VariableReader$1@36e23daa): Status ERROR: org.eclipse.cdt.dsf.gdb code=10001 Connection is shut down null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10001 2019-10-03 22:02:38.671
+!MESSAGE Connection is shut down
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2019-10-03 22:02:38.672
+!MESSAGE Request for monitor: 'RequestMonitor (com.nxp.mcuxpresso.freertos.gdb.tad.model.readers.VariableReader$1@6cd635cc): Status ERROR: org.eclipse.cdt.dsf.gdb code=10001 Connection is shut down null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10001 2019-10-03 22:02:38.672
+!MESSAGE Connection is shut down
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2019-10-03 22:02:38.672
+!MESSAGE Request for monitor: 'RequestMonitor (com.nxp.mcuxpresso.freertos.gdb.tad.model.readers.VariableReader$1@7fd53ee): Status ERROR: org.eclipse.cdt.dsf.gdb code=10001 Connection is shut down null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10001 2019-10-03 22:02:38.673
+!MESSAGE Connection is shut down
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2019-10-03 22:02:38.673
+!MESSAGE Request for monitor: 'RequestMonitor (com.nxp.mcuxpresso.freertos.gdb.tad.model.readers.VariableReader$1@56c2e246): Status ERROR: org.eclipse.cdt.dsf.gdb code=10001 Connection is shut down null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10001 2019-10-03 22:02:38.673
+!MESSAGE Connection is shut down
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2019-10-03 22:02:38.673
+!MESSAGE Request for monitor: 'RequestMonitor (com.nxp.mcuxpresso.freertos.gdb.tad.model.readers.VariableReader$1@71ea9a59): Status ERROR: org.eclipse.cdt.dsf.gdb code=10001 Connection is shut down null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10001 2019-10-03 22:02:38.673
+!MESSAGE Connection is shut down
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2019-10-03 22:02:38.673
+!MESSAGE Request for monitor: 'RequestMonitor (com.nxp.mcuxpresso.freertos.gdb.tad.model.readers.VariableReader$1@2ccfa9fd): Status ERROR: org.eclipse.cdt.dsf.gdb code=10001 Connection is shut down null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10001 2019-10-03 22:02:38.673
+!MESSAGE Connection is shut down
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2019-10-03 22:02:38.674
+!MESSAGE Request for monitor: 'RequestMonitor (com.nxp.mcuxpresso.freertos.gdb.tad.model.readers.VariableReader$1@41c0fda9): Status ERROR: org.eclipse.cdt.dsf.gdb code=10001 Connection is shut down null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10001 2019-10-03 22:02:38.674
+!MESSAGE Connection is shut down
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2019-10-03 22:02:38.674
+!MESSAGE Request for monitor: 'RequestMonitor (com.nxp.mcuxpresso.freertos.gdb.tad.model.readers.VariableReader$1@d1e705): Status ERROR: org.eclipse.cdt.dsf.gdb code=10001 Connection is shut down null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10001 2019-10-03 22:02:38.674
+!MESSAGE Connection is shut down
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2019-10-03 22:02:38.674
+!MESSAGE Request for monitor: 'RequestMonitor (com.nxp.mcuxpresso.freertos.gdb.tad.model.readers.VariableReader$1@254c8d14): Status ERROR: org.eclipse.cdt.dsf.gdb code=10001 Connection is shut down null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10001 2019-10-03 22:02:38.674
+!MESSAGE Connection is shut down
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2019-10-03 22:02:38.674
+!MESSAGE Request for monitor: 'RequestMonitor (com.nxp.mcuxpresso.freertos.gdb.tad.model.readers.VariableReader$1@741d5801): Status ERROR: org.eclipse.cdt.dsf.gdb code=10001 Connection is shut down null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10001 2019-10-03 22:02:38.674
+!MESSAGE Connection is shut down
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2019-10-03 22:02:38.675
+!MESSAGE Request for monitor: 'RequestMonitor (com.nxp.mcuxpresso.freertos.gdb.tad.model.readers.VariableReader$1@32f6ce9e): Status ERROR: org.eclipse.cdt.dsf.gdb code=10001 Connection is shut down null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10001 2019-10-03 22:02:38.675
+!MESSAGE Connection is shut down
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2019-10-03 22:02:38.677
+!MESSAGE Request for monitor: 'RequestMonitor (com.nxp.mcuxpresso.freertos.gdb.tad.model.readers.VariableReader$1@3d90fe0a): Status ERROR: org.eclipse.cdt.dsf.gdb code=10001 Connection is shut down null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10001 2019-10-03 22:02:38.677
+!MESSAGE Connection is shut down
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2019-10-03 22:02:38.677
+!MESSAGE Request for monitor: 'RequestMonitor (com.nxp.mcuxpresso.freertos.gdb.tad.model.readers.VariableReader$1@7c75f081): Status ERROR: org.eclipse.cdt.dsf.gdb code=10001 Connection is shut down null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10001 2019-10-03 22:02:38.677
+!MESSAGE Connection is shut down
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2019-10-03 22:02:38.678
+!MESSAGE Request for monitor: 'RequestMonitor (com.nxp.mcuxpresso.freertos.gdb.tad.model.readers.VariableReader$1@6236625e): Status ERROR: org.eclipse.cdt.dsf.gdb code=10001 Connection is shut down null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10001 2019-10-03 22:02:38.678
+!MESSAGE Connection is shut down
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2019-10-03 22:02:38.678
+!MESSAGE Request for monitor: 'RequestMonitor (com.nxp.mcuxpresso.freertos.gdb.tad.model.readers.VariableReader$1@66b0d2b8): Status ERROR: org.eclipse.cdt.dsf.gdb code=10001 Connection is shut down null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10001 2019-10-03 22:02:38.678
+!MESSAGE Connection is shut down
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2019-10-03 22:02:38.679
+!MESSAGE Request for monitor: 'RequestMonitor (com.nxp.mcuxpresso.freertos.gdb.tad.model.readers.VariableReader$1@5c6a10ca): Status ERROR: org.eclipse.cdt.dsf.gdb code=10001 Connection is shut down null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10001 2019-10-03 22:02:38.679
+!MESSAGE Connection is shut down
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2019-10-03 22:02:38.679
+!MESSAGE Request for monitor: 'RequestMonitor (com.nxp.mcuxpresso.freertos.gdb.tad.model.readers.VariableReader$1@fc8023e): Status ERROR: org.eclipse.cdt.dsf.gdb code=10001 Connection is shut down null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10001 2019-10-03 22:02:38.679
+!MESSAGE Connection is shut down
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2019-10-03 22:02:38.680
+!MESSAGE Request for monitor: 'RequestMonitor (com.nxp.mcuxpresso.freertos.gdb.tad.model.readers.VariableReader$1@5e3da50b): Status ERROR: org.eclipse.cdt.dsf.gdb code=10001 Connection is shut down null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10001 2019-10-03 22:02:38.680
+!MESSAGE Connection is shut down
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2019-10-03 22:02:38.680
+!MESSAGE Request for monitor: 'RequestMonitor (com.nxp.mcuxpresso.freertos.gdb.tad.model.readers.VariableReader$1@3ef89966): Status ERROR: org.eclipse.cdt.dsf.gdb code=10001 Connection is shut down null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10001 2019-10-03 22:02:38.680
+!MESSAGE Connection is shut down
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2019-10-03 22:02:38.681
+!MESSAGE Request for monitor: 'RequestMonitor (com.nxp.mcuxpresso.freertos.gdb.tad.model.readers.VariableReader$1@32982233): Status ERROR: org.eclipse.cdt.dsf.gdb code=10001 Connection is shut down null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10001 2019-10-03 22:02:38.681
+!MESSAGE Connection is shut down
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2019-10-03 22:02:38.681
+!MESSAGE Request for monitor: 'RequestMonitor (com.nxp.mcuxpresso.freertos.gdb.tad.model.readers.VariableReader$1@7d8e0fac): Status ERROR: org.eclipse.cdt.dsf.gdb code=10001 Connection is shut down null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10001 2019-10-03 22:02:38.681
+!MESSAGE Connection is shut down
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2019-10-03 22:02:38.682
+!MESSAGE Request for monitor: 'RequestMonitor (com.nxp.mcuxpresso.freertos.gdb.tad.model.readers.VariableReader$1@4e28f8eb): Status ERROR: org.eclipse.cdt.dsf.gdb code=10001 Connection is shut down null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10001 2019-10-03 22:02:38.682
+!MESSAGE Connection is shut down
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2019-10-03 22:02:38.682
+!MESSAGE Request for monitor: 'RequestMonitor (com.nxp.mcuxpresso.freertos.gdb.tad.model.readers.VariableReader$1@34616be1): Status ERROR: org.eclipse.cdt.dsf.gdb code=10001 Connection is shut down null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10001 2019-10-03 22:02:38.682
+!MESSAGE Connection is shut down
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2019-10-03 22:02:38.683
+!MESSAGE Request for monitor: 'RequestMonitor (com.nxp.mcuxpresso.freertos.gdb.tad.model.readers.VariableReader$1@471b5ee4): Status ERROR: org.eclipse.cdt.dsf.gdb code=10001 Connection is shut down null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10001 2019-10-03 22:02:38.683
+!MESSAGE Connection is shut down
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2019-10-03 22:02:38.683
+!MESSAGE Request for monitor: 'RequestMonitor (com.nxp.mcuxpresso.freertos.gdb.tad.model.readers.VariableReader$1@4a65dac4): Status ERROR: org.eclipse.cdt.dsf.gdb code=10001 Connection is shut down null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10001 2019-10-03 22:02:38.683
+!MESSAGE Connection is shut down
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2019-10-03 22:02:38.684
+!MESSAGE Request for monitor: 'RequestMonitor (com.nxp.mcuxpresso.freertos.gdb.tad.model.readers.VariableReader$1@43839cc3): Status ERROR: org.eclipse.cdt.dsf.gdb code=10001 Connection is shut down null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10001 2019-10-03 22:02:38.684
+!MESSAGE Connection is shut down
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2019-10-03 22:02:38.690
+!MESSAGE Request for monitor: 'RequestMonitor (com.nxp.mcuxpresso.freertos.gdb.tad.model.readers.VariableReader$1@72f64c67): Status ERROR: org.eclipse.cdt.dsf.gdb code=10001 Connection is shut down null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10001 2019-10-03 22:02:38.690
+!MESSAGE Connection is shut down
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2019-10-03 22:02:38.693
+!MESSAGE Request for monitor: 'RequestMonitor (com.nxp.mcuxpresso.freertos.gdb.tad.model.readers.VariableReader$1@6e56e27e): Status ERROR: org.eclipse.cdt.dsf.gdb code=10001 Connection is shut down null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10001 2019-10-03 22:02:38.693
+!MESSAGE Connection is shut down
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 10001 2019-10-03 22:02:38.694
+!MESSAGE Connection is shut down
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2019-10-03 22:02:38.694
+!MESSAGE Request for monitor: 'RequestMonitor (com.nxp.mcuxpresso.freertos.gdb.tad.model.readers.VariableReader$1@76ee3eb5): Status ERROR: org.eclipse.cdt.dsf.gdb code=10001 Connection is shut down null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10001 2019-10-03 22:02:38.694
+!MESSAGE Connection is shut down
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2019-10-03 22:02:38.695
+!MESSAGE Request for monitor: 'RequestMonitor (com.crt.dsfdebug.ui.DebugAllHelper$3$2@7db73a67): Status ERROR: org.eclipse.cdt.dsf.gdb code=10001 Connection is shut down null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10001 2019-10-03 22:02:38.695
+!MESSAGE Connection is shut down
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2019-10-03 22:02:38.695
+!MESSAGE Request for monitor: 'RequestMonitor (com.crt.dsfdebug.ui.DebugAllHelper$3$2@3d62c4c2): Status ERROR: org.eclipse.cdt.dsf.gdb code=10001 Connection is shut down null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10001 2019-10-03 22:02:38.695
+!MESSAGE Connection is shut down
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2019-10-03 22:02:38.695
+!MESSAGE Request for monitor: 'RequestMonitor (com.crt.dsfdebug.ui.DebugAllHelper$3$2@647e8402): Status ERROR: org.eclipse.cdt.dsf.gdb code=10001 Connection is shut down null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10001 2019-10-03 22:02:38.695
+!MESSAGE Connection is shut down
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2019-10-03 22:02:38.696
+!MESSAGE Request for monitor: 'RequestMonitor (com.crt.dsfdebug.ui.DebugAllHelper$3$2@63e215ae): Status ERROR: org.eclipse.cdt.dsf.gdb code=10001 Connection is shut down null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10001 2019-10-03 22:02:38.696
+!MESSAGE Connection is shut down
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2019-10-03 22:02:38.696
+!MESSAGE Request for monitor: 'RequestMonitor (com.crt.dsfdebug.ui.DebugAllHelper$3$2@27c27fb7): Status ERROR: org.eclipse.cdt.dsf.gdb code=10001 Connection is shut down null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10001 2019-10-03 22:02:38.696
+!MESSAGE Connection is shut down
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2019-10-03 22:02:38.696
+!MESSAGE Request for monitor: 'RequestMonitor (com.crt.dsfdebug.ui.DebugAllHelper$3$2@c2deb59): Status ERROR: org.eclipse.cdt.dsf.gdb code=10001 Connection is shut down null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10001 2019-10-03 22:02:38.696
+!MESSAGE Connection is shut down
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2019-10-03 22:02:38.697
+!MESSAGE Request for monitor: 'RequestMonitor (com.crt.dsfdebug.ui.DebugAllHelper$3$2@1c63304a): Status ERROR: org.eclipse.cdt.dsf.gdb code=10001 Connection is shut down null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10001 2019-10-03 22:02:38.697
+!MESSAGE Connection is shut down
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2019-10-03 22:02:38.697
+!MESSAGE Request for monitor: 'RequestMonitor (com.crt.dsfdebug.ui.DebugAllHelper$3$2@6f5f090d): Status ERROR: org.eclipse.cdt.dsf.gdb code=10001 Connection is shut down null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10001 2019-10-03 22:02:38.697
+!MESSAGE Connection is shut down
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2019-10-03 22:02:38.697
+!MESSAGE Request for monitor: 'RequestMonitor (com.crt.dsfdebug.ui.DebugAllHelper$3$2@5b54ec96): Status ERROR: org.eclipse.cdt.dsf.gdb code=10001 Connection is shut down null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10001 2019-10-03 22:02:38.697
+!MESSAGE Connection is shut down
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2019-10-03 22:02:38.698
+!MESSAGE Request for monitor: 'RequestMonitor (com.crt.dsfdebug.ui.DebugAllHelper$3$2@38c0a386): Status ERROR: org.eclipse.cdt.dsf.gdb code=10001 Connection is shut down null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10001 2019-10-03 22:02:38.698
+!MESSAGE Connection is shut down
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2019-10-03 22:02:38.698
+!MESSAGE Request for monitor: 'RequestMonitor (com.crt.dsfdebug.ui.DebugAllHelper$3$2@3da425b4): Status ERROR: org.eclipse.cdt.dsf.gdb code=10001 Connection is shut down null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10001 2019-10-03 22:02:38.698
+!MESSAGE Connection is shut down
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2019-10-03 22:02:38.698
+!MESSAGE Request for monitor: 'RequestMonitor (com.crt.dsfdebug.ui.DebugAllHelper$3$2@2aa4446c): Status ERROR: org.eclipse.cdt.dsf.gdb code=10001 Connection is shut down null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10001 2019-10-03 22:02:38.698
+!MESSAGE Connection is shut down
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2019-10-03 22:02:38.698
+!MESSAGE Request for monitor: 'RequestMonitor (com.crt.dsfdebug.ui.DebugAllHelper$3$2@56e83df2): Status ERROR: org.eclipse.cdt.dsf.gdb code=10001 Connection is shut down null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10001 2019-10-03 22:02:38.698
+!MESSAGE Connection is shut down
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2019-10-03 22:02:38.698
+!MESSAGE Request for monitor: 'RequestMonitor (com.crt.dsfdebug.ui.DebugAllHelper$3$2@6b09683a): Status ERROR: org.eclipse.cdt.dsf.gdb code=10001 Connection is shut down null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10001 2019-10-03 22:02:38.698
+!MESSAGE Connection is shut down
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2019-10-03 22:02:38.698
+!MESSAGE Request for monitor: 'RequestMonitor (com.crt.dsfdebug.ui.DebugAllHelper$3$2@771c796a): Status ERROR: org.eclipse.cdt.dsf.gdb code=10001 Connection is shut down null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10001 2019-10-03 22:02:38.698
+!MESSAGE Connection is shut down
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2019-10-03 22:02:38.699
+!MESSAGE Request for monitor: 'RequestMonitor (com.crt.dsfdebug.ui.DebugAllHelper$3$2@7f13d4c1): Status ERROR: org.eclipse.cdt.dsf.gdb code=10001 Connection is shut down null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10001 2019-10-03 22:02:38.699
+!MESSAGE Connection is shut down
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2019-10-03 22:02:38.699
+!MESSAGE Request for monitor: 'RequestMonitor (com.crt.dsfdebug.ui.DebugAllHelper$3$2@6883617c): Status ERROR: org.eclipse.cdt.dsf.gdb code=10001 Connection is shut down null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10001 2019-10-03 22:02:38.699
+!MESSAGE Connection is shut down
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2019-10-03 22:02:38.699
+!MESSAGE Request for monitor: 'RequestMonitor (com.crt.dsfdebug.ui.DebugAllHelper$3$2@486b9cee): Status ERROR: org.eclipse.cdt.dsf.gdb code=10001 Connection is shut down null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10001 2019-10-03 22:02:38.699
+!MESSAGE Connection is shut down
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2019-10-03 22:02:38.699
+!MESSAGE Request for monitor: 'RequestMonitor (com.crt.dsfdebug.ui.DebugAllHelper$3$2@5c287ba0): Status ERROR: org.eclipse.cdt.dsf.gdb code=10001 Connection is shut down null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10001 2019-10-03 22:02:38.699
+!MESSAGE Connection is shut down
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2019-10-03 22:02:38.700
+!MESSAGE Request for monitor: 'RequestMonitor (com.crt.dsfdebug.ui.DebugAllHelper$3$2@3dfc1938): Status ERROR: org.eclipse.cdt.dsf.gdb code=10001 Connection is shut down null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10001 2019-10-03 22:02:38.700
+!MESSAGE Connection is shut down
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2019-10-03 22:02:38.701
+!MESSAGE Request for monitor: 'RequestMonitor (com.crt.dsfdebug.ui.DebugAllHelper$3$2@4e07177a): Status ERROR: org.eclipse.cdt.dsf.gdb code=10001 Connection is shut down null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10001 2019-10-03 22:02:38.701
+!MESSAGE Connection is shut down
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2019-10-03 22:02:38.701
+!MESSAGE Request for monitor: 'RequestMonitor (com.crt.dsfdebug.ui.DebugAllHelper$3$2@5a1f7eb8): Status ERROR: org.eclipse.cdt.dsf.gdb code=10001 Connection is shut down null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10001 2019-10-03 22:02:38.701
+!MESSAGE Connection is shut down
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2019-10-03 22:02:38.701
+!MESSAGE Request for monitor: 'RequestMonitor (com.crt.dsfdebug.ui.DebugAllHelper$3$2@45f5eb20): Status ERROR: org.eclipse.cdt.dsf.gdb code=10001 Connection is shut down null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10001 2019-10-03 22:02:38.701
+!MESSAGE Connection is shut down
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2019-10-03 22:02:38.702
+!MESSAGE Request for monitor: 'RequestMonitor (com.crt.dsfdebug.ui.DebugAllHelper$3$2@181d1f7f): Status ERROR: org.eclipse.cdt.dsf.gdb code=10001 Connection is shut down null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10001 2019-10-03 22:02:38.702
+!MESSAGE Connection is shut down
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2019-10-03 22:02:38.702
+!MESSAGE Request for monitor: 'RequestMonitor (com.crt.dsfdebug.ui.DebugAllHelper$3$2@6ed767c1): Status ERROR: org.eclipse.cdt.dsf.gdb code=10001 Connection is shut down null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10001 2019-10-03 22:02:38.702
+!MESSAGE Connection is shut down
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2019-10-03 22:02:38.702
+!MESSAGE Request for monitor: 'RequestMonitor (com.crt.dsfdebug.ui.DebugAllHelper$3$2@4f1c3e1d): Status ERROR: org.eclipse.cdt.dsf.gdb code=10001 Connection is shut down null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10001 2019-10-03 22:02:38.702
+!MESSAGE Connection is shut down
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2019-10-03 22:02:38.703
+!MESSAGE Request for monitor: 'RequestMonitor (com.crt.dsfdebug.ui.DebugAllHelper$3$2@25da7035): Status ERROR: org.eclipse.cdt.dsf.gdb code=10001 Connection is shut down null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10001 2019-10-03 22:02:38.703
+!MESSAGE Connection is shut down
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2019-10-03 22:02:38.703
+!MESSAGE Request for monitor: 'RequestMonitor (com.crt.dsfdebug.ui.DebugAllHelper$3$2@55cc7516): Status ERROR: org.eclipse.cdt.dsf.gdb code=10001 Connection is shut down null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10001 2019-10-03 22:02:38.703
+!MESSAGE Connection is shut down
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2019-10-03 22:02:38.703
+!MESSAGE Request for monitor: 'RequestMonitor (com.crt.dsfdebug.ui.DebugAllHelper$3$2@f0e901): Status ERROR: org.eclipse.cdt.dsf.gdb code=10001 Connection is shut down null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10001 2019-10-03 22:02:38.703
+!MESSAGE Connection is shut down
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2019-10-03 22:02:38.703
+!MESSAGE Request for monitor: 'RequestMonitor (com.crt.dsfdebug.ui.DebugAllHelper$3$2@2eb2d3d4): Status ERROR: org.eclipse.cdt.dsf.gdb code=10001 Connection is shut down null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10001 2019-10-03 22:02:38.703
+!MESSAGE Connection is shut down
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2019-10-03 22:02:38.703
+!MESSAGE Request for monitor: 'RequestMonitor (com.crt.dsfdebug.ui.DebugAllHelper$3$2@581f45ef): Status ERROR: org.eclipse.cdt.dsf.gdb code=10001 Connection is shut down null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10001 2019-10-03 22:02:38.703
+!MESSAGE Connection is shut down
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2019-10-03 22:02:38.704
+!MESSAGE Request for monitor: 'RequestMonitor (com.crt.dsfdebug.ui.DebugAllHelper$3$2@6ecdef3f): Status ERROR: org.eclipse.cdt.dsf.gdb code=10001 Connection is shut down null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10001 2019-10-03 22:02:38.704
+!MESSAGE Connection is shut down
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2019-10-03 22:02:38.704
+!MESSAGE Request for monitor: 'RequestMonitor (com.crt.dsfdebug.ui.DebugAllHelper$3$2@69f2ab06): Status ERROR: org.eclipse.cdt.dsf.gdb code=10001 Connection is shut down null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10001 2019-10-03 22:02:38.704
+!MESSAGE Connection is shut down
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2019-10-03 22:02:38.704
+!MESSAGE Request for monitor: 'RequestMonitor (com.crt.dsfdebug.ui.DebugAllHelper$3$2@51e6f99f): Status ERROR: org.eclipse.cdt.dsf.gdb code=10001 Connection is shut down null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10001 2019-10-03 22:02:38.704
+!MESSAGE Connection is shut down
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2019-10-03 22:02:38.704
+!MESSAGE Request for monitor: 'RequestMonitor (com.crt.dsfdebug.ui.DebugAllHelper$3$2@7374fe71): Status ERROR: org.eclipse.cdt.dsf.gdb code=10001 Connection is shut down null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10001 2019-10-03 22:02:38.704
+!MESSAGE Connection is shut down
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2019-10-03 22:02:38.704
+!MESSAGE Request for monitor: 'RequestMonitor (com.crt.dsfdebug.ui.DebugAllHelper$3$2@72414337): Status ERROR: org.eclipse.cdt.dsf.gdb code=10001 Connection is shut down null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10001 2019-10-03 22:02:38.704
+!MESSAGE Connection is shut down
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2019-10-03 22:02:38.705
+!MESSAGE Request for monitor: 'RequestMonitor (com.crt.dsfdebug.ui.DebugAllHelper$3$2@e177ce2): Status ERROR: org.eclipse.cdt.dsf.gdb code=10001 Connection is shut down null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10001 2019-10-03 22:02:38.705
+!MESSAGE Connection is shut down
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2019-10-03 22:02:38.705
+!MESSAGE Request for monitor: 'RequestMonitor (com.crt.dsfdebug.ui.DebugAllHelper$3$2@685b46be): Status ERROR: org.eclipse.cdt.dsf.gdb code=10001 Connection is shut down null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10001 2019-10-03 22:02:38.705
+!MESSAGE Connection is shut down
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2019-10-03 22:02:38.705
+!MESSAGE Request for monitor: 'RequestMonitor (com.crt.dsfdebug.ui.DebugAllHelper$3$2@3c88aab2): Status ERROR: org.eclipse.cdt.dsf.gdb code=10001 Connection is shut down null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10001 2019-10-03 22:02:38.705
+!MESSAGE Connection is shut down
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2019-10-03 22:02:38.706
+!MESSAGE Request for monitor: 'RequestMonitor (com.crt.dsfdebug.ui.DebugAllHelper$3$2@44a81eef): Status ERROR: org.eclipse.cdt.dsf.gdb code=10001 Connection is shut down null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10001 2019-10-03 22:02:38.706
+!MESSAGE Connection is shut down
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2019-10-03 22:02:38.707
+!MESSAGE Request for monitor: 'RequestMonitor (com.crt.dsfdebug.ui.DebugAllHelper$3$2@716d9af4): Status ERROR: org.eclipse.cdt.dsf.gdb code=10001 Connection is shut down null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10001 2019-10-03 22:02:38.707
+!MESSAGE Connection is shut down
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2019-10-03 22:02:38.707
+!MESSAGE Request for monitor: 'RequestMonitor (com.crt.dsfdebug.ui.DebugAllHelper$3$2@43315cd1): Status ERROR: org.eclipse.cdt.dsf.gdb code=10001 Connection is shut down null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10001 2019-10-03 22:02:38.707
+!MESSAGE Connection is shut down
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2019-10-03 22:02:38.708
+!MESSAGE Request for monitor: 'RequestMonitor (com.crt.dsfdebug.ui.DebugAllHelper$3$2@3a15a33f): Status ERROR: org.eclipse.cdt.dsf.gdb code=10001 Connection is shut down null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10001 2019-10-03 22:02:38.708
+!MESSAGE Connection is shut down
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2019-10-03 22:02:38.708
+!MESSAGE Request for monitor: 'RequestMonitor (com.nxp.mcuxpresso.freertos.gdb.tad.model.readers.VariableReader$1@3ece9df4): Status ERROR: org.eclipse.cdt.dsf.gdb code=10001 Connection is shut down null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10001 2019-10-03 22:02:38.708
+!MESSAGE Connection is shut down
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2019-10-03 22:02:38.714
+!MESSAGE Request for monitor: 'RequestMonitor (com.nxp.mcuxpresso.freertos.gdb.tad.model.readers.VariableReader$1@11d5a4ad): Status ERROR: org.eclipse.cdt.dsf.gdb code=10001 Connection is shut down null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10001 2019-10-03 22:02:38.714
+!MESSAGE Connection is shut down
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2019-10-03 22:02:38.714
+!MESSAGE Request for monitor: 'RequestMonitor (com.nxp.mcuxpresso.freertos.gdb.tad.model.readers.VariableReader$1@5613c021): Status ERROR: org.eclipse.cdt.dsf.gdb code=10001 Connection is shut down null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10001 2019-10-03 22:02:38.714
+!MESSAGE Connection is shut down
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2019-10-03 22:02:38.715
+!MESSAGE Request for monitor: 'RequestMonitor (com.nxp.mcuxpresso.freertos.gdb.tad.model.readers.VariableReader$1@5b17abfc): Status ERROR: org.eclipse.cdt.dsf.gdb code=10001 Connection is shut down null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10001 2019-10-03 22:02:38.715
+!MESSAGE Connection is shut down
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2019-10-03 22:02:38.857
+!MESSAGE Request for monitor: 'RequestMonitor (com.crt.dsfdebug.ui.DebugAllHelper$3$2@72e79653): Status ERROR: org.eclipse.cdt.dsf.gdb code=10001 Connection is shut down null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10001 2019-10-03 22:02:38.857
+!MESSAGE Connection is shut down
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2019-10-03 22:02:38.857
+!MESSAGE Request for monitor: 'RequestMonitor (com.crt.dsfdebug.ui.DebugAllHelper$3$2@c8dc946): Status ERROR: org.eclipse.cdt.dsf.gdb code=10001 Connection is shut down null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10001 2019-10-03 22:02:38.857
+!MESSAGE Connection is shut down
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2019-10-03 22:02:38.858
+!MESSAGE Request for monitor: 'RequestMonitor (com.crt.dsfdebug.ui.DebugAllHelper$3$2@4457123e): Status ERROR: org.eclipse.cdt.dsf.gdb code=10001 Connection is shut down null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10001 2019-10-03 22:02:38.858
+!MESSAGE Connection is shut down
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2019-10-03 22:02:38.859
+!MESSAGE Request for monitor: 'RequestMonitor (com.crt.dsfdebug.ui.DebugAllHelper$3$2@22f90903): Status ERROR: org.eclipse.cdt.dsf.gdb code=10001 Connection is shut down null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10001 2019-10-03 22:02:38.859
+!MESSAGE Connection is shut down
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2019-10-03 22:02:38.859
+!MESSAGE Request for monitor: 'RequestMonitor (com.crt.dsfdebug.ui.DebugAllHelper$3$2@6c625601): Status ERROR: org.eclipse.cdt.dsf.gdb code=10001 Connection is shut down null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10001 2019-10-03 22:02:38.859
+!MESSAGE Connection is shut down
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2019-10-03 22:02:38.859
+!MESSAGE Request for monitor: 'RequestMonitor (com.crt.dsfdebug.ui.DebugAllHelper$3$2@ec77532): Status ERROR: org.eclipse.cdt.dsf.gdb code=10001 Connection is shut down null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10001 2019-10-03 22:02:38.859
+!MESSAGE Connection is shut down
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2019-10-03 22:02:38.900
+!MESSAGE Request for monitor: 'RequestMonitor (com.crt.dsfdebug.ui.DebugAllHelper$3$2@3ebf0a4): Status ERROR: org.eclipse.cdt.dsf.gdb code=10001 Connection is shut down null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10001 2019-10-03 22:02:38.900
+!MESSAGE Connection is shut down
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2019-10-03 22:02:38.901
+!MESSAGE Request for monitor: 'RequestMonitor (com.crt.dsfdebug.ui.DebugAllHelper$3$2@44f74a8d): Status ERROR: org.eclipse.cdt.dsf.gdb code=10001 Connection is shut down null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10001 2019-10-03 22:02:38.901
+!MESSAGE Connection is shut down
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2019-10-03 22:02:38.901
+!MESSAGE Request for monitor: 'RequestMonitor (com.crt.dsfdebug.ui.DebugAllHelper$3$2@1af12be0): Status ERROR: org.eclipse.cdt.dsf.gdb code=10001 Connection is shut down null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10001 2019-10-03 22:02:38.901
+!MESSAGE Connection is shut down
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2019-10-03 22:02:38.901
+!MESSAGE Request for monitor: 'RequestMonitor (com.crt.dsfdebug.ui.DebugAllHelper$3$2@5ce10a3c): Status ERROR: org.eclipse.cdt.dsf.gdb code=10001 Connection is shut down null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10001 2019-10-03 22:02:38.902
+!MESSAGE Connection is shut down
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2019-10-03 22:02:38.902
+!MESSAGE Request for monitor: 'RequestMonitor (com.crt.dsfdebug.ui.DebugAllHelper$3$2@53afd4): Status ERROR: org.eclipse.cdt.dsf.gdb code=10001 Connection is shut down null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10001 2019-10-03 22:02:38.902
+!MESSAGE Connection is shut down
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2019-10-03 22:02:40.692
+!MESSAGE Request for monitor: 'RequestMonitor (com.nxp.mcuxpresso.trace.core.linkserver.server.RedlinkClient$3@41b953c6): Status ERROR: com.nxp.mcuxpresso.trace.core.linkserver code=0 Problem obtaining SWO buffer content. java.net.SocketException: Connection reset by peer: socket write error' resulted in an error.
+!SUBENTRY 1 com.nxp.mcuxpresso.trace.core.linkserver 4 0 2019-10-03 22:02:40.692
+!MESSAGE Problem obtaining SWO buffer content.
+!STACK 0
+java.net.SocketException: Connection reset by peer: socket write error
+	at java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.net.SocketOutputStream.write(SocketOutputStream.java:143)
+	at com.nxp.mcuxpresso.trace.core.linkserver.server.RedlinkClient$2.run(RedlinkClient.java:127)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+!ENTRY com.crt.log 1 0 2019-10-03 22:02:43.986
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.crt.debugcommon 1 0 2019-10-03 22:02:44.002
+!MESSAGE RedlinkServer telnet session connected on port 3025->59618 @ 127.0.0.1
+
+!ENTRY com.crt.debugcommon 4 0 2019-10-03 22:02:44.009
+!MESSAGE Unable to parse ProbeList output to get probe ref count: []
+
+!ENTRY com.crt.debugcommon 1 0 2019-10-03 22:03:56.449
+!MESSAGE cvc-complex-type.2.4.a: 发现了以元素 'xi:include' 开头的无效内容。应以 '{params, param, initvalue}' 之一开头。
+
+
+!ENTRY com.crt.log 1 0 2019-10-03 22:04:00.055
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.crt.debugcommon 1 0 2019-10-03 22:04:00.059
+!MESSAGE RedlinkServer telnet session connected on port 3025->59632 @ 127.0.0.1
+
+!ENTRY com.crt.dsfdebug 1 0 2019-10-03 22:04:01.655
+!MESSAGE Telnet session connected on port 3330->59636 @ 127.0.0.1
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2019-10-03 22:04:10.484
+!MESSAGE Request for monitor: '59^error,msg="No symbol "FreeRTOSDebugConfig" in current context."' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2019-10-03 22:04:10.484
+!MESSAGE Failed to execute MI command:
+-data-evaluate-expression &(FreeRTOSDebugConfig)
+Error message from debugger back end:
+No symbol "FreeRTOSDebugConfig" in current context.
+!STACK 0
+java.lang.Exception: No symbol "FreeRTOSDebugConfig" in current context.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:993)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:822)
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2019-10-03 22:04:10.487
+!MESSAGE Request for monitor: '61^error,msg="No struct type named TaskControlBlock_t."' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2019-10-03 22:04:10.487
+!MESSAGE Failed to execute MI command:
+-data-evaluate-expression "sizeof(struct TaskControlBlock_t)"
+Error message from debugger back end:
+No struct type named TaskControlBlock_t.
+!STACK 0
+java.lang.Exception: No struct type named TaskControlBlock_t.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:993)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:822)
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2019-10-03 22:04:10.500
+!MESSAGE Request for monitor: '63^error,msg="There is no member named pcTail."' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2019-10-03 22:04:10.500
+!MESSAGE Failed to execute MI command:
+-data-evaluate-expression "&(((struct QueueDefinition *) 0)->pcTail)"
+Error message from debugger back end:
+There is no member named pcTail.
+!STACK 0
+java.lang.Exception: There is no member named pcTail.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:993)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:822)
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2019-10-03 22:05:02.214
+!MESSAGE Request for monitor: '565^error,msg="Unable to read memory."' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2019-10-03 22:05:02.214
+!MESSAGE Failed to execute MI command:
+-data-read-memory-bytes 0x8f3f014 32
+Error message from debugger back end:
+Unable to read memory.
+!STACK 0
+java.lang.Exception: Unable to read memory.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:993)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:822)
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2019-10-03 22:05:06.176
+!MESSAGE Request for monitor: '566^error,msg="Cannot access memory at address 0x8f3f034"' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2019-10-03 22:05:06.176
+!MESSAGE Failed to execute MI command:
+-data-evaluate-expression "(((struct tskTaskControlBlock *) 0x8f3efe0)->uxBasePriority)"
+Error message from debugger back end:
+Cannot access memory at address 0x8f3f034
+!STACK 0
+java.lang.Exception: Cannot access memory at address 0x8f3f034
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:993)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:822)
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2019-10-03 22:05:06.208
+!MESSAGE Request for monitor: '567^error,msg="Cannot access memory at address 0x8f3f00c"' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2019-10-03 22:05:06.208
+!MESSAGE Failed to execute MI command:
+-data-evaluate-expression "(((struct tskTaskControlBlock *) 0x8f3efe0)->uxPriority)"
+Error message from debugger back end:
+Cannot access memory at address 0x8f3f00c
+!STACK 0
+java.lang.Exception: Cannot access memory at address 0x8f3f00c
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:993)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:822)
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2019-10-03 22:05:06.337
+!MESSAGE Request for monitor: '572^error,msg="Unable to read memory."' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2019-10-03 22:05:06.337
+!MESSAGE Failed to execute MI command:
+-data-read-memory-bytes 0x8f3f014 32
+Error message from debugger back end:
+Unable to read memory.
+!STACK 0
+java.lang.Exception: Unable to read memory.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:993)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:822)
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2019-10-03 22:05:10.297
+!MESSAGE Request for monitor: '573^error,msg="Cannot access memory at address 0x8f3f00c"' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2019-10-03 22:05:10.297
+!MESSAGE Failed to execute MI command:
+-data-evaluate-expression "(((struct tskTaskControlBlock *) 0x8f3efe0)->uxPriority)"
+Error message from debugger back end:
+Cannot access memory at address 0x8f3f00c
+!STACK 0
+java.lang.Exception: Cannot access memory at address 0x8f3f00c
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:993)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:822)
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2019-10-03 22:06:52.326
+!MESSAGE Request for monitor: '769^error,msg="No symbol "freeRTOSMemoryScheme" in current context."' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2019-10-03 22:06:52.326
+!MESSAGE Failed to execute MI command:
+-data-evaluate-expression freeRTOSMemoryScheme
+Error message from debugger back end:
+No symbol "freeRTOSMemoryScheme" in current context.
+!STACK 0
+java.lang.Exception: No symbol "freeRTOSMemoryScheme" in current context.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:993)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:822)
+
+!ENTRY com.crt.debugcommon 4 0 2019-10-03 22:21:58.132
+!MESSAGE There is already a running debug session for the launch configuration 'base LinkServer Debug'.
+
+!ENTRY com.crt.log 1 0 2019-10-03 22:22:01.511
+!MESSAGE Stream is null in [MCUXpresso Semihosting Telnet console for 'base LinkServer Debug' started on port 59636 @ 127.0.0.1]
+
+
+!ENTRY com.crt.debugcommon 1 0 2019-10-03 22:22:08.016
+!MESSAGE cvc-complex-type.2.4.a: 发现了以元素 'xi:include' 开头的无效内容。应以 '{params, param, initvalue}' 之一开头。
+
+
+!ENTRY com.crt.log 1 0 2019-10-03 22:22:11.639
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.crt.debugcommon 1 0 2019-10-03 22:22:11.644
+!MESSAGE RedlinkServer telnet session connected on port 3025->60339 @ 127.0.0.1
+
+!ENTRY com.crt.dsfdebug 1 0 2019-10-03 22:22:13.283
+!MESSAGE Telnet session connected on port 3330->60353 @ 127.0.0.1
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2019-10-03 22:22:39.045
+!MESSAGE Request for monitor: '61^error,msg="No symbol "FreeRTOSDebugConfig" in current context."' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2019-10-03 22:22:39.045
+!MESSAGE Failed to execute MI command:
+-data-evaluate-expression &(FreeRTOSDebugConfig)
+Error message from debugger back end:
+No symbol "FreeRTOSDebugConfig" in current context.
+!STACK 0
+java.lang.Exception: No symbol "FreeRTOSDebugConfig" in current context.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:993)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:822)
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2019-10-03 22:22:39.049
+!MESSAGE Request for monitor: '63^error,msg="No struct type named TaskControlBlock_t."' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2019-10-03 22:22:39.049
+!MESSAGE Failed to execute MI command:
+-data-evaluate-expression "sizeof(struct TaskControlBlock_t)"
+Error message from debugger back end:
+No struct type named TaskControlBlock_t.
+!STACK 0
+java.lang.Exception: No struct type named TaskControlBlock_t.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:993)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:822)
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2019-10-03 22:22:39.064
+!MESSAGE Request for monitor: '65^error,msg="There is no member named pcTail."' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2019-10-03 22:22:39.064
+!MESSAGE Failed to execute MI command:
+-data-evaluate-expression "&(((struct QueueDefinition *) 0)->pcTail)"
+Error message from debugger back end:
+There is no member named pcTail.
+!STACK 0
+java.lang.Exception: There is no member named pcTail.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:993)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:822)

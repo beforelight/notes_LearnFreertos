@@ -37,7 +37,6 @@
  *
  * See http://www.freertos.org/a00110.html.
  *----------------------------------------------------------*/
-
 #define configRECORD_STACK_HIGH_ADDRESS			1
 #define configUSE_PREEMPTION                    1//使能抢占式调度器，为1时会使用
 #define configUSE_TICKLESS_IDLE                 0
@@ -79,12 +78,13 @@
 #define configUSE_MALLOC_FAILED_HOOK            0
 #define configUSE_DAEMON_TASK_STARTUP_HOOK      0
 
+#define configLIST_VOLATILE volatile
 /* Run time and task stats gathering related definitions. */
 #define configGENERATE_RUN_TIME_STATS           1//使能时间统计功能，1时还需要定义portCONFIGURE_TIMER_FOR_RUN_TIME_STATS()初始化基准时钟，portGET_RUN_TIME_COUNTER_VALUE()获取时钟值
 #define portCONFIGURE_TIMER_FOR_RUN_TIME_STATS() PITMGR_Init()
-#define portGET_RUN_TIME_COUNTER_VALUE() PITMGR_GetLTC()
+#define portGET_RUN_TIME_COUNTER_VALUE() PITMGR_GetLTC_us()
 #define configUSE_TRACE_FACILITY                1//使能可视化追踪
-#define configUSE_STATS_FORMATTING_FUNCTIONS    0//启用vTaskList()和vTaskGetRunTimeStats
+#define configUSE_STATS_FORMATTING_FUNCTIONS    1//启用vTaskList()和vTaskGetRunTimeStats
 
 /* Co-routine related definitions. */
 #define configUSE_CO_ROUTINES                   0//使能携程
