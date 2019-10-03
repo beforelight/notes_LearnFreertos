@@ -39,6 +39,7 @@
 #include "clock_config.h"
 #include "MK66F18.h"
 #include "fsl_debug_console.h"
+#include "user.h"
 /* TODO: insert other include files here. */
 
 /* TODO: insert other definitions and declarations here. */
@@ -53,9 +54,9 @@ int main(void) {
     BOARD_InitBootPeripherals();
   	/* Init FSL debug console. */
 	BOARD_InitDebugConsole();
-
     PRINTF("Hello World\n");
-
+    PRINTF("To Usermain()\n");
+	UserMain();
     /* Force the counter to be placed into memory. */
     volatile static int i = 0 ;
     /* Enter an infinite loop, just incrementing a counter. */

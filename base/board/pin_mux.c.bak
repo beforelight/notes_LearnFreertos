@@ -44,7 +44,7 @@ BOARD_InitPins:
 - options: {callFromInitBoot: 'true', prefix: '', coreID: core0, enableClock: 'true'}
 - pin_list:
   - {pin_num: '103', peripheral: GPIOC, signal: 'GPIO, 0', pin_signal: ADC0_SE14/TSI0_CH13/PTC0/SPI0_PCS4/PDB0_EXTRG/USB0_SOF_OUT/FB_AD14/SDRAM_A22/I2S0_TXD1, direction: OUTPUT,
-    gpio_init_state: 'false'}
+    gpio_init_state: 'true'}
   - {pin_num: '69', peripheral: GPIOA, signal: 'GPIO, 17', pin_signal: ADC1_SE17/PTA17/SPI0_SIN/UART0_RTS_b/RMII0_TXD1/MII0_TXD1/I2S0_MCLK, direction: OUTPUT, gpio_init_state: 'true'}
   - {pin_num: '46', peripheral: GPIOE, signal: 'GPIO, 25', pin_signal: ADC0_SE18/PTE25/LLWU_P21/CAN1_RX/UART4_RX/I2C0_SDA/EWM_IN, direction: OUTPUT, gpio_init_state: 'true'}
   - {pin_num: '144', peripheral: GPIOD, signal: 'GPIO, 15', pin_signal: PTD15/SPI2_PCS1/SDHC0_D7/FB_A23, direction: OUTPUT, gpio_init_state: 'true'}
@@ -85,7 +85,7 @@ void BOARD_InitPins(void)
 
     gpio_pin_config_t LED1_config = {
         .pinDirection = kGPIO_DigitalOutput,
-        .outputLogic = 0U
+        .outputLogic = 1U
     };
     /* Initialize GPIO functionality on pin PTC0 (pin 103)  */
     GPIO_PinInit(LED1_GPIO, LED1_PIN, &LED1_config);

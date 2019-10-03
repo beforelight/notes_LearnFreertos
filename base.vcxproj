@@ -64,22 +64,22 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <NMakeOutput>base.exe</NMakeOutput>
-    <NMakePreprocessorDefinitions>CPU_MK66FX1M0VLQ18_cm4;CPU_MK66FX1M0VLQ18;FSL_RTOS_BM;SDK_OS_BAREMETAL;SDK_DEBUGCONSOLE=1;CR_INTEGER_PRINTF;PRINTF_FLOAT_ENABLE=0;FSL_RTOS_FREE_RTOS;SDK_OS_FREE_RTOS;__GNUC__;SDK_DEBUGCONSOLE_UART;__MCUXPRESSO;__USE_CMSIS;DEBUG;__NEWLIB__</NMakePreprocessorDefinitions>
+    <NMakePreprocessorDefinitions>CPU_MK66FX1M0VLQ18_cm4;CPU_MK66FX1M0VLQ18;FSL_RTOS_BM;SDK_OS_BAREMETAL;SDK_DEBUGCONSOLE=1;CR_INTEGER_PRINTF;PRINTF_FLOAT_ENABLE=0;FSL_RTOS_FREE_RTOS;SDK_OS_FREE_RTOS;__GNUC__;SDK_DEBUGCONSOLE_UART;__MCUXPRESSO;__USE_CMSIS;DEBUG;__NEWLIB__;ARM_MATH_CM4</NMakePreprocessorDefinitions>
     <IncludePath>$(MSBuildProjectDirectory)/base/utilities/utilities;$(MSBuildProjectDirectory)/base/board;$(MSBuildProjectDirectory)/base/utilities;$(MSBuildProjectDirectory)/base/component/uart;$(MSBuildProjectDirectory)/base/component/lists;$(MSBuildProjectDirectory)/base/component/serial_manager;$(MSBuildProjectDirectory)/base/CMSIS_driver;$(MSBuildProjectDirectory)/base/drivers/freertos;$(MSBuildProjectDirectory)/base/CMSIS;$(MSBuildProjectDirectory)/base/device;$(MSBuildProjectDirectory)/base/drivers;$(MSBuildProjectDirectory)/base/amazon-freertos/include;$(MSBuildProjectDirectory)/base/amazon-freertos/freertos/portable;$(MSBuildProjectDirectory)/base/;$(MSBuildProjectDirectory)/base/source;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <NMakeOutput>base.exe</NMakeOutput>
-    <NMakePreprocessorDefinitions>CPU_MK66FX1M0VLQ18_cm4;CPU_MK66FX1M0VLQ18;FSL_RTOS_BM;SDK_OS_BAREMETAL;SDK_DEBUGCONSOLE=1;CR_INTEGER_PRINTF;PRINTF_FLOAT_ENABLE=0;FSL_RTOS_FREE_RTOS;SDK_OS_FREE_RTOS;__GNUC__;SDK_DEBUGCONSOLE_UART;__MCUXPRESSO;__USE_CMSIS;DEBUG;__NEWLIB__</NMakePreprocessorDefinitions>
+    <NMakePreprocessorDefinitions>CPU_MK66FX1M0VLQ18_cm4;CPU_MK66FX1M0VLQ18;FSL_RTOS_BM;SDK_OS_BAREMETAL;SDK_DEBUGCONSOLE=1;CR_INTEGER_PRINTF;PRINTF_FLOAT_ENABLE=0;FSL_RTOS_FREE_RTOS;SDK_OS_FREE_RTOS;__GNUC__;SDK_DEBUGCONSOLE_UART;__MCUXPRESSO;__USE_CMSIS;DEBUG;__NEWLIB__;ARM_MATH_CM4</NMakePreprocessorDefinitions>
     <IncludePath>$(MSBuildProjectDirectory)/base/utilities/utilities;$(MSBuildProjectDirectory)/base/board;$(MSBuildProjectDirectory)/base/utilities;$(MSBuildProjectDirectory)/base/component/uart;$(MSBuildProjectDirectory)/base/component/lists;$(MSBuildProjectDirectory)/base/component/serial_manager;$(MSBuildProjectDirectory)/base/CMSIS_driver;$(MSBuildProjectDirectory)/base/drivers/freertos;$(MSBuildProjectDirectory)/base/CMSIS;$(MSBuildProjectDirectory)/base/device;$(MSBuildProjectDirectory)/base/drivers;$(MSBuildProjectDirectory)/base/amazon-freertos/include;$(MSBuildProjectDirectory)/base/amazon-freertos/freertos/portable;$(MSBuildProjectDirectory)/base/;$(MSBuildProjectDirectory)/base/source;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <NMakeOutput>base.exe</NMakeOutput>
-    <NMakePreprocessorDefinitions>CPU_MK66FX1M0VLQ18_cm4;CPU_MK66FX1M0VLQ18;FSL_RTOS_BM;SDK_OS_BAREMETAL;SDK_DEBUGCONSOLE=1;CR_INTEGER_PRINTF;PRINTF_FLOAT_ENABLE=0;FSL_RTOS_FREE_RTOS;SDK_OS_FREE_RTOS;__GNUC__;SDK_DEBUGCONSOLE_UART;__MCUXPRESSO;__USE_CMSIS;DEBUG;__NEWLIB__</NMakePreprocessorDefinitions>
+    <NMakePreprocessorDefinitions>CPU_MK66FX1M0VLQ18_cm4;CPU_MK66FX1M0VLQ18;FSL_RTOS_BM;SDK_OS_BAREMETAL;SDK_DEBUGCONSOLE=1;CR_INTEGER_PRINTF;PRINTF_FLOAT_ENABLE=0;FSL_RTOS_FREE_RTOS;SDK_OS_FREE_RTOS;__GNUC__;SDK_DEBUGCONSOLE_UART;__MCUXPRESSO;__USE_CMSIS;DEBUG;__NEWLIB__;ARM_MATH_CM4</NMakePreprocessorDefinitions>
     <IncludePath>$(MSBuildProjectDirectory)/base/utilities/utilities;$(MSBuildProjectDirectory)/base/board;$(MSBuildProjectDirectory)/base/utilities;$(MSBuildProjectDirectory)/base/component/uart;$(MSBuildProjectDirectory)/base/component/lists;$(MSBuildProjectDirectory)/base/component/serial_manager;$(MSBuildProjectDirectory)/base/CMSIS_driver;$(MSBuildProjectDirectory)/base/drivers/freertos;$(MSBuildProjectDirectory)/base/CMSIS;$(MSBuildProjectDirectory)/base/device;$(MSBuildProjectDirectory)/base/drivers;$(MSBuildProjectDirectory)/base/amazon-freertos/include;$(MSBuildProjectDirectory)/base/amazon-freertos/freertos/portable;$(MSBuildProjectDirectory)/base/;$(MSBuildProjectDirectory)/base/source;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <NMakeOutput>base.exe</NMakeOutput>
-    <NMakePreprocessorDefinitions>CPU_MK66FX1M0VLQ18_cm4;CPU_MK66FX1M0VLQ18;FSL_RTOS_BM;SDK_OS_BAREMETAL;SDK_DEBUGCONSOLE=1;CR_INTEGER_PRINTF;PRINTF_FLOAT_ENABLE=0;FSL_RTOS_FREE_RTOS;SDK_OS_FREE_RTOS;__GNUC__;SDK_DEBUGCONSOLE_UART;__MCUXPRESSO;__USE_CMSIS;DEBUG;__NEWLIB__</NMakePreprocessorDefinitions>
+    <NMakePreprocessorDefinitions>CPU_MK66FX1M0VLQ18_cm4;CPU_MK66FX1M0VLQ18;FSL_RTOS_BM;SDK_OS_BAREMETAL;SDK_DEBUGCONSOLE=1;CR_INTEGER_PRINTF;PRINTF_FLOAT_ENABLE=0;FSL_RTOS_FREE_RTOS;SDK_OS_FREE_RTOS;__GNUC__;SDK_DEBUGCONSOLE_UART;__MCUXPRESSO;__USE_CMSIS;DEBUG;__NEWLIB__;ARM_MATH_CM4</NMakePreprocessorDefinitions>
     <IncludePath>$(MSBuildProjectDirectory)/base/utilities/utilities;$(MSBuildProjectDirectory)/base/board;$(MSBuildProjectDirectory)/base/utilities;$(MSBuildProjectDirectory)/base/component/uart;$(MSBuildProjectDirectory)/base/component/lists;$(MSBuildProjectDirectory)/base/component/serial_manager;$(MSBuildProjectDirectory)/base/CMSIS_driver;$(MSBuildProjectDirectory)/base/drivers/freertos;$(MSBuildProjectDirectory)/base/CMSIS;$(MSBuildProjectDirectory)/base/device;$(MSBuildProjectDirectory)/base/drivers;$(MSBuildProjectDirectory)/base/amazon-freertos/include;$(MSBuildProjectDirectory)/base/amazon-freertos/freertos/portable;$(MSBuildProjectDirectory)/base/;$(MSBuildProjectDirectory)/base/source;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <ItemDefinitionGroup>
@@ -152,6 +152,7 @@
     <ClCompile Include="base\drivers\fsl_wdog.c" />
     <ClCompile Include="base\source\base.c" />
     <ClCompile Include="base\source\semihost_hardfault.c" />
+    <ClCompile Include="base\source\user.c" />
     <ClCompile Include="base\startup\startup_mk66f18.c" />
     <ClCompile Include="base\utilities\fsl_assert.c" />
     <ClCompile Include="base\utilities\fsl_debug_console.c" />
@@ -254,6 +255,7 @@
     <ClInclude Include="base\drivers\fsl_vref.h" />
     <ClInclude Include="base\drivers\fsl_wdog.h" />
     <ClInclude Include="base\source\FreeRTOSConfig.h" />
+    <ClInclude Include="base\source\user.h" />
     <ClInclude Include="base\utilities\fsl_debug_console.h" />
     <ClInclude Include="base\utilities\fsl_debug_console_conf.h" />
     <ClInclude Include="base\utilities\fsl_shell.h" />

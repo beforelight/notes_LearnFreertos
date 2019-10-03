@@ -243,6 +243,9 @@
     <ClCompile Include="base\board\pin_mux.c">
       <Filter>board</Filter>
     </ClCompile>
+    <ClCompile Include="base\source\user.c">
+      <Filter>source</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="base\source\FreeRTOSConfig.h">
@@ -541,6 +544,9 @@
     </ClInclude>
     <ClInclude Include="base\board\RTE_Device.h">
       <Filter>board</Filter>
+    </ClInclude>
+    <ClInclude Include="base\source\user.h">
+      <Filter>source</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

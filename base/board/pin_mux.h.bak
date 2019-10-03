@@ -27,34 +27,6 @@ void BOARD_InitBootPins(void);
 
 #define SOPT5_UART0TXSRC_UART_TX 0x00u /*!<@brief UART 0 transmit data source select: UART0_TX pin */
 
-/*! @name PORTC0 (number 103), LED1
-  @{ */
-#define LED1_GPIO GPIOC /*!<@brief GPIO device name: GPIOC */
-#define LED1_PORT PORTC /*!<@brief PORT device name: PORTC */
-#define LED1_PIN 0U     /*!<@brief PORTC pin index: 0 */
-                        /* @} */
-
-/*! @name PORTA17 (number 69), LED2
-  @{ */
-#define LED2_GPIO GPIOA /*!<@brief GPIO device name: GPIOA */
-#define LED2_PORT PORTA /*!<@brief PORT device name: PORTA */
-#define LED2_PIN 17U    /*!<@brief PORTA pin index: 17 */
-                        /* @} */
-
-/*! @name PORTE25 (number 46), LED3
-  @{ */
-#define LED3_GPIO GPIOE /*!<@brief GPIO device name: GPIOE */
-#define LED3_PORT PORTE /*!<@brief PORT device name: PORTE */
-#define LED3_PIN 25U    /*!<@brief PORTE pin index: 25 */
-                        /* @} */
-
-/*! @name PORTD15 (number 144), LED4
-  @{ */
-#define LED4_GPIO GPIOD /*!<@brief GPIO device name: GPIOD */
-#define LED4_PORT PORTD /*!<@brief PORT device name: PORTD */
-#define LED4_PIN 15U    /*!<@brief PORTD pin index: 15 */
-                        /* @} */
-
 /*!
  * @brief Configures pin routing and optionally pin electrical features.
  *
