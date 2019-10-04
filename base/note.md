@@ -25,13 +25,39 @@
 
    3. 宏命名
 
-      - 宏定义使用文件名的一部发，比如
+      - 宏定义使用文件名的一部分，比如source/FreeRTOSConfig.h中的#define configGENERATE_RUN_TIME_STATS
+      - 宏定义其他部分全用大写，并且单词之间使用下划线隔开
 
+2. ### 数据类型
+
+   只使用stdint.h和FreeRtos自己定义的数据类型下俩个例外
+   
+   1. char
+   2. char*
+   
+   还有4个变量类型定义在文件portmacro.h中，属于移植要修改的
+   
+   1. TickType_t
+   
+      在32位单片机中必须定义为无符号的32位数据类型，在configUSE_16_BIT_TISCKS为0的时候定义为uint32_t
+   
+   2. BaseType_t 
+   
+      单片机效率最高的最大的数据类型，32位单片机就是int32_t
+   
+   3. UBaseType_t
+   
+      无符号的BaseType_t
+   
+   4. StackType_t
+   
+      堆栈使用的数据类型，在16位mcu上是16位的数据类型，在32位mcu上是32位的数据类型
+   
    
 
 ## 第一章 hello world
 
-首先在main.c同目录添加user.c/h，编译运行下
+首先在main.c同目录添加user.c/h，编译运行
 
 user.h
 
@@ -326,19 +352,321 @@ void vTaskList( char * pcWriteBuffer );
 
 ## 第八章 时间管理（待）
 
-## 第九章 FreeRtos队列（）
+## 第九章 FreeRtos队列
 
-## 第十章 信号量（）
+### 作用
 
-## 第十一章 软件定时器任务（）
+1. 数据存储。队列为先进先出的数据结构
+2. 多任务访问。任何任务都可以操作队列
+3. **出队阻塞**。当任务从队列读取消息时，可以设置阻塞时间。
+4. **入队阻塞**。当队列满时，可以阻塞。
+
+### 创建
+
+```c
+#define xQueueCreate ( uxQueueLength, uxItemSize ) xQueueGenericCreate( ( uxQueueLength ), ( uxItemSize ), ( queueQUEUE_TYPE_BASE ) )
+QueueHandle_t xQueueGenericCreate( const UBaseType_t uxQueueLength, const UBaseType_t uxItemSize, const uint8_t ucQueueType )
+```
+
+xQueueCreate是创建队列的函数，不过最终调用的是xQueueGenericCreate。第一个参数是队列的最大长度，第二个参数是每个项目的大小直接。第三个参数是类型，如果是创建队列的话为queueQUEUE_TYPE_BASE。
+
+```c
+#define queueQUEUE_TYPE_BASE				( ( uint8_t ) 0U )//普通消息队列
+#define queueQUEUE_TYPE_SET					( ( uint8_t ) 0U )
+#define queueQUEUE_TYPE_MUTEX 				( ( uint8_t ) 1U )//互斥信号量
+#define queueQUEUE_TYPE_COUNTING_SEMAPHORE	( ( uint8_t ) 2U )//计数信号量
+#define queueQUEUE_TYPE_BINARY_SEMAPHORE	( ( uint8_t ) 3U )//二值信号量
+#define queueQUEUE_TYPE_RECURSIVE_MUTEX		( ( uint8_t ) 4U )//递归互斥信号量
+```
+
+返回队列的句柄
+
+### 发送消息
+
+| 分类           | 函数                | 描述                     |
+| -------------- | ------------------- | ------------------------ |
+| 任务级入队函数 | xQueueSend()        | 入队                     |
+|                | xQueueSendToBack()  | 同上                     |
+|                | xQueueSendToFront() | 前项入队                 |
+|                | xQueueOverwrite()   | 带覆写功能入队           |
+|                | xQueueGenericSend() | 上面都是调用这个真正干活 |
+| 中断级         | xQueueSendFromISR() |                          |
+| 不能设置阻塞时间 |   xQueueSendToBackFromISR()           |        |
+| 并且可以需要在消息 | xQueueSendToFrontFromISR() |                          |
+| 发送完成之后进行任务切换 | xQueueOverwriteFromISR() | |
+| | xQueueGenericSendFromISR() | |
+
+```c
+BaseType_t xQueueGenericSend( QueueHandle_t xQueue,//队列句柄
+                             const void * const pvItemToQueue, //指向消息的指针，会复制消息
+                             TickType_t xTicksToWait, //阻塞时间
+                             const BaseType_t xCopyPosition );//入队方式
+#define	queueSEND_TO_BACK		( ( BaseType_t ) 0 )
+#define	queueSEND_TO_FRONT		( ( BaseType_t ) 1 )
+#define queueOVERWRITE			( ( BaseType_t ) 2 )
+    //返回pdTRUE发送成功
+```
+
+```c
+BaseType_t xQueueGenericSendFromISR( QueueHandle_t xQueue, 
+                                    const void * const pvItemToQueue, 
+                                    BaseType_t * const pxHigherPriorityTaskWoken, //标记退出之后是否需要任务切换 为pdTRU时，需要进行切换
+                                    const BaseType_t xCopyPosition );
+//对于第三个参数来说，有个函数方便的完成了ifelse的判断，可以使用宏定义portYIELD_FROM_ISR()完成切换
+#define portEND_SWITCHING_ISR( xSwitchRequired ) if( xSwitchRequired != pdFALSE ) portYIELD()
+#define portYIELD_FROM_ISR( x ) portEND_SWITCHING_ISR( x )
+```
+
+### 读取消息
+
+| 任务级出队 | xQueueReceive()        | 完成之后删除   |
+| ---------- | ---------------------- | -------------- |
+|            | xQueuePeek()           | 完成之后不删除 |
+| 中断级出队 | xQueueReceiveFromISR() |                |
+|            | xQueuePeekFromISR()    |                |
+
+```c
+BaseType_t xQueueReceive( QueueHandle_t xQueue, void * const pvBuffer, TickType_t xTicksToWait );
+BaseType_t xQueuePeek( QueueHandle_t xQueue, void * const pvBuffer, TickType_t xTicksToWait );
+BaseType_t xQueueReceiveFromISR( QueueHandle_t xQueue, void * const pvBuffer, BaseType_t * const pxHigherPriorityTaskWoken );
+BaseType_t xQueuePeekFromISR( QueueHandle_t xQueue, void * const pvBuffer );
+//返回pdTRUE成功
+```
+
+示例
+
+```c
+#define QUEUE_SEND_PRIO 0
+#define QUEUE_SEND_STK_SIZE 400
+static TaskHandle_t queue_send_handler;
+void queue_send(void* pvParameters);
+static QueueHandle_t queue0;
+#define QUEUE_RECEIVE_PRIO QUEUE_SEND_PRIO+1
+#define QUEUE_RECEIVE_STK_SIZE 400
+static TaskHandle_t queue_receive_handler;
+void queue_receive(void* pvParameters);
+
+void queue_send(void* pvParameters)
+{
+	PRINTF("0123 to on 4567 to off\n");
+	char q;
+	int result;
+	while (1)
+	{
+		q=GETCHAR();
+		result=xQueueSend(queue0, &q, portMAX_DELAY);//一直等待发送
+	}
+}
+
+void queue_receive(void* pvParameters)
+{
+	char q;
+	int result;
+	while (1)
+	{
+		result=xQueueReceive(queue0, &q, portMAX_DELAY);//一直阻塞等待消息
+		if (q=='0'){GPIO_PinWrite(LED1_GPIO, LED1_PIN, 0); PRINTF("LED1 on\n");}
+		else if (q == '1') { GPIO_PinWrite(LED2_GPIO, LED2_PIN, 0); PRINTF("LED1 on\n"); }
+		else if (q == '2') { GPIO_PinWrite(LED3_GPIO, LED3_PIN, 0); PRINTF("LED2 on\n"); }
+		else if (q == '3') { GPIO_PinWrite(LED4_GPIO, LED4_PIN, 0); PRINTF("LED3 on\n"); }
+		else if (q == '4') { GPIO_PinWrite(LED1_GPIO, LED1_PIN, 1); PRINTF("LED4 off\n"); }
+		else if (q == '5') { GPIO_PinWrite(LED2_GPIO, LED2_PIN, 1); PRINTF("LED2 off\n"); }
+		else if (q == '6') { GPIO_PinWrite(LED3_GPIO, LED3_PIN, 1); PRINTF("LED3 off\n"); }
+		else if (q == '7') { GPIO_PinWrite(LED4_GPIO, LED4_PIN, 1); PRINTF("LED4 off\n"); }
+	}
+}
+```
+
+
+
+## 第十章 信号量
+
+信号量一般用来任务同步、资源管理。freertos的信号量是包装之后的队列。
+
+### 10.1 二值信号量（锁）
+
+二值信号量会发生优先级翻转
+
+#### 创建
+
+xSemaphoreCreateBinary()创建之后默认没有释放是不能获取的
+
+```c
+#define xSemaphoreCreateBinary() xQueueGenericCreate( ( UBaseType_t ) 1, semSEMAPHORE_QUEUE_ITEM_LENGTH, queueQUEUE_TYPE_BINARY_SEMAPHORE )
+```
+
+#### 释放
+
+xSemaphoreGive()和xSemaphoreGiveFromISR()
+
+```c
+#define xSemaphoreGive( xSemaphore )		xQueueGenericSend( ( QueueHandle_t ) ( xSemaphore ), NULL, semGIVE_BLOCK_TIME, queueSEND_TO_BACK )
+#define xSemaphoreGiveFromISR( xSemaphore, pxHigherPriorityTaskWoken )	xQueueGiveFromISR( ( QueueHandle_t ) ( xSemaphore ), ( pxHigherPriorityTaskWoken ) )//不能用于互斥信号量
+
+```
+
+#### 获取
+
+注意刚创建的信号量是获取不了的
+
+```c
+#define xSemaphoreTakeFromISR( xSemaphore, pxHigherPriorityTaskWoken )	xQueueReceiveFromISR( ( QueueHandle_t ) ( xSemaphore ), NULL, ( pxHigherPriorityTaskWoken ) )
+#define xSemaphoreTake( xSemaphore, xBlockTime )		xQueueSemaphoreTake( ( xSemaphore ), ( xBlockTime ) )//不能用于互斥信号量
+```
+
+
+
+### 10.2 计数信号量
+
+如果说二值信号量是长度为1的队列，那计数信号量就是长多大于1的队列。一般用于资源管理，比如管理停车场的停车位，很形象吧
+
+```c
+//创建
+#define xSemaphoreCreateCounting( uxMaxCount, uxInitialCount ) xQueueCreateCountingSemaphore( ( uxMaxCount ), ( uxInitialCount ) )//需要设置最大计数值
+//释放和获取同二值信号量
+```
+
+### 10.3 互斥信号量
+
+互斥信号量是有优先级继承的二值信号量。当低优先级的任务先获取了信号量，然后高优先级再去获取信号量是，会将该低优先级的任务升级到改高优先级任务的优先级。互斥信号量，降低了高优先级任务的阻塞时间，尽量避免优先级翻转。
+
+注意，不能在中断服务函数中使用互斥信号量
+
+```c
+//创建之后hui固定释放一次信号量
+#define xSemaphoreCreateMutex() xQueueCreateMutex( queueQUEUE_TYPE_MUTEX )
+//释放和获取同二值信号量
+```
+
+### 10.4 递归互斥信号量
+
+特殊的互斥信号量。当一个任务获取了信号量之后，还能在同一个任务再次获取，并且获取了多少次就要释放多少次。同样有优先级继承的特性
+
+```c
+//创建之后会固定释放一次信号量
+#define xSemaphoreCreateRecursiveMutex() xQueueCreateMutex( queueQUEUE_TYPE_RECURSIVE_MUTEX )
+//释放
+#define xSemaphoreGiveRecursive( xMutex )	xQueueGiveMutexRecursive( ( xMutex ) )
+//获取
+#define xSemaphoreTakeRecursive( xMutex, xBlockTime )	xQueueTakeMutexRecursive( ( xMutex ), ( xBlockTime ) )
+```
+
+
+
+## 第十一章 软件定时器任务
+
+用于创建定时执行的任务
+
+- 创建
+
+  xTimerCreate
+
+  ```c
+  TimerHandle_t xTimerCreate(	const char * const pcTimerName,	//定时器名字
+  								const TickType_t xTimerPeriodInTicks,//定时器周期，单位是节拍数
+  								const UBaseType_t uxAutoReload,//单次定时器or周期定时器
+  								void * const pvTimerID,//定时器编号，也可以用来传参区分同回调函数的不同的定时器
+  								TimerCallbackFunction_t pxCallbackFunction )；//定时时间到执行的回调函数
+  typedef void (*TimerCallbackFunction_t)( TimerHandle_t xTimer );
+  ```
+
+- 开启和复位
+
+  ```c
+  #define xTimerStart( xTimer, xTicksToWait ) xTimerGenericCommand( ( xTimer ), tmrCOMMAND_START, ( xTaskGetTickCount() ), NULL, ( xTicksToWait ) )//第二个参数是阻塞时间，因为涉及到队列操作
+  #define xTimerStartFromISR( xTimer, pxHigherPriorityTaskWoken ) xTimerGenericCommand( ( xTimer ), tmrCOMMAND_START_FROM_ISR, ( xTaskGetTickCountFromISR() ), ( pxHigherPriorityTaskWoken ), 0U )
+  //如果定时器已经在运行了，那么上面的效果和下面的一样
+  #define xTimerReset( xTimer, xTicksToWait ) xTimerGenericCommand( ( xTimer ), tmrCOMMAND_RESET, ( xTaskGetTickCount() ), NULL, ( xTicksToWait ) )
+  #define xTimerResetFromISR( xTimer, pxHigherPriorityTaskWoken ) xTimerGenericCommand( ( xTimer ), tmrCOMMAND_RESET_FROM_ISR, ( xTaskGetTickCountFromISR() ), ( pxHigherPriorityTaskWoken ), 0U )
+  
+  ```
+
+- 停止和删除
+
+  ```c
+  #define xTimerStop( xTimer, xTicksToWait ) xTimerGenericCommand( ( xTimer ), tmrCOMMAND_STOP, 0U, NULL, ( xTicksToWait ) )
+  #define xTimerStopFromISR( xTimer, pxHigherPriorityTaskWoken ) xTimerGenericCommand( ( xTimer ), tmrCOMMAND_STOP_FROM_ISR, 0, ( pxHigherPriorityTaskWoken ), 0U )
+  #define xTimerDelete( xTimer, xTicksToWait ) xTimerGenericCommand( ( xTimer ), tmrCOMMAND_DELETE, 0U, NULL, ( xTicksToWait ) )
+  
+  ```
 
 ## 第十二章 事件标志组（）
 
-## 第十三章 任务通知·新（）
+## 第十三章 任务通知
 
-## 第十四章 低功耗模式（）
+### 发送通知
+
+发送通知不会阻塞
+
+| 函数                       | 描述                                                         |
+| -------------------------- | ------------------------------------------------------------ |
+| xTaskNotify                | 发送通知，带有通知值而且不保留接收任务原通知值               |
+| xTaskNotifyFromISR         |                                                              |
+| xTaskNotifyGive            | 发送通知，不带有通知值而且不保留接收任务原通知值，会将接收任务通知值+1 |
+| vTaskNotifyGiveFromISR     |                                                              |
+| xTaskNotifyAndQuery        | 发送通知，带有通知值而且保留接收任务原通知值                 |
+| xTaskNotifyAndQueryFromISR |                                                              |
+
+### 获取通知
+
+通常有阻塞
+
+| 函数             | 描述                                                         |
+| ---------------- | ------------------------------------------------------------ |
+| ulTaskNotifyTake | 获取任务通知，可以设置退出时将任务通知值清0或-1。当用作二值、计数信号量时，用来获取信号量 |
+| xTaskNotifyWait  | 全功能获取任务通知                                           |
+
+
+
+## 第十四章 低功耗Tickless模式（）
+
+见k66例程
 
 ## 第十五章 空闲任务（）
 
-## 第十六章 内存管理（）
+## 第十六章 内存管理
+
+FreeRtos内置了5中内存管理方法
+
+![](png/2.png)
+
+### heap_1.c
+
+内存堆为ucHeap[]，其内存分配方法不适用于动态内存。内存分配方法简单，但是无内存释放方法。
+
+### heap_2.c
+
+内存堆为ucHeap[]，内存分配方法简单，内存释放方法也简单。容易造成内存碎片
+
+### heap_3.c
+
+对c中的malloc()和free()的简单封装
+
+### heap_4.c
+
+内存堆为ucHeap[]，方法复杂，不造成内存碎片
+
+### heap_5.c
+
+同heap_4.c，只不过内存堆由用户提供，并且支持内存堆使用不连续的内存块。
+
+在使用freertos API之前一定要先使用void vPortDefineHeapRegions( const HeapRegion_t * const pxHeapRegions )初始化内存堆。
+
+```c
+typedef struct HeapRegion
+{
+	uint8_t *pucStartAddress;
+	size_t xSizeInBytes;
+} HeapRegion_t;
+HeapRegion_t xHeapRegions[]=
+{
+    {(uint8_t*)0x10000000UL,0x10000},
+    {(uint8_t*)0x20000000UL,0x30000},
+    {(uint8_t*)0xC0000000UL,0x2000000},
+    {NULL,0}//结尾格式，成员按地址从低到高的岁序排列
+}
+vPortDefineHeapRegions(xHeapRegions);//初始化内存堆
+```
+
+
 

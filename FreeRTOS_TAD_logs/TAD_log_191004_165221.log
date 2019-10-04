@@ -1,0 +1,28 @@
+"FreeRTOS Task Aware Debugger for GDB" version 11.0.0 (201905201323)
+(c) 2016-2018 NXP Semiconductors, Inc.
+==================================
+16:46:43.118 ERROR: [MemoryReader] Read bytes method timed out!
+16:46:43.122 EXCEPTION: [TadModel] NullPointerException while "Heap Usage" data load.
+	com.nxp.mcuxpresso.freertos.gdb.tad.model.readers.VariableReader.readVariable(VariableReader.java:214)
+	com.nxp.mcuxpresso.freertos.gdb.tad.model.readers.VariableReader.getValueAtAddress(VariableReader.java:136)
+	com.nxp.mcuxpresso.freertos.gdb.tad.controller.TadFactory.readIntAtAddress(TadFactory.java:212)
+	com.nxp.mcuxpresso.freertos.gdb.tad.controller.tasklist.TaskFactory.readTasksFromList(TaskFactory.java:202)
+	com.nxp.mcuxpresso.freertos.gdb.tad.controller.tasklist.TaskFactory.getData(TaskFactory.java:142)
+	com.nxp.mcuxpresso.freertos.gdb.tad.model.TadModel$2.execute(TadModel.java:210)
+	com.nxp.mcuxpresso.freertos.gdb.tad.model.TadModel$3.run(TadModel.java:414)
+16:51:35.713 INFO: [TadModel] DSF session ID 7 has started.
+16:51:43.76 INFO: [TadState] TAD state changed:  DEBUG_STARTED -> DEBUG_INIT_0 (RESUMED, USER_REQUEST)
+16:51:43.322 INFO: [TadState] TAD state changed:  DEBUG_INIT_0 -> DEBUG_INIT_1 (SUSPENDED, SIGNAL)
+16:51:45.879 INFO: [TadState] TAD state changed:  DEBUG_INIT_1 -> DEBUG_SUSPENDED (RESUMED, USER_REQUEST)
+16:51:46.60 INFO: [TadState] TAD state changed:  DEBUG_SUSPENDED -> DEBUG_SUSPENDED (SUSPENDED, BREAKPOINT)
+16:51:50.508 INFO: [TadState] TAD state changed:  DEBUG_SUSPENDED -> DEBUG_RESUMED (RESUMED, USER_REQUEST)
+16:52:19.891 INFO: [TadState] TAD state changed:  DEBUG_RESUMED -> READY (SUSPENDED, SIGNAL)
+16:52:19.896 INFO: [Benchmark] Loading data for "Determine FreeRTOS version" has started.
+16:52:19.902 ERROR: [VariableReader] Could not read variable expression: "&(FreeRTOSDebugConfig)".
+16:52:19.909 ERROR: [VariableReader] Could not read variable expression: "sizeof(struct TaskControlBlock_t)".
+16:52:19.924 ERROR: [VariableReader] Could not read variable expression: "&(((struct QueueDefinition *) 0)->pcTail)".
+16:52:19.924 INFO: [TadModel] FreeRTOS version has been identified from available FreeRTOS symbols as 10.11.
+16:52:19.925 INFO: [Benchmark] Loading data for "Determine FreeRTOS version" took 29 ms.
+16:52:19.925 INFO: [Benchmark] Loading data for "Heap Usage" has started.
+16:52:20.242 ERROR: [TaskFactory] ulTotalRunTime not available
+16:52:21.907 INFO: [TadModel] DSF session ID 7 has ended.

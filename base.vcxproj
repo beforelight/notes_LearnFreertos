@@ -85,6 +85,18 @@
   <ItemDefinitionGroup>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="base\amazon-freertos\freertos\event_groups.c" />
+    <ClCompile Include="base\amazon-freertos\freertos\list.c" />
+    <ClCompile Include="base\amazon-freertos\freertos\portable\heap_1.c" />
+    <ClCompile Include="base\amazon-freertos\freertos\portable\heap_2.c" />
+    <ClCompile Include="base\amazon-freertos\freertos\portable\heap_3.c" />
+    <ClCompile Include="base\amazon-freertos\freertos\portable\heap_4.c" />
+    <ClCompile Include="base\amazon-freertos\freertos\portable\heap_5.c" />
+    <ClCompile Include="base\amazon-freertos\freertos\portable\port.c" />
+    <ClCompile Include="base\amazon-freertos\freertos\queue.c" />
+    <ClCompile Include="base\amazon-freertos\freertos\stream_buffer.c" />
+    <ClCompile Include="base\amazon-freertos\freertos\tasks.c" />
+    <ClCompile Include="base\amazon-freertos\freertos\timers.c" />
     <ClCompile Include="base\board\board.c" />
     <ClCompile Include="base\board\clock_config.c" />
     <ClCompile Include="base\board\peripherals.c" />
@@ -151,7 +163,9 @@
     <ClCompile Include="base\drivers\fsl_vref.c" />
     <ClCompile Include="base\drivers\fsl_wdog.c" />
     <ClCompile Include="base\source\base.c" />
+    <ClCompile Include="base\source\list.c" />
     <ClCompile Include="base\source\semihost_hardfault.c" />
+    <ClCompile Include="base\source\sys_pit_mgr.c" />
     <ClCompile Include="base\source\user.c" />
     <ClCompile Include="base\startup\startup_mk66f18.c" />
     <ClCompile Include="base\utilities\fsl_assert.c" />
@@ -161,6 +175,24 @@
     <ClCompile Include="base\utilities\utilities\fsl_notifier.c" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="base\amazon-freertos\freertos\portable\portmacro.h" />
+    <ClInclude Include="base\amazon-freertos\include\deprecated_definitions.h" />
+    <ClInclude Include="base\amazon-freertos\include\event_groups.h" />
+    <ClInclude Include="base\amazon-freertos\include\FreeRTOS.h" />
+    <ClInclude Include="base\amazon-freertos\include\freertos_tasks_c_additions.h" />
+    <ClInclude Include="base\amazon-freertos\include\list.h" />
+    <ClInclude Include="base\amazon-freertos\include\message_buffer.h" />
+    <ClInclude Include="base\amazon-freertos\include\mpu_prototypes.h" />
+    <ClInclude Include="base\amazon-freertos\include\mpu_wrappers.h" />
+    <ClInclude Include="base\amazon-freertos\include\portable.h" />
+    <ClInclude Include="base\amazon-freertos\include\projdefs.h" />
+    <ClInclude Include="base\amazon-freertos\include\queue.h" />
+    <ClInclude Include="base\amazon-freertos\include\semphr.h" />
+    <ClInclude Include="base\amazon-freertos\include\stack_macros.h" />
+    <ClInclude Include="base\amazon-freertos\include\stream_buffer.h" />
+    <ClInclude Include="base\amazon-freertos\include\task.h" />
+    <ClInclude Include="base\amazon-freertos\include\threading_alt.h" />
+    <ClInclude Include="base\amazon-freertos\include\timers.h" />
     <ClInclude Include="base\board\board.h" />
     <ClInclude Include="base\board\clock_config.h" />
     <ClInclude Include="base\board\peripherals.h" />
@@ -255,6 +287,8 @@
     <ClInclude Include="base\drivers\fsl_vref.h" />
     <ClInclude Include="base\drivers\fsl_wdog.h" />
     <ClInclude Include="base\source\FreeRTOSConfig.h" />
+    <ClInclude Include="base\source\list.h" />
+    <ClInclude Include="base\source\sys_pit_mgr.h" />
     <ClInclude Include="base\source\user.h" />
     <ClInclude Include="base\utilities\fsl_debug_console.h" />
     <ClInclude Include="base\utilities\fsl_debug_console_conf.h" />

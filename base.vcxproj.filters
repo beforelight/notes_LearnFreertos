@@ -22,6 +22,9 @@
     <Filter Include="board">
       <UniqueIdentifier>{1f7ea78b-7ecd-46cf-95c8-1b2e8bbc18bb}</UniqueIdentifier>
     </Filter>
+    <Filter Include="freertos">
+      <UniqueIdentifier>{1529fff3-c1b8-4e0b-8776-4ce6130c5db6}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="base\source\base.c">
@@ -244,6 +247,48 @@
       <Filter>board</Filter>
     </ClCompile>
     <ClCompile Include="base\source\user.c">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="base\amazon-freertos\freertos\event_groups.c">
+      <Filter>freertos</Filter>
+    </ClCompile>
+    <ClCompile Include="base\amazon-freertos\freertos\list.c">
+      <Filter>freertos</Filter>
+    </ClCompile>
+    <ClCompile Include="base\amazon-freertos\freertos\portable\heap_1.c">
+      <Filter>freertos</Filter>
+    </ClCompile>
+    <ClCompile Include="base\amazon-freertos\freertos\portable\heap_2.c">
+      <Filter>freertos</Filter>
+    </ClCompile>
+    <ClCompile Include="base\amazon-freertos\freertos\portable\heap_3.c">
+      <Filter>freertos</Filter>
+    </ClCompile>
+    <ClCompile Include="base\amazon-freertos\freertos\portable\heap_4.c">
+      <Filter>freertos</Filter>
+    </ClCompile>
+    <ClCompile Include="base\amazon-freertos\freertos\portable\heap_5.c">
+      <Filter>freertos</Filter>
+    </ClCompile>
+    <ClCompile Include="base\amazon-freertos\freertos\portable\port.c">
+      <Filter>freertos</Filter>
+    </ClCompile>
+    <ClCompile Include="base\amazon-freertos\freertos\queue.c">
+      <Filter>freertos</Filter>
+    </ClCompile>
+    <ClCompile Include="base\amazon-freertos\freertos\stream_buffer.c">
+      <Filter>freertos</Filter>
+    </ClCompile>
+    <ClCompile Include="base\amazon-freertos\freertos\tasks.c">
+      <Filter>freertos</Filter>
+    </ClCompile>
+    <ClCompile Include="base\amazon-freertos\freertos\timers.c">
+      <Filter>freertos</Filter>
+    </ClCompile>
+    <ClCompile Include="base\source\sys_pit_mgr.c">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="base\source\list.c">
       <Filter>source</Filter>
     </ClCompile>
   </ItemGroup>
@@ -546,6 +591,66 @@
       <Filter>board</Filter>
     </ClInclude>
     <ClInclude Include="base\source\user.h">
+      <Filter>source</Filter>
+    </ClInclude>
+    <ClInclude Include="base\amazon-freertos\freertos\portable\portmacro.h">
+      <Filter>freertos</Filter>
+    </ClInclude>
+    <ClInclude Include="base\amazon-freertos\include\deprecated_definitions.h">
+      <Filter>freertos</Filter>
+    </ClInclude>
+    <ClInclude Include="base\amazon-freertos\include\event_groups.h">
+      <Filter>freertos</Filter>
+    </ClInclude>
+    <ClInclude Include="base\amazon-freertos\include\FreeRTOS.h">
+      <Filter>freertos</Filter>
+    </ClInclude>
+    <ClInclude Include="base\amazon-freertos\include\freertos_tasks_c_additions.h">
+      <Filter>freertos</Filter>
+    </ClInclude>
+    <ClInclude Include="base\amazon-freertos\include\list.h">
+      <Filter>freertos</Filter>
+    </ClInclude>
+    <ClInclude Include="base\amazon-freertos\include\message_buffer.h">
+      <Filter>freertos</Filter>
+    </ClInclude>
+    <ClInclude Include="base\amazon-freertos\include\mpu_prototypes.h">
+      <Filter>freertos</Filter>
+    </ClInclude>
+    <ClInclude Include="base\amazon-freertos\include\mpu_wrappers.h">
+      <Filter>freertos</Filter>
+    </ClInclude>
+    <ClInclude Include="base\amazon-freertos\include\portable.h">
+      <Filter>freertos</Filter>
+    </ClInclude>
+    <ClInclude Include="base\amazon-freertos\include\projdefs.h">
+      <Filter>freertos</Filter>
+    </ClInclude>
+    <ClInclude Include="base\amazon-freertos\include\queue.h">
+      <Filter>freertos</Filter>
+    </ClInclude>
+    <ClInclude Include="base\amazon-freertos\include\semphr.h">
+      <Filter>freertos</Filter>
+    </ClInclude>
+    <ClInclude Include="base\amazon-freertos\include\stack_macros.h">
+      <Filter>freertos</Filter>
+    </ClInclude>
+    <ClInclude Include="base\amazon-freertos\include\stream_buffer.h">
+      <Filter>freertos</Filter>
+    </ClInclude>
+    <ClInclude Include="base\amazon-freertos\include\task.h">
+      <Filter>freertos</Filter>
+    </ClInclude>
+    <ClInclude Include="base\amazon-freertos\include\threading_alt.h">
+      <Filter>freertos</Filter>
+    </ClInclude>
+    <ClInclude Include="base\amazon-freertos\include\timers.h">
+      <Filter>freertos</Filter>
+    </ClInclude>
+    <ClInclude Include="base\source\sys_pit_mgr.h">
+      <Filter>source</Filter>
+    </ClInclude>
+    <ClInclude Include="base\source\list.h">
       <Filter>source</Filter>
     </ClInclude>
   </ItemGroup>
